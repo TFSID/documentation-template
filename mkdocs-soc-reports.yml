@@ -1,0 +1,168 @@
+site_name: Threat Aadvisory
+
+theme:
+  name: material
+  features:
+    - content.code.copy
+    - content.code.select
+    - content.code.annotate
+
+markdown_extensions:
+  - tables
+  - attr_list
+  - md_in_html
+  - admonition
+  - pymdownx.details
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+  - md_in_html
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.superfences:
+      custom_fences:
+        - name: vegalite
+          class: vegalite
+          format: !!python/name:mkdocs_charts_plugin.fences.fence_vegalite
+
+plugins:
+  - search
+  - charts
+  - macros:
+      # module_name: macros
+      # include_dir: "macros"
+      module_name: "macros/main"
+      # include_files:
+        # - "macros/main.py"
+  - redirects:
+      redirect_maps:
+        changelog/insiders.md: insiders/changelog.md
+        extensions/admonition.md: reference/admonitions.md
+        extensions/codehilite.md: reference/code-blocks.md
+        extensions/footnotes.md: reference/footnotes.md
+        extensions/metadata.md: reference/meta-tags.md
+        extensions/permalinks.md: setup/setting-up-navigation.md #permalink
+        extensions/pymdown.md: reference/admonitions.md
+        plugins/revision-date.md: setup/adding-a-git-repository.md #revision-date
+        plugins/search.md: setup/setting-up-site-search.md
+        releases/4.md: upgrading.md #upgrading-from-4x-to-5x
+        releases/5.md: upgrading.md #upgrading-from-3x-to-4x
+        releases/changelog.md: changelog.md
+        setup/adding-social-links.md: setup/setting-up-the-footer.md
+        sponsorship.md: insiders/index.md
+  - minify:
+      minify_html: true
+  - extra-sass
+  - with-pdf:
+      author: Akasata Cybertech
+      # copyright: TFSID
+      #
+      cover: true
+      # back_cover: true
+      cover_title: Threat Aadvisory
+      cover_subtitle: PT Pelindo Terminal Petikemas
+      #custom_template_path: TEMPLATES PATH
+      #
+      #toc_title: TOC TITLE TEXT
+      #heading_shift: false
+      #toc_level: 3
+      #ordered_chapter_level: 2
+      #excludes_children:
+      #    - 'release-notes/:upgrading'
+      #    - 'release-notes/:changelog'
+      #
+      #exclude_pages:
+      #    - 'bugs/'
+      #    - 'appendix/contribute/'
+      #convert_iframe:
+      #    - src: IFRAME SRC
+      #      img: POSTER IMAGE URL
+      #      text: ALTERNATE TEXT
+      #    - src: ...
+      #two_columns_level: 3
+      #
+      # render_js: true
+      # headless_chrome_path: chromium-browser
+      # headless_chrome_path: /usr/bin/chromium
+      # use_relaxed_js_renderer: true
+      # output_pdf_name: relaxed_document.pdf
+      #
+      # output_path: docs/relaxed_document.pdf
+      #enabled_if_env: ENABLE_PDF_EXPORT
+      #
+      debug_html: true
+      #show_anchors: true
+      # verbose: true
+# Customization
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/squidfunk
+    - icon: fontawesome/brands/gitter
+      link: https://gitter.im/squidfunk/mkdocs-material
+    - icon: fontawesome/brands/docker
+      link: https://hub.docker.com/r/squidfunk/mkdocs-material/
+    - icon: fontawesome/brands/twitter
+      link: https://twitter.com/squidfunk
+    - icon: fontawesome/brands/linkedin
+      link: https://linkedin.com/in/squidfunk/
+    - icon: fontawesome/brands/instagram
+      link: https://instagram.com/squidfunk
+
+extra_css:
+  - styles/pdf-admonition-fix.css
+  - styles/extra.css
+  # - assets/styles/custom-bg.css
+
+extra_javascript:
+  - https://cdn.jsdelivr.net/npm/vega@5
+  - https://cdn.jsdelivr.net/npm/vega-lite@5
+  - https://cdn.jsdelivr.net/npm/vega-embed@6
+
+
+exclude_docs: |
+  Temp-Notes.md
+  temp-OT.md
+  /Products Vault/*/*/temp.md
+  /Products Vault/*/*/Temp*.md
+  /Products Vault/*/*/Perancangan*.md
+  /Products Vault/*/*/PoinPenting.md
+  /Products Vault/*/*/PointPenting.md
+  Opensources Cyber.md
+  .*
+  /*-v[0-9]*.*
+  /*-v[0-9][0-9].*
+  /__dev/
+  assets/*/*.md
+
+# nav:
+  # - Threat Advisory: threat-advisory-data.md
+  # - Technical Weekly Reports: pages/reports/technical-reports.md
+  # - Home: index.md
+  # - Technical Weekly Reports: pages\reports\technical-reports.md
+  # - Executive Reports: pages/reports/executive-reports.md
+  # - Technical Reports:
+    # - Bug Bounty Ancol: pages/reports/technical/ancol/technical-reports-ancol.md
+    # - Bug Bounty Sinarmas:
+      # - Summary: pages/reports/technical/technical-reports-sinarmas.md
+      # - Detailed: pages/reports/technical/detailed-sinarmas.md
+    # - Bug Bounty AHU:
+    #   - Summary: pages/reports/technical/technical-reports-ahu.md
+    #   - Subdomains-report:
+    #     - apostille.ahu.go.id
+    #     - manual.ahu.go.id
+    #     - koperasi.ahu.go.id
+    #     - bhpsby-eoffice.ahu.go.id
+
+  # - Personal Reports: pages/reports/personal/personal-reports.md
+  # - Weekly Improvement Reports: pages/reports/executive-reports.md
+  # - Weekly Improvement Reports: pages/reports/weekly-reports.md
+  # - Monthly Reports: pages/reports/executive-reports.md
+  # - Insiders: pages/insiders/index.md
+  # - Release Notes: releases/index.md
+  # - Weekly Reports Teknis: reports/weekly-reports-teknis.md
+  # - Weekly Reports General: reports/weekly-reports-general.md

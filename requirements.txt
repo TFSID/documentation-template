@@ -1,0 +1,19 @@
+setuptools
+mkdocs
+beautifulsoup4
+mkdocs-material
+mkdocs-redirects
+mkdocs-charts-plugin
+mkdocs-macros-plugin
+mkdocs-with-pdf
+# mkdocs-with-pdf # manually copy from mkdocs-plugin/mkdocs_with_pdf
+mkdocs-minify-plugin
+mkdocs-extra-sass-plugin
+livereload
+# cairocffi
+weasyprint
+altair
+altair_saver
+pandas
+vega
+vl-convert-python

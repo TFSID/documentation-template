@@ -1,0 +1,10 @@
+services:
+  mkdocs:
+    build:
+      context: ./
+      dockerfile:  Dockerfile
+    container_name: akasata-threat-advisory
+    ports:
+      - 5992:5990
+    volumes:
+      - ./docs:/app/docs
