@@ -1,0 +1,60 @@
+@media print {
+    /* admonition overrides */
+    /* .md-typeset__scrollwrap {
+      justify-self: center;
+    } */
+
+    /* admonition icon */
+    .md-typeset :is(.admonition-title,summary):before {
+      top: 0.6rem;
+      left: 0.6rem;
+    }
+
+    .md-typeset pre>code {
+      word-wrap: break-word;
+      word-break: break-word;
+      white-space: pre-wrap;
+      color: black;
+    }
+
+    .md-typeset .admonition code {
+      word-wrap: break-word;
+      word-break: break-word;
+      white-space: pre-wrap;
+      color: black;
+    }
+
+    code {
+      word-wrap: break-word;
+      word-break: break-word;
+      white-space: pre-wrap;
+      color: black;
+    }
+
+    .flex-table-center {
+      display: flex;
+      justify-content: center;
+  }
+
+  div .flex-table-center{
+    display: flex;
+    justify-content: center;
+  }
+  
+
+    /* left border
+    .md-typeset :is(.admonition,details) {
+      border-left-width: 0.1rem;
+      padding: 0rem 0rem 0rem 0rem;
+      margin-left: 1rem;
+    }
+
+    [dir=ltr] .md-typeset :is(.admonition,details) {
+      margin-left: 1rem;
+    }
+
+    html .md-typeset :is(.admonition,details)>:last-child {
+      margin-left: 0.6rem;
+    }
+ */
+}
