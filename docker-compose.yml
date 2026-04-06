@@ -2,9 +2,9 @@ services:
   mkdocs:
     build:
       context: ./
-      dockerfile:  Dockerfile
-    container_name: akasata-threat-advisory
+      dockerfile: Dockerfile
+    container_name: kaffah-documentations
     ports:
-      - 5992:5990
+      - 5994:5990
     volumes:
       - ./docs:/app/docs

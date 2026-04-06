@@ -1,0 +1,286 @@
+﻿<!DOCTYPE html>
+<html lang="en" class="dark">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kaffah Snippets</title>
+
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap"
+        rel="stylesheet">
+
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                container: { center: true, padding: "2rem", screens: { "2xl": "1400px" } },
+                extend: {
+                    colors: {
+                        border: "hsl(var(--border))", input: "hsl(var(--input))", ring: "hsl(var(--ring))",
+                        background: "hsl(var(--background))", foreground: "hsl(var(--foreground))",
+                        primary: { DEFAULT: "hsl(var(--primary))", foreground: "hsl(var(--primary-foreground))" },
+                        secondary: { DEFAULT: "hsl(var(--secondary))", foreground: "hsl(var(--secondary-foreground))" },
+                        destructive: { DEFAULT: "hsl(var(--destructive))", foreground: "hsl(var(--destructive-foreground))" },
+                        muted: { DEFAULT: "hsl(var(--muted))", foreground: "hsl(var(--muted-foreground))" },
+                        accent: { DEFAULT: "hsl(var(--accent))", foreground: "hsl(var(--accent-foreground))" },
+                        popover: { DEFAULT: "hsl(var(--popover))", foreground: "hsl(var(--popover-foreground))" },
+                        card: { DEFAULT: "hsl(var(--card))", foreground: "hsl(var(--card-foreground))" },
+                    },
+                    borderRadius: { lg: "var(--radius)", md: "calc(var(--radius) - 2px)", sm: "calc(var(--radius) - 4px)" },
+                    fontFamily: { sans: ["Inter", "sans-serif"], mono: ["JetBrains Mono", "monospace"] }
+                },
+            },
+        }
+    </script>
+
+    <style>
+        :root {
+            --background: 0 0% 100%;
+            --foreground: 222.2 84% 4.9%;
+            --card: 0 0% 100%;
+            --card-foreground: 222.2 84% 4.9%;
+            --popover: 0 0% 100%;
+            --popover-foreground: 222.2 84% 4.9%;
+            --primary: 222.2 47.4% 11.2%;
+            --primary-foreground: 210 40% 98%;
+            --secondary: 210 40% 96.1%;
+            --secondary-foreground: 222.2 47.4% 11.2%;
+            --muted: 210 40% 96.1%;
+            --muted-foreground: 215.4 16.3% 46.9%;
+            --accent: 210 40% 96.1%;
+            --accent-foreground: 222.2 47.4% 11.2%;
+            --destructive: 0 84.2% 60.2%;
+            --destructive-foreground: 210 40% 98%;
+            --border: 214.3 31.8% 91.4%;
+            --input: 214.3 31.8% 91.4%;
+            --ring: 222.2 84% 4.9%;
+            --radius: 0.5rem;
+        }
+
+        .dark {
+            --background: 222.2 84% 4.9%;
+            --foreground: 210 40% 98%;
+            --card: 222.2 84% 4.9%;
+            --card-foreground: 210 40% 98%;
+            --popover: 222.2 84% 4.9%;
+            --popover-foreground: 210 40% 98%;
+            --primary: 210 40% 98%;
+            --primary-foreground: 222.2 47.4% 11.2%;
+            --secondary: 217.2 32.6% 17.5%;
+            --secondary-foreground: 210 40% 98%;
+            --muted: 217.2 32.6% 17.5%;
+            --muted-foreground: 215 20.2% 65.1%;
+            --accent: 217.2 32.6% 17.5%;
+            --accent-foreground: 210 40% 98%;
+            --destructive: 0 62.8% 30.6%;
+            --destructive-foreground: 210 40% 98%;
+            --border: 217.2 32.6% 17.5%;
+            --input: 217.2 32.6% 17.5%;
+            --ring: 212.7 26.8% 83.9%;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: hsl(var(--background));
+            color: hsl(var(--foreground));
+        }
+
+        ::-webkit-scrollbar {
+            width: 8px;
+            height: 8px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: transparent;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: hsl(var(--muted-foreground) / 0.3);
+            border-radius: 4px;
+        }
+
+        .bg-grid {
+            background-size: 40px 40px;
+            background-image: linear-gradient(to right, hsl(var(--border) / 0.3) 1px, transparent 1px),
+                linear-gradient(to bottom, hsl(var(--border) / 0.3) 1px, transparent 1px);
+        }
+    </style>
+</head>
+
+<body class="min-h-screen">
+    <div id="root"></div>
+
+    <script type="text/babel">
+        const { useState, useEffect, useMemo } = React;
+        const { createRoot } = ReactDOM;
+
+        const Icon = ({ path, className, ...props }) => (
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className={className} {...props}>
+                {path}
+            </svg>
+        );
+        const Icons = {
+            Search: (p) => <Icon {...p} path={<g><circle cx="11" cy="11" r="8" /><path d="m21 21-4.3-4.3" /></g>} />,
+            Copy: (p) => <Icon {...p} path={<g><rect width="14" height="14" x="8" y="8" rx="2" ry="2" /><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2" /></g>} />,
+            Play: (p) => <Icon {...p} path={<polygon points="5 3 19 12 5 21 5 3" />} />,
+            Code: (p) => <Icon {...p} path={<g><polyline points="16 18 22 12 16 6" /><polyline points="8 6 2 12 8 18" /></g>} />,
+            Moon: (p) => <Icon {...p} path={<path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z" />} />,
+            Sun: (p) => <Icon {...p} path={<g><circle cx="12" cy="12" r="4" /><path d="M12 2v2" /><path d="M12 20v2" /><path d="m4.93 4.93 1.41 1.41" /><path d="m17.66 17.66 1.41 1.41" /><path d="M2 12h2" /><path d="M20 12h2" /><path d="m6.34 17.66-1.41-1.41" /><path d="m19.07 4.93-1.41 1.41" /></g>} />,
+            Bell: (p) => <Icon {...p} path={<g><path d="M6 8a6 6 0 0 1 12 0c0 7 3 9 3 9H3s3-2 3-9" /><path d="M10.3 21a1.94 1.94 0 0 0 3.4 0" /></g>} />,
+            ChevronRight: (p) => <Icon {...p} path={<path d="m9 18 6-6-6-6" />} />,
+            Check: (p) => <Icon {...p} path={<polyline points="20 6 9 17 4 12" />} />,
+            X: (p) => <Icon {...p} path={<g><path d="M18 6 6 18" /><path d="m6 6 12 12" /></g>} />,
+        };
+
+        const cn = (...classes) => classes.filter(Boolean).join(" ");
+        const Button = ({ className, variant = "default", size = "default", asChild = false, ...props }) => {
+            const variants = {
+                default: "bg-primary text-primary-foreground hover:bg-primary/90",
+                destructive: "bg-destructive text-destructive-foreground hover:bg-destructive/90",
+                outline: "border border-input bg-background hover:bg-accent hover:text-accent-foreground",
+                secondary: "bg-secondary text-secondary-foreground hover:bg-secondary/80",
+                ghost: "hover:bg-accent hover:text-accent-foreground",
+                link: "text-primary underline-offset-4 hover:underline"
+            };
+            const sizes = { default: "h-10 px-4 py-2", sm: "h-9 rounded-md px-3", lg: "h-11 rounded-md px-8", icon: "h-10 w-10" };
+            const Comp = asChild ? "span" : "button";
+            return <Comp className={cn("inline-flex items-center justify-center rounded-md text-sm font-medium transition-colors disabled:opacity-50", variants[variant] || variants.default, sizes[size] || sizes.default, className)} {...props} />;
+        };
+
+        const Card = ({ className, ...props }) => <div className={cn("rounded-lg border bg-card text-card-foreground shadow-sm", className)} {...props} />;
+        const CardHeader = ({ className, ...props }) => <div className={cn("flex flex-col space-y-1.5 p-6", className)} {...props} />;
+        const CardTitle = ({ className, ...props }) => <h3 className={cn("text-2xl font-semibold leading-none tracking-tight", className)} {...props} />;
+        const CardDescription = ({ className, ...props }) => <p className={cn("text-sm text-muted-foreground", className)} {...props} />;
+        const CardContent = ({ className, ...props }) => <div className={cn("p-6 pt-0", className)} {...props} />;
+        const CardFooter = ({ className, ...props }) => <div className={cn("flex items-center p-6 pt-0", className)} {...props} />;
+        const Input = ({ className, type, ...props }) => <input type={type} className={cn("flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50", className)} {...props} />;
+        const Label = ({ className, ...props }) => <label className={cn("text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70", className)} {...props} />;
+        const Checkbox = ({ className, ...props }) => <input type="checkbox" className={cn("peer h-4 w-4 shrink-0 rounded-sm border border-primary ring-offset-background focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 data-[state=checked]:bg-primary data-[state=checked]:text-primary-foreground", className)} {...props} />;
+
+        const Dialog = ({ children }) => <div className="relative border rounded-lg p-4 bg-background/50 border-dashed">{children}</div>;
+        const DialogTrigger = ({ children }) => <div className="mb-4 inline-block">{children}</div>;
+        const DialogContent = ({ children, className }) => <div className={cn("border bg-background p-6 shadow-lg rounded-lg max-w-lg mx-auto", className)}>{children}</div>;
+        const DialogHeader = ({ className, ...props }) => <div className={cn("flex flex-col space-y-1.5 text-center sm:text-left", className)} {...props} />;
+        const DialogFooter = ({ className, ...props }) => <div className={cn("flex flex-col-reverse sm:flex-row sm:justify-end sm:space-x-2", className)} {...props} />;
+        const DialogTitle = CardTitle;
+        const DialogDescription = CardDescription;
+        const DialogClose = Button;
+
+        const Form = ({ children, ...props }) => <form {...props}>{children}</form>;
+        const FormField = ({ render }) => render({ field: { value: "", onChange: () => { } } });
+        const FormItem = ({ children }) => <div className="space-y-2">{children}</div>;
+        const FormLabel = Label;
+        const FormControl = ({ children }) => <div>{children}</div>;
+        const FormMessage = () => null;
+
+        const SCOPE = { React, useState, Button, Card, CardHeader, CardTitle, CardDescription, CardContent, CardFooter, Input, Label, Checkbox, Dialog, DialogTrigger, DialogContent, DialogHeader, DialogFooter, DialogTitle, DialogDescription, DialogClose, Form, FormField, FormItem, FormLabel, FormControl, FormMessage, lucide: Icons };
+
+        // --- SNIPPETS PLACEHOLDER ---
+        const snippetsData = {"base-layouts.code-snippets":{"Flexbox Row":{"prefix":"flex-row","body":["\u003cdiv className=\"flex flex-row ${1|items-start,items-center,items-end,items-stretch,items-baseline|} ${2|justify-start,justify-center,justify-end,justify-between,justify-around,justify-evenly|} ${3|gap-0,gap-1,gap-2,gap-3,gap-4,gap-6,gap-8|}\"${4: ${5|flex-wrap,flex-nowrap|}}\u003e","\t$0","\u003c/div\u003e"],"description":"Flexbox horizontal layout"},"Flexbox Column":{"prefix":"flex-col","body":["\u003cdiv className=\"flex flex-col ${1|items-start,items-center,items-end,items-stretch|} ${2|justify-start,justify-center,justify-end,justify-between,justify-around,justify-evenly|} ${3|gap-0,gap-1,gap-2,gap-3,gap-4,gap-6,gap-8|}\"\u003e","\t$0","\u003c/div\u003e"],"description":"Flexbox vertical layout"},"Flexbox Responsive":{"prefix":"flex-responsive","body":["\u003cdiv className=\"flex ${1|flex-col,flex-row|} ${2|sm,md,lg,xl,2xl|}:${3|flex-row,flex-col|} ${4|items-start,items-center,items-end,items-stretch|} ${5|justify-start,justify-center,justify-end,justify-between|} ${6|gap-2,gap-4,gap-6,gap-8|}\"\u003e","\t$0","\u003c/div\u003e"],"description":"Responsive flexbox with breakpoint direction change"},"Flexbox Center":{"prefix":"flex-center","body":["\u003cdiv className=\"flex ${1|flex-row,flex-col|} items-center justify-center ${2|gap-0,gap-2,gap-4,gap-6|}\"\u003e","\t$0","\u003c/div\u003e"],"description":"Centered flexbox layout"},"Flexbox Between":{"prefix":"flex-between","body":["\u003cdiv className=\"flex ${1|flex-row,flex-col|} items-center justify-between ${2|gap-0,gap-2,gap-4,gap-6|}\"\u003e","\t$0","\u003c/div\u003e"],"description":"Space-between flexbox layout"},"Grid 2 Columns":{"prefix":"grid-2","body":["\u003cdiv className=\"grid grid-cols-1 ${1|sm,md,lg,xl|}:grid-cols-2 ${2|gap-2,gap-4,gap-6,gap-8,gap-10|}\"\u003e","\t$0","\u003c/div\u003e"],"description":"2-column responsive grid"},"Grid 3 Columns":{"prefix":"grid-3","body":["\u003cdiv className=\"grid grid-cols-1 ${1|sm,md,lg|}:grid-cols-2 ${2|lg,xl,2xl|}:grid-cols-3 ${3|gap-2,gap-4,gap-6,gap-8|}\"\u003e","\t$0","\u003c/div\u003e"],"description":"3-column responsive grid"},"Grid 4 Columns":{"prefix":"grid-4","body":["\u003cdiv className=\"grid grid-cols-1 sm:grid-cols-2 ${1|md,lg,xl|}:grid-cols-3 ${2|lg,xl,2xl|}:grid-cols-4 ${3|gap-2,gap-4,gap-6,gap-8|}\"\u003e","\t$0","\u003c/div\u003e"],"description":"4-column responsive grid"},"Grid Auto Fit":{"prefix":"grid-auto","body":["\u003cdiv className=\"grid grid-cols-[repeat(auto-fit,minmax(${1|200px,250px,300px,350px|},1fr))] ${2|gap-2,gap-4,gap-6,gap-8|}\"\u003e","\t$0","\u003c/div\u003e"],"description":"Auto-fit responsive grid"},"Grid Custom":{"prefix":"grid-custom","body":["\u003cdiv className=\"grid grid-cols-${1:1} ${2|sm,md,lg,xl|}:grid-cols-${3:2} ${4|md,lg,xl,2xl|}:grid-cols-${5:3} ${6|gap-2,gap-4,gap-6,gap-8|}\"\u003e","\t$0","\u003c/div\u003e"],"description":"Custom responsive grid"},"Flex Wrap Responsive":{"prefix":"flex-wrap-responsive","body":["\u003cdiv className=\"flex flex-wrap ${1|items-start,items-center,items-end|} ${2|justify-start,justify-center,justify-end,justify-between|} ${3|gap-2,gap-4,gap-6,gap-8|}\"\u003e","\t$0","\u003c/div\u003e"],"description":"Flex wrap for responsive cards"},"Flex Direction Responsive":{"prefix":"flex-dir-responsive","body":["\u003cdiv className=\"flex flex-col ${1|sm,md,lg,xl|}:flex-row ${2|md,lg,xl,2xl|}:flex-${3|row,col,row-reverse,col-reverse|} items-${4|start,center,end,stretch|} justify-${5|start,center,end,between,around|} gap-${6|2,4,6,8|}\"\u003e","\t$0","\u003c/div\u003e"],"description":"Multi-breakpoint flex direction change"},"Grid Place Items":{"prefix":"grid-place","body":["\u003cdiv className=\"grid ${1|place-items-start,place-items-center,place-items-end,place-items-stretch|} ${2|place-content-start,place-content-center,place-content-end,place-content-between,place-content-around,place-content-evenly|} grid-cols-${3:3} ${4|gap-2,gap-4,gap-6,gap-8|}\"\u003e","\t$0","\u003c/div\u003e"],"description":"Grid with place-items alignment"},"Flex Reverse":{"prefix":"flex-reverse","body":["\u003cdiv className=\"flex ${1|flex-row-reverse,flex-col-reverse|} items-${2|start,center,end,stretch|} justify-${3|start,center,end,between|} gap-${4|2,4,6,8|}\"\u003e","\t$0","\u003c/div\u003e"],"description":"Reversed flex direction"},"Container Flex":{"prefix":"container-flex","body":["\u003cdiv className=\"container mx-auto px-4\"\u003e","\t\u003cdiv className=\"flex ${1|flex-row,flex-col|} ${2|items-start,items-center,items-end|} ${3|justify-start,justify-center,justify-end,justify-between|} ${4|gap-4,gap-6,gap-8|}\"\u003e","\t\t$0","\t\u003c/div\u003e","\u003c/div\u003e"],"description":"Container with flexbox"},"Container Grid":{"prefix":"container-grid","body":["\u003cdiv className=\"container mx-auto px-4\"\u003e","\t\u003cdiv className=\"grid grid-cols-1 ${1|sm,md,lg|}:grid-cols-${2:2} ${3|lg,xl,2xl|}:grid-cols-${4:3} ${5|gap-4,gap-6,gap-8|}\"\u003e","\t\t$0","\t\u003c/div\u003e","\u003c/div\u003e"],"description":"Container with grid"}}};
+        const cleanSnippetCode = (code) => {
+            if (!code) return "";
+            let clean = Array.isArray(code) ? code.join('\n') : code;
+            clean = clean.replace(/\$\{\d+:([^}]+)\}/g, '$1')
+                .replace(/\$\{\d+\|([^,]+)(,[^}]+)?\|\}/g, '$1')
+                .replace(/\$\{\d+\}/g, 'type_here')
+                .replace(/\$0/g, '');
+            return clean;
+        };
+
+        const LivePreview = ({ code }) => {
+            const [Component, setComponent] = useState(null);
+            const [error, setError] = useState(null);
+
+            useEffect(() => {
+                try {
+                    const cleaned = cleanSnippetCode(code);
+                    if (cleaned.includes("export default")) throw new Error("File templates cannot be previewed.");
+
+                    // 1. Transpile just the component definition (valid script)
+                    const codeToTranspile = `const SnippetPreview = () => (<> ${cleaned} </>);`;
+                    const transpiled = Babel.transform(codeToTranspile, { presets: ['react'] }).code;
+
+                    // 2. Append return statement for the Function body
+                    const funcBody = `${transpiled} return SnippetPreview;`;
+
+                    const func = new Function(...Object.keys(SCOPE), funcBody);
+                    const Renderable = func(...Object.values(SCOPE));
+                    setComponent(() => Renderable);
+                    setError(null);
+                } catch (e) {
+                    setError(e.message);
+                    setComponent(null);
+                }
+            }, [code]);
+
+            if (error) return <div className="text-red-400 text-xs p-4 font-mono bg-destructive/10 rounded border border-destructive/20 mt-2">Preview Error: {error}</div>;
+            if (!Component) return null;
+            return <div className="preview-canvas bg-background border rounded-md p-8 flex items-center justify-center min-h-[200px] overflow-auto relative"><div className="absolute inset-0 bg-grid opacity-[0.05] pointer-events-none"></div><div className="w-full max-w-md relative z-10 scale-95 origin-center"><Component /></div></div>;
+        };
+
+        function App() {
+            const [snippets, setSnippets] = useState([]);
+            const [search, setSearch] = useState("");
+            const [category, setCategory] = useState("all");
+            const [isDark, setIsDark] = useState(true);
+
+            useEffect(() => {
+                if (!snippetsData) return;
+                const processed = [];
+                Object.keys(snippetsData).forEach(file => {
+                    const catName = file.replace('kaffah-', '').replace('.code-snippets', '').replace(/-/g, ' ');
+                    Object.entries(snippetsData[file]).forEach(([name, snippet]) => {
+                        processed.push({ id: name, name, category: catName, ...snippet });
+                    });
+                });
+                setSnippets(processed);
+            }, []);
+
+            useEffect(() => {
+                if (isDark) document.documentElement.classList.add('dark');
+                else document.documentElement.classList.remove('dark');
+            }, [isDark]);
+
+            const categories = useMemo(() => ["all", ...new Set(snippets.map(s => s.category))], [snippets]);
+            const filtered = snippets.filter(s => (category === "all" || s.category === category) && (s.name.toLowerCase().includes(search.toLowerCase()) || s.prefix.toLowerCase().includes(search.toLowerCase())));
+
+            return (
+                <div className="container mx-auto px-4 py-8 max-w-[1600px]">
+                    <header className="mb-8 flex flex-col md:flex-row justify-between items-center gap-4">
+                        <div><h1 className="text-3xl font-bold bg-gradient-to-r from-primary to-primary/60 bg-clip-text text-transparent">Kaffah UI Gallery</h1><p className="text-muted-foreground text-sm">Design System & Snippets Library</p></div>
+                        <button onClick={() => setIsDark(!isDark)} className="p-2 rounded-full hover:bg-muted transition-colors">{isDark ? <Icons.Sun /> : <Icons.Moon />}</button>
+                    </header>
+                    <div className="sticky top-4 z-50 mb-8 bg-background/80 backdrop-blur-md p-4 rounded-xl border shadow-sm flex flex-col md:flex-row gap-4 items-center">
+                        <div className="relative w-full md:w-96"><Icons.Search className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-muted-foreground" /><input className="w-full bg-muted/50 border border-input rounded-lg pl-10 pr-4 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-ring" placeholder="Search..." value={search} onChange={e => setSearch(e.target.value)} /></div>
+                        <div className="flex gap-2 overflow-x-auto w-full pb-2 md:pb-0 scrollbar-none">{categories.map(cat => <button key={cat} onClick={() => setCategory(cat)} className={`px-4 py-1.5 rounded-full text-xs font-medium whitespace-nowrap transition-all border ${category === cat ? "bg-primary text-primary-foreground border-primary" : "bg-background hover:bg-muted"}`}>{cat.toUpperCase()}</button>)}</div>
+                    </div>
+                    <div className="grid grid-cols-1 xl:grid-cols-2 gap-6 pb-20">{filtered.map(snippet => <SnippetCard key={snippet.name} snippet={snippet} />)}</div>
+                </div>
+            );
+        }
+
+        function SnippetCard({ snippet }) {
+            const [tab, setTab] = useState('preview');
+            const code = Array.isArray(snippet.body) ? snippet.body.join('\n') : snippet.body;
+            return (
+                <div className="group rounded-xl border bg-card text-card-foreground shadow-sm hover:shadow-md transition-all">
+                    <div className="p-4 border-b flex justify-between items-start">
+                        <div><div className="flex items-center gap-2 mb-1"><span className="text-[10px] font-bold px-2 py-0.5 rounded-full bg-primary/10 text-primary uppercase tracking-wider">{snippet.category}</span><code className="text-[10px] bg-muted px-1.5 py-0.5 rounded text-muted-foreground">{snippet.prefix}</code></div><h3 className="font-semibold text-lg">{snippet.name}</h3></div>
+                        <div className="flex gap-1 p-1 bg-muted/50 rounded-lg"><button onClick={() => setTab('preview')} className={cn("p-1.5 rounded-md transition-all", tab === 'preview' ? "bg-background text-primary shadow-sm" : "text-muted-foreground")}><Icons.Play className="w-4 h-4" /></button><button onClick={() => setTab('code')} className={cn("p-1.5 rounded-md transition-all", tab === 'code' ? "bg-background text-primary shadow-sm" : "text-muted-foreground")}><Icons.Code className="w-4 h-4" /></button></div>
+                    </div>
+                    <div>{tab === 'preview' ? <div className="p-6 min-h-[200px] flex flex-col justify-center"><LivePreview code={code} /></div> : <div className="relative bg-zinc-950 min-h-[200px] max-h-[400px] overflow-auto p-4 group/code"><pre className="text-sm text-gray-300 font-mono whitespace-pre-wrap">{code}</pre><button className="absolute top-4 right-4 p-2 bg-white/10 hover:bg-white/20 text-white rounded opacity-0 group-hover/code:opacity-100 transition-opacity" onClick={() => navigator.clipboard.writeText(code)}><Icons.Copy className="w-4 h-4" /></button></div>}</div>
+                </div>
+            );
+        }
+        const root = createRoot(document.getElementById('root'));
+        root.render(<App />);
+    </script>
+</body>
+
+</html>

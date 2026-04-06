@@ -1,0 +1,69 @@
+# Backend Tasks - Task Documentation Summary
+
+Total Tasks: 56
+
+## Module Breakdown
+- **EDU**: 9 tasks
+  - EDU-002.md
+  - EDU-005.md
+  - EDU-006.md
+  - EDU-007.md
+  - EDU-008.md
+  - EDU-009.md
+  - EDU-012.md
+  - EDU-013.md
+  - EDU-016.md
+- **HAJ**: 12 tasks
+  - HAJ-001.md
+  - HAJ-003.md
+  - HAJ-004.md
+  - HAJ-005.md
+  - HAJ-006.md
+  - HAJ-007.md
+  - HAJ-008.md
+  - HAJ-009.md
+  - HAJ-010.md
+  - HAJ-012.md
+  - HAJ-014.md
+  - HAJ-015.md
+- **IDEN**: 5 tasks
+  - IDEN-001.md
+  - IDEN-002.md
+  - IDEN-003.md
+  - IDEN-005.md
+  - IDEN-006.md
+- **JAMA**: 6 tasks
+  - JAMA-001.md
+  - JAMA-002.md
+  - JAMA-003.md
+  - JAMA-004.md
+  - JAMA-005.md
+  - JAMA-007.md
+- **PROF**: 2 tasks
+  - PROF-002.md
+  - PROF-003.md
+- **REQ**: 5 tasks
+  - REQ-002.md
+  - REQ-003.md
+  - REQ-006.md
+  - REQ-007.md
+  - REQ-009.md
+- **UMR**: 9 tasks
+  - UMR-003.md
+  - UMR-004.md
+  - UMR-005.md
+  - UMR-006.md
+  - UMR-007.md
+  - UMR-008.md
+  - UMR-009.md
+  - UMR-010.md
+  - UMR-012.md
+- **VISA**: 8 tasks
+  - VISA-001.md
+  - VISA-002.md
+  - VISA-003.md
+  - VISA-004.md
+  - VISA-005.md
+  - VISA-006.md
+  - VISA-007.md
+  - VISA-008.md

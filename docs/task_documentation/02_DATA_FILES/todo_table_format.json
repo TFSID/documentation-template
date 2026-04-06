@@ -1,0 +1,800 @@
+{
+  "project": "Umrah Haji Booking Application - Frontend Development",
+  "version": "1.0.0",
+  "description": "Comprehensive frontend development tasks with phase-based planning",
+  "structure": {
+    "columns": ["Task ID", "Category/Modul", "Task Name", "Description", "Priority", "Status", "Estimasi", "Phase"],
+    "estimation_unit": "days",
+    "total_phases": 4
+  },
+  "phases": [
+    {
+      "phase_number": 1,
+      "phase_name": "Foundation & Authentication",
+      "description": "Project setup, authentication system, and basic user management",
+      "estimated_duration": "4 weeks"
+    },
+    {
+      "phase_number": 2,
+      "phase_name": "Core Features Development",
+      "description": "Package management, booking process, and payment interface",
+      "estimated_duration": "6 weeks"
+    },
+    {
+      "phase_number": 3,
+      "phase_name": "Advanced Features & Admin",
+      "description": "Order management, admin panel, and mobile optimization",
+      "estimated_duration": "4 weeks"
+    },
+    {
+      "phase_number": 4,
+      "phase_name": "Testing & Deployment",
+      "description": "Testing implementation, performance optimization, and deployment",
+      "estimated_duration": "3 weeks"
+    }
+  ],
+  "tasks": [
+    {
+      "Task ID": "SETUP-001",
+      "Category/Modul": "Project Setup & Configuration",
+      "Task Name": "React Project Initialization",
+      "Description": "Setup React project with Vite, configure project structure and dependencies",
+      "Priority": "High",
+      "Status": "To Do",
+      "Estimasi": "1 hari",
+      "Phase": "Phase 1"
+    },
+    {
+      "Task ID": "SETUP-002",
+      "Category/Modul": "Project Setup & Configuration",
+      "Task Name": "Tailwind CSS Configuration",
+      "Description": "Install and configure Tailwind CSS with custom theme and design system",
+      "Priority": "High",
+      "Status": "To Do",
+      "Estimasi": "1 hari",
+      "Phase": "Phase 1"
+    },
+    {
+      "Task ID": "SETUP-003",
+      "Category/Modul": "Project Setup & Configuration",
+      "Task Name": "UI Component Library Setup",
+      "Description": "Install and configure Ant Design/Material-UI with custom theming",
+      "Priority": "Medium",
+      "Status": "To Do",
+      "Estimasi": "1 hari",
+      "Phase": "Phase 1"
+    },
+    {
+      "Task ID": "SETUP-004",
+      "Category/Modul": "Project Setup & Configuration",
+      "Task Name": "Routing System Implementation",
+      "Description": "Setup React Router with protected routes, lazy loading, and navigation guards",
+      "Priority": "High",
+      "Status": "To Do",
+      "Estimasi": "2 hari",
+      "Phase": "Phase 1"
+    },
+    {
+      "Task ID": "SETUP-005",
+      "Category/Modul": "Project Setup & Configuration",
+      "Task Name": "State Management Setup",
+      "Description": "Implement Redux Toolkit or Zustand for global state management",
+      "Priority": "High",
+      "Status": "To Do",
+      "Estimasi": "2 hari",
+      "Phase": "Phase 1"
+    },
+    {
+      "Task ID": "SETUP-006",
+      "Category/Modul": "Project Setup & Configuration",
+      "Task Name": "API Client Configuration",
+      "Description": "Setup Axios with interceptors, error handling, and token management",
+      "Priority": "High",
+      "Status": "To Do",
+      "Estimasi": "1 hari",
+      "Phase": "Phase 1"
+    },
+    {
+      "Task ID": "SETUP-007",
+      "Category/Modul": "Project Setup & Configuration",
+      "Task Name": "Development Environment Setup",
+      "Description": "Configure ESLint, Prettier, TypeScript, and development scripts",
+      "Priority": "Medium",
+      "Status": "To Do",
+      "Estimasi": "1 hari",
+      "Phase": "Phase 1"
+    },
+    {
+      "Task ID": "AUTH-001",
+      "Category/Modul": "Authentication & Authorization",
+      "Task Name": "Login Page Implementation",
+      "Description": "Create responsive login page with email/password form and Google OAuth button",
+      "Priority": "High",
+      "Status": "To Do",
+      "Estimasi": "2 hari",
+      "Phase": "Phase 1"
+    },
+    {
+      "Task ID": "AUTH-002",
+      "Category/Modul": "Authentication & Authorization",
+      "Task Name": "Registration Page Implementation",
+      "Description": "Create multi-step registration form with validation and email verification",
+      "Priority": "High",
+      "Status": "To Do",
+      "Estimasi": "3 hari",
+      "Phase": "Phase 1"
+    },
+    {
+      "Task ID": "AUTH-003",
+      "Category/Modul": "Authentication & Authorization",
+      "Task Name": "Forgot Password Interface",
+      "Description": "Create forgot password form with email input and reset flow",
+      "Priority": "Medium",
+      "Status": "To Do",
+      "Estimasi": "1 hari",
+      "Phase": "Phase 1"
+    },
+    {
+      "Task ID": "AUTH-004",
+      "Category/Modul": "Authentication & Authorization",
+      "Task Name": "Google OAuth Integration UI",
+      "Description": "Implement Google sign-in button and callback handling UI",
+      "Priority": "Medium",
+      "Status": "To Do",
+      "Estimasi": "2 hari",
+      "Phase": "Phase 1"
+    },
+    {
+      "Task ID": "AUTH-005",
+      "Category/Modul": "Authentication & Authorization",
+      "Task Name": "Authentication Context Provider",
+      "Description": "Create authentication context with login, logout, and user state management",
+      "Priority": "High",
+      "Status": "To Do",
+      "Estimasi": "2 hari",
+      "Phase": "Phase 1"
+    },
+    {
+      "Task ID": "AUTH-006",
+      "Category/Modul": "Authentication & Authorization",
+      "Task Name": "JWT Token Management",
+      "Description": "Implementasi JWT untuk session management dan refresh token",
+      "Priority": "High",
+      "Status": "To Do",
+      "Estimasi": "2 hari",
+      "Phase": "Phase 1"
+    },
+    {
+      "Task ID": "AUTH-007",
+      "Category/Modul": "Authentication & Authorization",
+      "Task Name": "Role-Based Access Control",
+      "Description": "Setup roles: Admin User Agent dengan permission berbeda",
+      "Priority": "Medium",
+      "Status": "To Do",
+      "Estimasi": "2 hari",
+      "Phase": "Phase 1"
+    },
+    {
+      "Task ID": "AUTH-008",
+      "Category/Modul": "Authentication & Authorization",
+      "Task Name": "Protected Route Components",
+      "Description": "Create higher-order components for route protection and redirect logic",
+      "Priority": "High",
+      "Status": "To Do",
+      "Estimasi": "1 hari",
+      "Phase": "Phase 1"
+    },
+    {
+      "Task ID": "PROFILE-001",
+      "Category/Modul": "User Profile Management",
+      "Task Name": "Create Profile Form",
+      "Description": "Form lengkap: nama lengkap no telepon email tanggal lahir jenis kelamin",
+      "Priority": "High",
+      "Status": "To Do",
+      "Estimasi": "3 hari",
+      "Phase": "Phase 1"
+    },
+    {
+      "Task ID": "PROFILE-002",
+      "Category/Modul": "User Profile Management",
+      "Task Name": "Upload KTP Photo",
+      "Description": "Feature upload dan preview foto KTP dengan validasi format dan size",
+      "Priority": "High",
+      "Status": "To Do",
+      "Estimasi": "2 hari",
+      "Phase": "Phase 1"
+    },
+    {
+      "Task ID": "PROFILE-003",
+      "Category/Modul": "User Profile Management",
+      "Task Name": "Upload Passport Photo",
+      "Description": "Feature upload dan preview foto Passport dengan validasi format dan size",
+      "Priority": "High",
+      "Status": "To Do",
+      "Estimasi": "2 hari",
+      "Phase": "Phase 1"
+    },
+    {
+      "Task ID": "PROFILE-004",
+      "Category/Modul": "User Profile Management",
+      "Task Name": "Document Number Management",
+      "Description": "Create forms for KTP/Passport numbers with validation",
+      "Priority": "Medium",
+      "Status": "To Do",
+      "Estimasi": "2 hari",
+      "Phase": "Phase 1"
+    },
+    {
+      "Task ID": "PROFILE-005",
+      "Category/Modul": "User Profile Management",
+      "Task Name": "Bank Details Management UI",
+      "Description": "Create form for bank name, account number, and account name (A.N)",
+      "Priority": "Medium",
+      "Status": "To Do",
+      "Estimasi": "2 hari",
+      "Phase": "Phase 1"
+    },
+    {
+      "Task ID": "PROFILE-006",
+      "Category/Modul": "User Profile Management",
+      "Task Name": "Password Change Interface",
+      "Description": "Create secure password change form with current/new password fields",
+      "Priority": "Medium",
+      "Status": "To Do",
+      "Estimasi": "2 hari",
+      "Phase": "Phase 1"
+    },
+    {
+      "Task ID": "PROFILE-007",
+      "Category/Modul": "User Profile Management",
+      "Task Name": "Profile Dashboard Layout",
+      "Description": "Create main profile dashboard with sidebar navigation and content areas",
+      "Priority": "High",
+      "Status": "To Do",
+      "Estimasi": "2 hari",
+      "Phase": "Phase 1"
+    },
+    {
+      "Task ID": "PROFILE-008",
+      "Category/Modul": "User Profile Management",
+      "Task Name": "Profile Picture Upload",
+      "Description": "Upload dan crop foto profile user",
+      "Priority": "Low",
+      "Status": "To Do",
+      "Estimasi": "2 hari",
+      "Phase": "Phase 1"
+    },
+    {
+      "Task ID": "PKG-001",
+      "Category/Modul": "Package Management",
+      "Task Name": "Package Type Categories",
+      "Description": "Setup 5 tipe paket: Private Umrah Plus (Negara) Umrah Plus (Lokal) Umrah Plus Liburan Paket Request",
+      "Priority": "High",
+      "Status": "To Do",
+      "Estimasi": "2 hari",
+      "Phase": "Phase 2"
+    },
+    {
+      "Task ID": "PKG-002",
+      "Category/Modul": "Package Management",
+      "Task Name": "Package Class System",
+      "Description": "Implementasi 5 class: Super Executive Executive Bisnis Ekonomis Premium",
+      "Priority": "High",
+      "Status": "To Do",
+      "Estimasi": "2 hari",
+      "Phase": "Phase 2"
+    },
+    {
+      "Task ID": "PKG-003",
+      "Category/Modul": "Package Management",
+      "Task Name": "Package Listing Page Layout",
+      "Description": "Create main package listing page with grid/list view toggle and filters",
+      "Priority": "High",
+      "Status": "To Do",
+      "Estimasi": "3 hari",
+      "Phase": "Phase 2"
+    },
+    {
+      "Task ID": "PKG-004",
+      "Category/Modul": "Package Management",
+      "Task Name": "Package Filter System",
+      "Description": "Create comprehensive filtering system for package types, classes, dates, and prices",
+      "Priority": "High",
+      "Status": "To Do",
+      "Estimasi": "4 hari",
+      "Phase": "Phase 2"
+    },
+    {
+      "Task ID": "PKG-005",
+      "Category/Modul": "Package Management",
+      "Task Name": "Package Card Component",
+      "Description": "Create reusable package card component with images, ratings, and key info",
+      "Priority": "High",
+      "Status": "To Do",
+      "Estimasi": "2 hari",
+      "Phase": "Phase 2"
+    },
+    {
+      "Task ID": "PKG-006",
+      "Category/Modul": "Package Management",
+      "Task Name": "Package Detail Page",
+      "Description": "Create comprehensive package detail page with tabs and extensive information",
+      "Priority": "High",
+      "Status": "To Do",
+      "Estimasi": "4 hari",
+      "Phase": "Phase 2"
+    },
+    {
+      "Task ID": "PKG-007",
+      "Category/Modul": "Package Management",
+      "Task Name": "Package Search & Suggestions",
+      "Description": "Implement search functionality with autocomplete and suggestion system",
+      "Priority": "Medium",
+      "Status": "To Do",
+      "Estimasi": "3 hari",
+      "Phase": "Phase 2"
+    },
+    {
+      "Task ID": "PKG-008",
+      "Category/Modul": "Package Management",
+      "Task Name": "Package Comparison Feature",
+      "Description": "Create side-by-side package comparison interface",
+      "Priority": "Medium",
+      "Status": "To Do",
+      "Estimasi": "3 hari",
+      "Phase": "Phase 2"
+    },
+    {
+      "Task ID": "PKG-009",
+      "Category/Modul": "Package Management",
+      "Task Name": "Package Availability Calendar",
+      "Description": "Create interactive calendar showing package availability and pricing",
+      "Priority": "Medium",
+      "Status": "To Do",
+      "Estimasi": "4 hari",
+      "Phase": "Phase 2"
+    },
+    {
+      "Task ID": "BOOK-001",
+      "Category/Modul": "Booking Process",
+      "Task Name": "Multi-step Booking Wizard",
+      "Description": "Create step-by-step booking process with progress indicator and navigation",
+      "Priority": "High",
+      "Status": "To Do",
+      "Estimasi": "5 hari",
+      "Phase": "Phase 2"
+    },
+    {
+      "Task ID": "BOOK-002",
+      "Category/Modul": "Booking Process",
+      "Task Name": "Pilgrim Data Collection Form",
+      "Description": "Create comprehensive form for collecting pilgrim details with validation",
+      "Priority": "High",
+      "Status": "To Do",
+      "Estimasi": "4 hari",
+      "Phase": "Phase 2"
+    },
+    {
+      "Task ID": "BOOK-003",
+      "Category/Modul": "Booking Process",
+      "Task Name": "Jemaah Counter Component",
+      "Description": "Create interactive counter for jumlah jemaah with bayi/dewasa options",
+      "Priority": "High",
+      "Status": "To Do",
+      "Estimasi": "2 hari",
+      "Phase": "Phase 2"
+    },
+    {
+      "Task ID": "BOOK-004",
+      "Category/Modul": "Booking Process",
+      "Task Name": "Room Selection Interface",
+      "Description": "Create room type selection (Double/Triple/Quad) with visual representation",
+      "Priority": "High",
+      "Status": "To Do",
+      "Estimasi": "3 hari",
+      "Phase": "Phase 2"
+    },
+    {
+      "Task ID": "BOOK-005",
+      "Category/Modul": "Booking Process",
+      "Task Name": "Booking Summary Component",
+      "Description": "Create comprehensive booking summary with all details and pricing breakdown",
+      "Priority": "High",
+      "Status": "To Do",
+      "Estimasi": "2 hari",
+      "Phase": "Phase 2"
+    },
+    {
+      "Task ID": "BOOK-006",
+      "Category/Modul": "Booking Process",
+      "Task Name": "Booking Confirmation Flow",
+      "Description": "Create booking confirmation page with success states and next steps",
+      "Priority": "High",
+      "Status": "To Do",
+      "Estimasi": "2 hari",
+      "Phase": "Phase 2"
+    },
+    {
+      "Task ID": "BOOK-007",
+      "Category/Modul": "Booking Process",
+      "Task Name": "Booking Modification Interface",
+      "Description": "Create interface for modifying existing bookings with restrictions",
+      "Priority": "Medium",
+      "Status": "To Do",
+      "Estimasi": "3 hari",
+      "Phase": "Phase 2"
+    },
+    {
+      "Task ID": "PAY-001",
+      "Category/Modul": "Payment Management",
+      "Task Name": "Payment Method Selection",
+      "Description": "Create payment method selection interface with bank transfer options",
+      "Priority": "High",
+      "Status": "To Do",
+      "Estimasi": "2 hari",
+      "Phase": "Phase 2"
+    },
+    {
+      "Task ID": "PAY-002",
+      "Category/Modul": "Payment Management",
+      "Task Name": "Bank Transfer Information Display",
+      "Description": "Create interface showing destination bank, account name, and account number",
+      "Priority": "High",
+      "Status": "To Do",
+      "Estimasi": "2 hari",
+      "Phase": "Phase 2"
+    },
+    {
+      "Task ID": "PAY-003",
+      "Category/Modul": "Payment Management",
+      "Task Name": "Transaction Code Generation UI",
+      "Description": "Create interface for generating and displaying unique transaction codes",
+      "Priority": "High",
+      "Status": "To Do",
+      "Estimasi": "2 hari",
+      "Phase": "Phase 2"
+    },
+    {
+      "Task ID": "PAY-004",
+      "Category/Modul": "Payment Management",
+      "Task Name": "Payment Proof Upload Interface",
+      "Description": "Create drag-and-drop interface for uploading payment proof documents",
+      "Priority": "High",
+      "Status": "To Do",
+      "Estimasi": "3 hari",
+      "Phase": "Phase 2"
+    },
+    {
+      "Task ID": "PAY-005",
+      "Category/Modul": "Payment Management",
+      "Task Name": "Payment Status Dashboard",
+      "Description": "Create real-time payment status tracking with notifications",
+      "Priority": "High",
+      "Status": "To Do",
+      "Estimasi": "3 hari",
+      "Phase": "Phase 2"
+    },
+    {
+      "Task ID": "PAY-006",
+      "Category/Modul": "Payment Management",
+      "Task Name": "Payment History & Receipts",
+      "Description": "Create payment history page with receipt downloads and transaction details",
+      "Priority": "Medium",
+      "Status": "To Do",
+      "Estimasi": "2 hari",
+      "Phase": "Phase 2"
+    },
+    {
+      "Task ID": "ORDER-001",
+      "Category/Modul": "Order Management",
+      "Task Name": "Order Dashboard Layout",
+      "Description": "Create main order management dashboard with status overview",
+      "Priority": "High",
+      "Status": "To Do",
+      "Estimasi": "3 hari",
+      "Phase": "Phase 3"
+    },
+    {
+      "Task ID": "ORDER-002",
+      "Category/Modul": "Order Management",
+      "Task Name": "Order Status Management",
+      "Description": "Create interface for viewing and tracking all order statuses",
+      "Priority": "High",
+      "Status": "To Do",
+      "Estimasi": "4 hari",
+      "Phase": "Phase 3"
+    },
+    {
+      "Task ID": "ORDER-003",
+      "Category/Modul": "Order Management",
+      "Task Name": "Order Detail View",
+      "Description": "Create comprehensive order detail page with all booking information",
+      "Priority": "High",
+      "Status": "To Do",
+      "Estimasi": "3 hari",
+      "Phase": "Phase 3"
+    },
+    {
+      "Task ID": "ORDER-004",
+      "Category/Modul": "Order Management",
+      "Task Name": "Order History & Filtering",
+      "Description": "Create order history page with advanced filtering and search",
+      "Priority": "Medium",
+      "Status": "To Do",
+      "Estimasi": "3 hari",
+      "Phase": "Phase 3"
+    },
+    {
+      "Task ID": "ORDER-005",
+      "Category/Modul": "Order Management",
+      "Task Name": "Order Communication Interface",
+      "Description": "Create messaging system for customer support and order updates",
+      "Priority": "Medium",
+      "Status": "To Do",
+      "Estimasi": "4 hari",
+      "Phase": "Phase 3"
+    },
+    {
+      "Task ID": "ORDER-006",
+      "Category/Modul": "Order Management",
+      "Task Name": "Order Document Management",
+      "Description": "Create interface for managing order-related documents and tickets",
+      "Priority": "Low",
+      "Status": "To Do",
+      "Estimasi": "3 hari",
+      "Phase": "Phase 3"
+    },
+    {
+      "Task ID": "ADMIN-001",
+      "Category/Modul": "Admin Panel",
+      "Task Name": "Admin Dashboard Layout",
+      "Description": "Create comprehensive admin dashboard with sidebar navigation and metrics",
+      "Priority": "High",
+      "Status": "To Do",
+      "Estimasi": "4 hari",
+      "Phase": "Phase 3"
+    },
+    {
+      "Task ID": "ADMIN-002",
+      "Category/Modul": "Admin Panel",
+      "Task Name": "User Management Interface",
+      "Description": "Create admin interface for managing all users and their profiles",
+      "Priority": "High",
+      "Status": "To Do",
+      "Estimasi": "5 hari",
+      "Phase": "Phase 3"
+    },
+    {
+      "Task ID": "ADMIN-003",
+      "Category/Modul": "Admin Panel",
+      "Task Name": "Package Management Admin",
+      "Description": "Create admin interface for CRUD operations on packages",
+      "Priority": "High",
+      "Status": "To Do",
+      "Estimasi": "6 hari",
+      "Phase": "Phase 3"
+    },
+    {
+      "Task ID": "ADMIN-004",
+      "Category/Modul": "Admin Panel",
+      "Task Name": "Order Management Admin",
+      "Description": "Create admin interface for managing all orders and updating statuses",
+      "Priority": "High",
+      "Status": "To Do",
+      "Estimasi": "5 hari",
+      "Phase": "Phase 3"
+    },
+    {
+      "Task ID": "ADMIN-005",
+      "Category/Modul": "Admin Panel",
+      "Task Name": "Sales & Analytics Dashboard",
+      "Description": "Create analytics dashboard with charts and reports",
+      "Priority": "Medium",
+      "Status": "To Do",
+      "Estimasi": "5 hari",
+      "Phase": "Phase 3"
+    },
+    {
+      "Task ID": "ADMIN-006",
+      "Category/Modul": "Admin Panel",
+      "Task Name": "System Settings Interface",
+      "Description": "Create admin interface for system configuration and settings",
+      "Priority": "Low",
+      "Status": "To Do",
+      "Estimasi": "3 hari",
+      "Phase": "Phase 3"
+    },
+    {
+      "Task ID": "SERVICE-001",
+      "Category/Modul": "Services & Information",
+      "Task Name": "Services Landing Page",
+      "Description": "Create comprehensive 'Layanan Kami' page showcasing all services",
+      "Priority": "Medium",
+      "Status": "To Do",
+      "Estimasi": "4 hari",
+      "Phase": "Phase 3"
+    },
+    {
+      "Task ID": "SERVICE-002",
+      "Category/Modul": "Services & Information",
+      "Task Name": "Service Detail Pages",
+      "Description": "Create individual detail pages for each service with pricing",
+      "Priority": "Medium",
+      "Status": "To Do",
+      "Estimasi": "3 hari",
+      "Phase": "Phase 3"
+    },
+    {
+      "Task ID": "SERVICE-003",
+      "Category/Modul": "Services & Information",
+      "Task Name": "Pilgrim Management Interface",
+      "Description": "Create 'Manajemen Jamaah' section for group and individual management",
+      "Priority": "Medium",
+      "Status": "To Do",
+      "Estimasi": "5 hari",
+      "Phase": "Phase 3"
+    },
+    {
+      "Task ID": "SERVICE-004",
+      "Category/Modul": "Services & Information",
+      "Task Name": "FAQ & Help Center",
+      "Description": "Create FAQ page and help center with searchable content",
+      "Priority": "Low",
+      "Status": "To Do",
+      "Estimasi": "3 hari",
+      "Phase": "Phase 3"
+    },
+    {
+      "Task ID": "SERVICE-005",
+      "Category/Modul": "Services & Information",
+      "Task Name": "About & Contact Pages",
+      "Description": "Create company information and contact pages with forms",
+      "Priority": "Low",
+      "Status": "To Do",
+      "Estimasi": "3 hari",
+      "Phase": "Phase 3"
+    },
+    {
+      "Task ID": "MOBILE-001",
+      "Category/Modul": "Mobile Responsiveness",
+      "Task Name": "Mobile Navigation System",
+      "Description": "Implement mobile-first navigation with hamburger menu and drawer",
+      "Priority": "High",
+      "Status": "To Do",
+      "Estimasi": "3 hari",
+      "Phase": "Phase 3"
+    },
+    {
+      "Task ID": "MOBILE-002",
+      "Category/Modul": "Mobile Responsiveness",
+      "Task Name": "Responsive Layout System",
+      "Description": "Ensure all pages are fully responsive across all device sizes",
+      "Priority": "High",
+      "Status": "To Do",
+      "Estimasi": "6 hari",
+      "Phase": "Phase 3"
+    },
+    {
+      "Task ID": "MOBILE-003",
+      "Category/Modul": "Mobile Responsiveness",
+      "Task Name": "Touch-friendly Interactions",
+      "Description": "Optimize all interactive elements for touch devices",
+      "Priority": "High",
+      "Status": "To Do",
+      "Estimasi": "4 hari",
+      "Phase": "Phase 3"
+    },
+    {
+      "Task ID": "MOBILE-004",
+      "Category/Modul": "Mobile Responsiveness",
+      "Task Name": "Loading States & Skeletons",
+      "Description": "Implement loading states and skeleton screens for better UX",
+      "Priority": "Medium",
+      "Status": "To Do",
+      "Estimasi": "3 hari",
+      "Phase": "Phase 3"
+    },
+    {
+      "Task ID": "MOBILE-005",
+      "Category/Modul": "Mobile Responsiveness",
+      "Task Name": "Performance Optimization",
+      "Description": "Optimize frontend performance with code splitting and lazy loading",
+      "Priority": "Medium",
+      "Status": "To Do",
+      "Estimasi": "4 hari",
+      "Phase": "Phase 3"
+    },
+    {
+      "Task ID": "TEST-001",
+      "Category/Modul": "Testing & Quality",
+      "Task Name": "Component Testing Setup",
+      "Description": "Setup Jest/React Testing Library for component unit testing",
+      "Priority": "High",
+      "Status": "To Do",
+      "Estimasi": "3 hari",
+      "Phase": "Phase 4"
+    },
+    {
+      "Task ID": "TEST-002",
+      "Category/Modul": "Testing & Quality",
+      "Task Name": "E2E Testing Implementation",
+      "Description": "Implement Cypress/Playwright for end-to-end testing",
+      "Priority": "High",
+      "Status": "To Do",
+      "Estimasi": "5 hari",
+      "Phase": "Phase 4"
+    },
+    {
+      "Task ID": "TEST-003",
+      "Category/Modul": "Testing & Quality",
+      "Task Name": "Visual Regression Testing",
+      "Description": "Setup visual regression testing for UI consistency",
+      "Priority": "Medium",
+      "Status": "To Do",
+      "Estimasi": "3 hari",
+      "Phase": "Phase 4"
+    },
+    {
+      "Task ID": "TEST-004",
+      "Category/Modul": "Testing & Quality",
+      "Task Name": "Accessibility Testing & Implementation",
+      "Description": "Implement WCAG compliance and accessibility features",
+      "Priority": "High",
+      "Status": "To Do",
+      "Estimasi": "4 hari",
+      "Phase": "Phase 4"
+    },
+    {
+      "Task ID": "TEST-005",
+      "Category/Modul": "Testing & Quality",
+      "Task Name": "Performance Testing",
+      "Description": "Test and optimize frontend performance metrics",
+      "Priority": "Medium",
+      "Status": "To Do",
+      "Estimasi": "3 hari",
+      "Phase": "Phase 4"
+    },
+    {
+      "Task ID": "DEPLOY-001",
+      "Category/Modul": "Deployment & Build",
+      "Task Name": "Build Optimization",
+      "Description": "Optimize production build with minification, tree shaking, and compression",
+      "Priority": "High",
+      "Status": "To Do",
+      "Estimasi": "2 hari",
+      "Phase": "Phase 4"
+    },
+    {
+      "Task ID": "DEPLOY-002",
+      "Category/Modul": "Deployment & Build",
+      "Task Name": "Deployment Pipeline",
+      "Description": "Setup CI/CD pipeline for automated deployment",
+      "Priority": "High",
+      "Status": "To Do",
+      "Estimasi": "2 hari",
+      "Phase": "Phase 4"
+    },
+    {
+      "Task ID": "DEPLOY-003",
+      "Category/Modul": "Deployment & Build",
+      "Task Name": "Environment Configuration",
+      "Description": "Manage environment variables and configuration for different stages",
+      "Priority": "Medium",
+      "Status": "To Do",
+      "Estimasi": "1 hari",
+      "Phase": "Phase 4"
+    }
+  ],
+  "summary": {
+    "total_tasks": 70,
+    "total_days": 175,
+    "high_priority": 45,
+    "medium_priority": 21,
+    "low_priority": 4
+  },
+  "metadata": {
+    "created_date": "2025-11-20",
+    "version": "1.0",
+    "author": "MiniMax Agent"
+  }
+}

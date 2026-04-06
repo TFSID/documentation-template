@@ -1,0 +1,176 @@
+{
+  "project": "Modul Konsultasi EduTrip - Aplikasi Umrah Haji",
+  "version": "1.0.0",
+  "description": "Todo list khusus untuk modul konsultasi dan edukasi trip",
+  "technology_stack": {
+    "frontend": "React.js / Vue.js",
+    "backend": "Node.js / Python",
+    "database": "PostgreSQL / MongoDB",
+    "ui_framework": "Tailwind CSS / Ant Design"
+  },
+  "modules": [
+    {
+      "name": "Consultation & EduTrip System",
+      "tasks": [
+        {
+          "id": "EDU-001",
+          "title": "Consultation Booking System",
+          "description": "Sistem booking konsultasi dengan konsultan religious dan travel",
+          "priority": "High",
+          "status": "To Do",
+          "estimated_hours": 12,
+          "deliverables": ["Consultation calendar", "Time slot management", "Booking confirmation", "Payment integration"]
+        },
+        {
+          "id": "EDU-002",
+          "title": "Educational Content Library",
+          "description": "Perpustakaan konten edukasi tentang Haji, Umrah, dan travel tips",
+          "priority": "High",
+          "status": "To Do",
+          "estimated_hours": 15,
+          "deliverables": ["Content management", "Video lessons", "Article database", "Resource downloads"]
+        },
+        {
+          "id": "EDU-003",
+          "title": "Interactive Q&A Platform",
+          "description": "Platform tanya jawab interaktif untuk jemaah",
+          "priority": "High",
+          "status": "To Do",
+          "estimated_hours": 10,
+          "deliverables": ["Q&A interface", "Question categorization", "Expert responses", "Voting system"]
+        },
+        {
+          "id": "EDU-004",
+          "title": "Virtual Tour & Preview",
+          "description": "Tur virtual dan preview tempat suci dan destinos penting",
+          "priority": "Medium",
+          "status": "To Do",
+          "estimated_hours": 20,
+          "deliverables": ["360° tours", "Virtual reality", "Photo galleries", "Interactive maps"]
+        },
+        {
+          "id": "EDU-005",
+          "title": "Cultural Education Module",
+          "description": "Modul edukasi budaya dan etiquette Saudi Arabia",
+          "priority": "Medium",
+          "status": "To Do",
+          "estimated_hours": 12,
+          "deliverables": ["Cultural guide", "Etiquette lessons", "Language basics", "Do's and don'ts"]
+        },
+        {
+          "id": "EDU-006",
+          "title": "Pre-Trip Preparation Course",
+          "description": "Kursus persiapan perjalanan Haji/Umrah",
+          "priority": "High",
+          "status": "To Do",
+          "estimated_hours": 18,
+          "deliverables": ["Course modules", "Progress tracking", "Certificate system", "Assessment tests"]
+        },
+        {
+          "id": "EDU-007",
+          "title": "Live Webinar System",
+          "description": "Sistem webinar langsung dengan expert dan scholar",
+          "priority": "Medium",
+          "status": "To Do",
+          "estimated_hours": 15,
+          "deliverables": ["Webinar platform", "Live streaming", "Recording system", "Chat integration"]
+        },
+        {
+          "id": "EDU-008",
+          "title": "Knowledge Assessment Tool",
+          "description": "Alat penilaian pengetahuan dan readiness jemaah",
+          "priority": "Medium",
+          "status": "To Do",
+          "estimated_hours": 10,
+          "deliverables": ["Assessment questions", "Scoring system", "Feedback reports", "Improvement suggestions"]
+        },
+        {
+          "id": "EDU-009",
+          "title": "Personalized Learning Path",
+          "description": "Path pembelajaran yang dipersonalisasi berdasarkan kebutuhan jemaah",
+          "priority": "Medium",
+          "status": "To Do",
+          "estimated_hours": 12,
+          "deliverables": ["Learning algorithms", "Personalized content", "Progress tracking", "Adaptive learning"]
+        },
+        {
+          "id": "EDU-010",
+          "title": "Community Forum & Discussion",
+          "description": "Forum komunitas untuk diskusi jemaah dan sharing pengalaman",
+          "priority": "Low",
+          "status": "To Do",
+          "estimated_hours": 10,
+          "deliverables": ["Forum interface", "Discussion threads", "User moderation", "Expert moderation"]
+        },
+        {
+          "id": "EDU-011",
+          "title": "Multilingual Support",
+          "description": "Dukungan multi-bahasa untuk konten edukasi",
+          "priority": "Medium",
+          "status": "To Do",
+          "estimated_hours": 15,
+          "deliverables": ["Translation system", "Multi-language interface", "Local content", "Cultural adaptation"]
+        },
+        {
+          "id": "EDU-012",
+          "title": "Video Conference Integration",
+          "description": "Integrasi video conference untuk konsultasi private",
+          "priority": "High",
+          "status": "To Do",
+          "estimated_hours": 12,
+          "deliverables": ["Video call system", "Screen sharing", "Recording capability", "Security features"]
+        },
+        {
+          "id": "EDU-013",
+          "title": "Educational Game & Simulation",
+          "description": "Game edukasi dan simulasi ritu Haji/Umrah",
+          "priority": "Low",
+          "status": "To Do",
+          "estimated_hours": 20,
+          "deliverables": ["Educational games", "Ritual simulation", "Interactive learning", "Achievement system"]
+        },
+        {
+          "id": "EDU-014",
+          "title": "Feedback & Rating System",
+          "description": "Sistem feedback dan rating untuk konsultan dan konten edukasi",
+          "priority": "Medium",
+          "status": "To Do",
+          "estimated_hours": 8,
+          "deliverables": ["Rating interface", "Review system", "Quality metrics", "Improvement tracking"]
+        },
+        {
+          "id": "EDU-015",
+          "title": "Mobile Learning App",
+          "description": "Aplikasi mobile untuk pembelajaran on-the-go",
+          "priority": "Medium",
+          "status": "To Do",
+          "estimated_hours": 25,
+          "deliverables": ["Mobile app", "Offline content", "Push notifications", "Synchronization"]
+        },
+        {
+          "id": "EDU-016",
+          "title": "Analytics & Performance Tracking",
+          "description": "Sistem analytics untuk tracking performa edukasi dan engagement",
+          "priority": "Low",
+          "status": "To Do",
+          "estimated_hours": 10,
+          "deliverables": ["Learning analytics", "Engagement metrics", "Performance reports", "Improvement insights"]
+        }
+      ]
+    }
+  ],
+  "summary": {
+    "total_tasks": 16,
+    "total_hours": 224,
+    "total_weeks": 9,
+    "high_priority": 6,
+    "medium_priority": 8,
+    "low_priority": 2
+  },
+  "metadata": {
+    "created_date": "2025-11-20",
+    "version": "1.0",
+    "author": "MiniMax Agent",
+    "language": "Bahasa Indonesia"
+  }
+}

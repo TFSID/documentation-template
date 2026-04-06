@@ -1,0 +1,176 @@
+{
+  "project": "Modul Pendaftaran Haji - Aplikasi Umrah Haji",
+  "version": "1.0.0",
+  "description": "Todo list khusus untuk modul pendaftaran haji",
+  "technology_stack": {
+    "frontend": "React.js / Vue.js",
+    "backend": "Node.js / Python",
+    "database": "PostgreSQL / MongoDB",
+    "ui_framework": "Tailwind CSS / Ant Design"
+  },
+  "modules": [
+    {
+      "name": "Hajj Registration System",
+      "tasks": [
+        {
+          "id": "HAJ-001",
+          "title": "Hajj Quota Management",
+          "description": "Sistem manajemen kuota haji per tahun dan per region",
+          "priority": "High",
+          "status": "To Do",
+          "estimated_hours": 12,
+          "deliverables": ["Quota allocation", "Regional distribution", "Priority system", "Waitlist management"]
+        },
+        {
+          "id": "HAJ-002",
+          "title": "Hajj Application Form",
+          "description": "Form aplikasi haji dengan validasi lengkap dan dokumen wajib",
+          "priority": "High",
+          "status": "To Do",
+          "estimated_hours": 10,
+          "deliverables": ["Application form", "Document checklist", "Form validation", "Multi-step wizard"]
+        },
+        {
+          "id": "HAJ-003",
+          "title": "Eligibility Checker System",
+          "description": "Sistem untuk mengecek kelayakan calon jemaah haji",
+          "priority": "High",
+          "status": "To Do",
+          "estimated_hours": 8,
+          "deliverables": ["Eligibility criteria", "Age verification", "Health check", "Financial capability"]
+        },
+        {
+          "id": "HAJ-004",
+          "title": "Document Management System",
+          "description": "Sistem manajemen dokumen persyaratan haji",
+          "priority": "High",
+          "status": "To Do",
+          "estimated_hours": 12,
+          "deliverables": ["Document upload", "Document verification", "Missing document tracking", "Renewal alerts"]
+        },
+        {
+          "id": "HAJ-005",
+          "title": "Payment Plan & Package Selection",
+          "description": "Sistem rencana pembayaran dan pemilihan paket haji",
+          "priority": "High",
+          "status": "To Do",
+          "estimated_hours": 10,
+          "deliverables": ["Payment plans", "Package comparison", "Installment calculator", "Payment tracking"]
+        },
+        {
+          "id": "HAJ-006",
+          "title": "Health Screening System",
+          "description": "Sistem screening kesehatan dan medical check-up",
+          "priority": "High",
+          "status": "To Do",
+          "estimated_hours": 12,
+          "deliverables": ["Health questionnaire", "Medical records", "Vaccination status", "Health clearance"]
+        },
+        {
+          "id": "HAJ-007",
+          "title": "Training & Education Module",
+          "description": "Modul pelatihan dan edukasi calon jemaah haji",
+          "priority": "Medium",
+          "status": "To Do",
+          "estimated_hours": 15,
+          "deliverables": ["Video lessons", "Quizzes", "Progress tracking", "Certificate system"]
+        },
+        {
+          "id": "HAJ-008",
+          "title": "Approval Workflow System",
+          "description": "Sistem alur persetujuan aplikasi haji",
+          "priority": "High",
+          "status": "To Do",
+          "estimated_hours": 10,
+          "deliverables": ["Multi-level approval", "Review system", "Status tracking", "Notification system"]
+        },
+        {
+          "id": "HAJ-009",
+          "title": "Government Integration API",
+          "description": "Integrasi dengan sistem pemerintah untuk verifikasi data",
+          "priority": "High",
+          "status": "To Do",
+          "estimated_hours": 15,
+          "deliverables": ["Government API", "Data verification", "Status check", "Compliance reporting"]
+        },
+        {
+          "id": "HAJ-010",
+          "title": "Group Formation System",
+          "description": "Sistem pembentukan gruppo jemaah Haji",
+          "priority": "Medium",
+          "status": "To Do",
+          "estimated_hours": 10,
+          "deliverables": ["Group assignment", "Leader selection", "Group communication", "Coordination tools"]
+        },
+        {
+          "id": "HAJ-011",
+          "title": "Pre-departure Orientation",
+          "description": "Sistem orientasi pra-keberangkatan",
+          "priority": "Medium",
+          "status": "To Do",
+          "estimated_hours": 8,
+          "deliverables": ["Orientation schedule", "Checklist system", "Final preparation", "Departure coordination"]
+        },
+        {
+          "id": "HAJ-012",
+          "title": "Real-time Tracking System",
+          "description": "Sistem pelacakan real-time durante viaje Haji",
+          "priority": "Medium",
+          "status": "To Do",
+          "estimated_hours": 12,
+          "deliverables": ["GPS tracking", "Location updates", "Family notifications", "Emergency alerts"]
+        },
+        {
+          "id": "HAJ-013",
+          "title": "Communication Hub",
+          "description": "Pusat komunikasi antara jemaah, keluarga, dan tour leader",
+          "priority": "Medium",
+          "status": "To Do",
+          "estimated_hours": 10,
+          "deliverables": ["Messaging system", "Video calls", "Group chat", "Emergency communication"]
+        },
+        {
+          "id": "HAJ-014",
+          "title": "Post-Hajj Documentation",
+          "description": "Dokumentasi pasca-Haji (sertifikat, foto, laporan)",
+          "priority": "Low",
+          "status": "To Do",
+          "estimated_hours": 8,
+          "deliverables": ["Certificate generation", "Photo gallery", "Experience reports", "Memory book"]
+        },
+        {
+          "id": "HAJ-015",
+          "title": "Compliance & Reporting",
+          "description": "Sistem pelaporan dan kepatuhan regulasi",
+          "priority": "High",
+          "status": "To Do",
+          "estimated_hours": 12,
+          "deliverables": ["Compliance tracking", "Regulatory reports", "Audit trails", "Documentation system"]
+        },
+        {
+          "id": "HAJ-016",
+          "title": "Analytics Dashboard",
+          "description": "Dashboard analytics untuk monitoring aplikasi dan jemaah",
+          "priority": "Medium",
+          "status": "To Do",
+          "estimated_hours": 10,
+          "deliverables": ["Registration metrics", "Approval rates", "Financial tracking", "Performance analytics"]
+        }
+      ]
+    }
+  ],
+  "summary": {
+    "total_tasks": 16,
+    "total_hours": 184,
+    "total_weeks": 7,
+    "high_priority": 10,
+    "medium_priority": 5,
+    "low_priority": 1
+  },
+  "metadata": {
+    "created_date": "2025-11-20",
+    "version": "1.0",
+    "author": "MiniMax Agent",
+    "language": "Bahasa Indonesia"
+  }
+}

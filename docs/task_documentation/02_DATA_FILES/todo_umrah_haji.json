@@ -1,0 +1,559 @@
+{
+  "project": "Umrah Haji Booking Application",
+  "version": "1.0.0",
+  "description": "Comprehensive Umrah and Haji booking application with user authentication, profile management, and package booking",
+  "categories": [
+    {
+      "name": "Project Setup & Infrastructure",
+      "tasks": [
+        {
+          "id": "PS001",
+          "title": "Setup Project Repository",
+          "description": "Initialize Git repository and setup project structure",
+          "priority": "High",
+          "status": "Todo",
+          "estimated_hours": 2,
+          "dependencies": []
+        },
+        {
+          "id": "PS002",
+          "title": "Database Design & Setup",
+          "description": "Design and setup database schema for users, packages, bookings, payments",
+          "priority": "High",
+          "status": "Todo",
+          "estimated_hours": 8,
+          "dependencies": []
+        },
+        {
+          "id": "PS003",
+          "title": "Authentication System Setup",
+          "description": "Setup JWT tokens, session management, and security configurations",
+          "priority": "High",
+          "status": "Todo",
+          "estimated_hours": 6,
+          "dependencies": ["PS002"]
+        },
+        {
+          "id": "PS004",
+          "title": "Google OAuth Integration",
+          "description": "Integrate Google sign-in functionality",
+          "priority": "Medium",
+          "status": "Todo",
+          "estimated_hours": 4,
+          "dependencies": ["PS003"]
+        },
+        {
+          "id": "PS005",
+          "title": "File Upload System",
+          "description": "Setup secure file upload for KTP/Passport documents and payment proofs",
+          "priority": "Medium",
+          "status": "Todo",
+          "estimated_hours": 5,
+          "dependencies": ["PS002"]
+        }
+      ]
+    },
+    {
+      "name": "User Authentication & Profile Management",
+      "tasks": [
+        {
+          "id": "AU001",
+          "title": "User Registration System",
+          "description": "Create registration form with validation and email verification",
+          "priority": "High",
+          "status": "Todo",
+          "estimated_hours": 6,
+          "dependencies": ["PS003"]
+        },
+        {
+          "id": "AU002",
+          "title": "User Login System",
+          "description": "Implement login form with email/password and remember me feature",
+          "priority": "High",
+          "status": "Todo",
+          "estimated_hours": 4,
+          "dependencies": ["PS003"]
+        },
+        {
+          "id": "AU003",
+          "title": "Google Sign-in Integration",
+          "description": "Complete Google OAuth implementation for seamless login",
+          "priority": "Medium",
+          "status": "Todo",
+          "estimated_hours": 4,
+          "dependencies": ["PS004", "AU002"]
+        },
+        {
+          "id": "AU004",
+          "title": "Profile Management Interface",
+          "description": "Create comprehensive profile management UI with all user details",
+          "priority": "High",
+          "status": "Todo",
+          "estimated_hours": 8,
+          "dependencies": ["AU001", "PS005"]
+        },
+        {
+          "id": "AU005",
+          "title": "ID Document Management",
+          "description": "Upload and manage KTP/Passport photos and document numbers",
+          "priority": "High",
+          "status": "Todo",
+          "estimated_hours": 6,
+          "dependencies": ["PS005", "AU004"]
+        },
+        {
+          "id": "AU006",
+          "title": "Password Management System",
+          "description": "Implement forgot password and change password functionality",
+          "priority": "Medium",
+          "status": "Todo",
+          "estimated_hours": 4,
+          "dependencies": ["AU002"]
+        },
+        {
+          "id": "AU007",
+          "title": "Bank Details Management",
+          "description": "Add bank account information for refunds (bank name, account number, account name)",
+          "priority": "Medium",
+          "status": "Todo",
+          "estimated_hours": 3,
+          "dependencies": ["AU004"]
+        }
+      ]
+    },
+    {
+      "name": "Package Management System",
+      "tasks": [
+        {
+          "id": "PM001",
+          "title": "Package Types Implementation",
+          "description": "Create database and UI for: paket private, umrah plus (negara), umrah plus (lokal), umrah plus liburan, paket request",
+          "priority": "High",
+          "status": "Todo",
+          "estimated_hours": 10,
+          "dependencies": ["PS002"]
+        },
+        {
+          "id": "PM002",
+          "title": "Package Class System",
+          "description": "Implement package classes: super executive, executive, bisnis, ekonomis, premium with ratings",
+          "priority": "High",
+          "status": "Todo",
+          "estimated_hours": 8,
+          "dependencies": ["PM001"]
+        },
+        {
+          "id": "PM003",
+          "title": "Package Details Management",
+          "description": "Create forms for package description, departure/return dates, flight info, hotel details",
+          "priority": "High",
+          "status": "Todo",
+          "estimated_hours": 12,
+          "dependencies": ["PM001"]
+        },
+        {
+          "id": "PM004",
+          "title": "Room Type System",
+          "description": "Implement room type selection: Double, Triple, Quad with pricing",
+          "priority": "Medium",
+          "status": "Todo",
+          "estimated_hours": 6,
+          "dependencies": ["PM003"]
+        },
+        {
+          "id": "PM005",
+          "title": "Facilities Management",
+          "description": "Manage included facilities: air zamzam, snacks, food & drinks, mutawwif, tour leader, handling, transportation, administration, equipment, visa, flight tickets",
+          "priority": "Medium",
+          "status": "Todo",
+          "estimated_hours": 8,
+          "dependencies": ["PM003"]
+        },
+        {
+          "id": "PM006",
+          "title": "Package Display System",
+          "description": "Create package listing with availability, total sales, ratings, and filtering options",
+          "priority": "High",
+          "status": "Todo",
+          "estimated_hours": 10,
+          "dependencies": ["PM001", "PM002", "PM005"]
+        },
+        {
+          "id": "PM007",
+          "title": "Package Detail View",
+          "description": "Design comprehensive package detail page with all information and booking CTA",
+          "priority": "High",
+          "status": "Todo",
+          "estimated_hours": 8,
+          "dependencies": ["PM006"]
+        }
+      ]
+    },
+    {
+      "name": "Booking System",
+      "tasks": [
+        {
+          "id": "BK001",
+          "title": "Multi-step Booking Form",
+          "description": "Create multi-step booking process with progress indicator",
+          "priority": "High",
+          "status": "Todo",
+          "estimated_hours": 12,
+          "dependencies": ["PM007"]
+        },
+        {
+          "id": "BK002",
+          "title": "Pilgrim Data Collection",
+          "description": "Implement pilgrim data form with full name, age, gender, ID numbers",
+          "priority": "High",
+          "status": "Todo",
+          "estimated_hours": 10,
+          "dependencies": ["BK001"]
+        },
+        {
+          "id": "BK003",
+          "title": "Jemaah Counter System",
+          "description": "Create counter for jumlah jemaah with bayi (infant) and dewasa (adult) options",
+          "priority": "High",
+          "status": "Todo",
+          "estimated_hours": 6,
+          "dependencies": ["BK001"]
+        },
+        {
+          "id": "BK004",
+          "title": "Pilgrim Type Selection",
+          "description": "Implement tipe jamaah selection with appropriate categorization",
+          "priority": "Medium",
+          "status": "Todo",
+          "estimated_hours": 4,
+          "dependencies": ["BK003"]
+        },
+        {
+          "id": "BK005",
+          "title": "Room Assignment System",
+          "description": "Automatic room allocation based on jumlah jemaah and room type preferences",
+          "priority": "Medium",
+          "status": "Todo",
+          "estimated_hours": 8,
+          "dependencies": ["BK003", "PM004"]
+        },
+        {
+          "id": "BK006",
+          "title": "Booking Summary & Review",
+          "description": "Create booking summary page with all details for user confirmation",
+          "priority": "High",
+          "status": "Todo",
+          "estimated_hours": 6,
+          "dependencies": ["BK001", "BK005"]
+        }
+      ]
+    },
+    {
+      "name": "Payment Management System",
+      "tasks": [
+        {
+          "id": "PY001",
+          "title": "Bank Transfer Payment System",
+          "description": "Implement bank transfer payment with destination bank, account name, account number",
+          "priority": "High",
+          "status": "Todo",
+          "estimated_hours": 10,
+          "dependencies": ["BK006"]
+        },
+        {
+          "id": "PY002",
+          "title": "Transaction Code Generation",
+          "description": "Create unique transaction codes for each payment",
+          "priority": "High",
+          "status": "Todo",
+          "estimated_hours": 4,
+          "dependencies": ["PY001"]
+        },
+        {
+          "id": "PY003",
+          "title": "Payment Proof Upload",
+          "description": "Allow users to upload payment proof screenshots/documents",
+          "priority": "High",
+          "status": "Todo",
+          "estimated_hours": 6,
+          "dependencies": ["PY001", "PS005"]
+        },
+        {
+          "id": "PY004",
+          "title": "Moota Integration",
+          "description": "Integrate Moota API for automatic payment verification by checking transaction nominal",
+          "priority": "High",
+          "status": "Todo",
+          "estimated_hours": 12,
+          "dependencies": ["PY002", "PY003"]
+        },
+        {
+          "id": "PY005",
+          "title": "Payment Status Management",
+          "description": "Implement payment status tracking: belum bayar, belum lunas, diproses/sedang dikonfirmasi, sudah bayar",
+          "priority": "High",
+          "status": "Todo",
+          "estimated_hours": 8,
+          "dependencies": ["PY004"]
+        }
+      ]
+    },
+    {
+      "name": "Order Management System",
+      "tasks": [
+        {
+          "id": "OM001",
+          "title": "Order Tracking System",
+          "description": "Create order tracking with comprehensive status management",
+          "priority": "High",
+          "status": "Todo",
+          "estimated_hours": 10,
+          "dependencies": ["PY005"]
+        },
+        {
+          "id": "OM002",
+          "title": "Order Status Implementation",
+          "description": "Implement all order statuses: selesai, aktif, sedang berjalan, sudah bayar, berangkat, diproses, belum lunas, belum bayar",
+          "priority": "High",
+          "status": "Todo",
+          "estimated_hours": 8,
+          "dependencies": ["OM001"]
+        },
+        {
+          "id": "OM003",
+          "title": "Order History & Management",
+          "description": "Create user order history page with filtering and search capabilities",
+          "priority": "Medium",
+          "status": "Todo",
+          "estimated_hours": 8,
+          "dependencies": ["OM001"]
+        },
+        {
+          "id": "OM004",
+          "title": "Admin Order Management",
+          "description": "Create admin interface for managing all orders and updating statuses",
+          "priority": "Medium",
+          "status": "Todo",
+          "estimated_hours": 12,
+          "dependencies": ["OM002"]
+        },
+        {
+          "id": "OM005",
+          "title": "Email Notification System",
+          "description": "Implement automated email notifications for order status changes",
+          "priority": "Medium",
+          "status": "Todo",
+          "estimated_hours": 6,
+          "dependencies": ["OM002"]
+        }
+      ]
+    },
+    {
+      "name": "Our Services & Pilgrim Management",
+      "tasks": [
+        {
+          "id": "SV001",
+          "title": "Services Page Creation",
+          "description": "Create comprehensive 'layanan kami' page showcasing all services offered",
+          "priority": "Medium",
+          "status": "Todo",
+          "estimated_hours": 8,
+          "dependencies": []
+        },
+        {
+          "id": "SV002",
+          "title": "Service Detail Management",
+          "description": "Implement detailed service descriptions with images and pricing",
+          "priority": "Medium",
+          "status": "Todo",
+          "estimated_hours": 10,
+          "dependencies": ["SV001"]
+        },
+        {
+          "id": "PMM001",
+          "title": "Pilgrim Management System",
+          "description": "Create 'manajemen jamaah' section for managing pilgrim groups and individuals",
+          "priority": "Medium",
+          "status": "Todo",
+          "estimated_hours": 12,
+          "dependencies": ["OM001"]
+        },
+        {
+          "id": "PMM002",
+          "title": "Group Management Features",
+          "description": "Implement group creation, member management, and group booking features",
+          "priority": "Low",
+          "status": "Todo",
+          "estimated_hours": 10,
+          "dependencies": ["PMM001"]
+        },
+        {
+          "id": "PMM003",
+          "title": "Pilgrim Communication System",
+          "description": "Create communication features for pilgrim groups and tour leaders",
+          "priority": "Low",
+          "status": "Todo",
+          "estimated_hours": 8,
+          "dependencies": ["PMM002"]
+        }
+      ]
+    },
+    {
+      "name": "Admin Panel & Management",
+      "tasks": [
+        {
+          "id": "AD001",
+          "title": "Admin Dashboard",
+          "description": "Create comprehensive admin dashboard with key metrics and reports",
+          "priority": "High",
+          "status": "Todo",
+          "estimated_hours": 12,
+          "dependencies": ["OM004"]
+        },
+        {
+          "id": "AD002",
+          "title": "User Management Interface",
+          "description": "Create admin interface for managing all users and their profiles",
+          "priority": "High",
+          "status": "Todo",
+          "estimated_hours": 8,
+          "dependencies": ["AD001"]
+        },
+        {
+          "id": "AD003",
+          "title": "Package Management Admin",
+          "description": "Create admin interface for adding, editing, and managing packages",
+          "priority": "High",
+          "status": "Todo",
+          "estimated_hours": 10,
+          "dependencies": ["AD001"]
+        },
+        {
+          "id": "AD004",
+          "title": "Sales & Revenue Reports",
+          "description": "Implement comprehensive reporting system for sales and revenue analysis",
+          "priority": "Medium",
+          "status": "Todo",
+          "estimated_hours": 12,
+          "dependencies": ["AD001"]
+        },
+        {
+          "id": "AD005",
+          "title": "System Settings Management",
+          "description": "Create admin interface for system configurations and settings",
+          "priority": "Low",
+          "status": "Todo",
+          "estimated_hours": 6,
+          "dependencies": ["AD001"]
+        }
+      ]
+    },
+    {
+      "name": "Testing & Quality Assurance",
+      "tasks": [
+        {
+          "id": "TQ001",
+          "title": "Unit Testing Implementation",
+          "description": "Create comprehensive unit tests for all critical functions",
+          "priority": "High",
+          "status": "Todo",
+          "estimated_hours": 20,
+          "dependencies": ["AD003"]
+        },
+        {
+          "id": "TQ002",
+          "title": "Integration Testing",
+          "description": "Test integration between different modules and external APIs",
+          "priority": "High",
+          "status": "Todo",
+          "estimated_hours": 16,
+          "dependencies": ["TQ001"]
+        },
+        {
+          "id": "TQ003",
+          "title": "User Acceptance Testing",
+          "description": "Conduct UAT with real users and stakeholders",
+          "priority": "High",
+          "status": "Todo",
+          "estimated_hours": 24,
+          "dependencies": ["TQ002"]
+        },
+        {
+          "id": "TQ004",
+          "title": "Performance Testing",
+          "description": "Test system performance under load and optimize",
+          "priority": "Medium",
+          "status": "Todo",
+          "estimated_hours": 12,
+          "dependencies": ["TQ002"]
+        },
+        {
+          "id": "TQ005",
+          "title": "Security Testing",
+          "description": "Conduct security testing and vulnerability assessment",
+          "priority": "High",
+          "status": "Todo",
+          "estimated_hours": 16,
+          "dependencies": ["TQ002"]
+        }
+      ]
+    },
+    {
+      "name": "Deployment & Launch",
+      "tasks": [
+        {
+          "id": "DL001",
+          "title": "Production Environment Setup",
+          "description": "Setup production server, database, and hosting environment",
+          "priority": "High",
+          "status": "Todo",
+          "estimated_hours": 8,
+          "dependencies": ["TQ003"]
+        },
+        {
+          "id": "DL002",
+          "title": "Domain & SSL Configuration",
+          "description": "Configure custom domain and SSL certificates",
+          "priority": "High",
+          "status": "Todo",
+          "estimated_hours": 4,
+          "dependencies": ["DL001"]
+        },
+        {
+          "id": "DL003",
+          "title": "Production Deployment",
+          "description": "Deploy application to production environment",
+          "priority": "High",
+          "status": "Todo",
+          "estimated_hours": 6,
+          "dependencies": ["DL002"]
+        },
+        {
+          "id": "DL004",
+          "title": "Backup & Monitoring Setup",
+          "description": "Implement automated backups and system monitoring",
+          "priority": "Medium",
+          "status": "Todo",
+          "estimated_hours": 8,
+          "dependencies": ["DL003"]
+        },
+        {
+          "id": "DL005",
+          "title": "Documentation & Training",
+          "description": "Create user documentation and admin training materials",
+          "priority": "Medium",
+          "status": "Todo",
+          "estimated_hours": 12,
+          "dependencies": ["DL003"]
+        }
+      ]
+    }
+  ],
+  "total_estimated_hours": 580,
+  "metadata": {
+    "created_date": "2025-11-20",
+    "version": "1.0",
+    "author": "MiniMax Agent",
+    "estimated_timeline_months": 8
+  }
+}

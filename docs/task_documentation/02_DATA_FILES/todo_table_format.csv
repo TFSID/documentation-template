@@ -1,0 +1,76 @@
+Task ID,Category/Modul,Task Name,Description,Priority,Status,Estimasi,Phase
+SETUP-001,Project Setup & Configuration,React Project Initialization,Setup React project with Vite configure project structure and dependencies,High,To Do,1 hari,Phase 1
+SETUP-002,Project Setup & Configuration,Tailwind CSS Configuration,Install and configure Tailwind CSS with custom theme and design system,High,To Do,1 hari,Phase 1
+SETUP-003,Project Setup & Configuration,UI Component Library Setup,Install and configure Ant Design/Material-UI with custom theming,Medium,To Do,1 hari,Phase 1
+SETUP-004,Project Setup & Configuration,Routing System Implementation,Setup React Router with protected routes lazy loading and navigation guards,High,To Do,2 hari,Phase 1
+SETUP-005,Project Setup & Configuration,State Management Setup,Implement Redux Toolkit or Zustand for global state management,High,To Do,2 hari,Phase 1
+SETUP-006,Project Setup & Configuration,API Client Configuration,Setup Axios with interceptors error handling and token management,High,To Do,1 hari,Phase 1
+SETUP-007,Project Setup & Configuration,Development Environment Setup,Configure ESLint Prettier TypeScript and development scripts,Medium,To Do,1 hari,Phase 1
+AUTH-001,Authentication & Authorization,Login Page Implementation,Create responsive login page with email/password form and Google OAuth button,High,To Do,2 hari,Phase 1
+AUTH-002,Authentication & Authorization,Registration Page Implementation,Create multi-step registration form with validation and email verification,High,To Do,3 hari,Phase 1
+AUTH-003,Authentication & Authorization,Forgot Password Interface,Create forgot password form with email input and reset flow,Medium,To Do,1 hari,Phase 1
+AUTH-004,Authentication & Authorization,Google OAuth Integration UI,Implement Google sign-in button and callback handling UI,Medium,To Do,2 hari,Phase 1
+AUTH-005,Authentication & Authorization,Authentication Context Provider,Create authentication context with login logout and user state management,High,To Do,2 hari,Phase 1
+AUTH-006,Authentication & Authorization,JWT Token Management,Implementasi JWT untuk session management dan refresh token,High,To Do,2 hari,Phase 1
+AUTH-007,Authentication & Authorization,Role-Based Access Control,Setup roles: Admin User Agent dengan permission berbeda,Medium,To Do,2 hari,Phase 1
+AUTH-008,Authentication & Authorization,Protected Route Components,Create higher-order components for route protection and redirect logic,High,To Do,1 hari,Phase 1
+PROFILE-001,User Profile Management,Create Profile Form,Form lengkap: nama lengkap no telepon email tanggal lahir jenis kelamin,High,To Do,3 hari,Phase 1
+PROFILE-002,User Profile Management,Upload KTP Photo,Feature upload dan preview foto KTP dengan validasi format dan size,High,To Do,2 hari,Phase 1
+PROFILE-003,User Profile Management,Upload Passport Photo,Feature upload dan preview foto Passport dengan validasi format dan size,High,To Do,2 hari,Phase 1
+PROFILE-004,User Profile Management,Document Number Management,Create forms for KTP/Passport numbers with validation,Medium,To Do,2 hari,Phase 1
+PROFILE-005,User Profile Management,Bank Details Management UI,Create form for bank name account number and account name (A.N),Medium,To Do,2 hari,Phase 1
+PROFILE-006,User Profile Management,Password Change Interface,Create secure password change form with current/new password fields,Medium,To Do,2 hari,Phase 1
+PROFILE-007,User Profile Management,Profile Dashboard Layout,Create main profile dashboard with sidebar navigation and content areas,High,To Do,2 hari,Phase 1
+PROFILE-008,User Profile Management,Profile Picture Upload,Upload dan crop foto profile user,Low,To Do,2 hari,Phase 1
+PKG-001,Package Management,Package Type Categories,Setup 5 tipe paket: Private Umrah Plus (Negara) Umrah Plus (Lokal) Umrah Plus Liburan Paket Request,High,To Do,2 hari,Phase 2
+PKG-002,Package Management,Package Class System,Implementasi 5 class: Super Executive Executive Bisnis Ekonomis Premium,High,To Do,2 hari,Phase 2
+PKG-003,Package Management,Package Listing Page Layout,Create main package listing page with grid/list view toggle and filters,High,To Do,3 hari,Phase 2
+PKG-004,Package Management,Package Filter System,Create comprehensive filtering system for package types classes dates and prices,High,To Do,4 hari,Phase 2
+PKG-005,Package Management,Package Card Component,Create reusable package card component with images ratings and key info,High,To Do,2 hari,Phase 2
+PKG-006,Package Management,Package Detail Page,Create comprehensive package detail page with tabs and extensive information,High,To Do,4 hari,Phase 2
+PKG-007,Package Management,Package Search & Suggestions,Implement search functionality with autocomplete and suggestion system,Medium,To Do,3 hari,Phase 2
+PKG-008,Package Management,Package Comparison Feature,Create side-by-side package comparison interface,Medium,To Do,3 hari,Phase 2
+PKG-009,Package Management,Package Availability Calendar,Create interactive calendar showing package availability and pricing,Medium,To Do,4 hari,Phase 2
+BOOK-001,Booking Process,Multi-step Booking Wizard,Create step-by-step booking process with progress indicator and navigation,High,To Do,5 hari,Phase 2
+BOOK-002,Booking Process,Pilgrim Data Collection Form,Create comprehensive form for collecting pilgrim details with validation,High,To Do,4 hari,Phase 2
+BOOK-003,Booking Process,Jemaah Counter Component,Create interactive counter for jumlah jemaah with bayi/dewasa options,High,To Do,2 hari,Phase 2
+BOOK-004,Booking Process,Room Selection Interface,Create room type selection (Double/Triple/Quad) with visual representation,High,To Do,3 hari,Phase 2
+BOOK-005,Booking Process,Booking Summary Component,Create comprehensive booking summary with all details and pricing breakdown,High,To Do,2 hari,Phase 2
+BOOK-006,Booking Process,Booking Confirmation Flow,Create booking confirmation page with success states and next steps,High,To Do,2 hari,Phase 2
+BOOK-007,Booking Process,Booking Modification Interface,Create interface for modifying existing bookings with restrictions,Medium,To Do,3 hari,Phase 2
+PAY-001,Payment Management,Payment Method Selection,Create payment method selection interface with bank transfer options,High,To Do,2 hari,Phase 2
+PAY-002,Payment Management,Bank Transfer Information Display,Create interface showing destination bank account name and account number,High,To Do,2 hari,Phase 2
+PAY-003,Payment Management,Transaction Code Generation UI,Create interface for generating and displaying unique transaction codes,High,To Do,2 hari,Phase 2
+PAY-004,Payment Management,Payment Proof Upload Interface,Create drag-and-drop interface for uploading payment proof documents,High,To Do,3 hari,Phase 2
+PAY-005,Payment Management,Payment Status Dashboard,Create real-time payment status tracking with notifications,High,To Do,3 hari,Phase 2
+PAY-006,Payment Management,Payment History & Receipts,Create payment history page with receipt downloads and transaction details,Medium,To Do,2 hari,Phase 2
+ORDER-001,Order Management,Order Dashboard Layout,Create main order management dashboard with status overview,High,To Do,3 hari,Phase 3
+ORDER-002,Order Management,Order Status Management,Create interface for viewing and tracking all order statuses,High,To Do,4 hari,Phase 3
+ORDER-003,Order Management,Order Detail View,Create comprehensive order detail page with all booking information,High,To Do,3 hari,Phase 3
+ORDER-004,Order Management,Order History & Filtering,Create order history page with advanced filtering and search,Medium,To Do,3 hari,Phase 3
+ORDER-005,Order Management,Order Communication Interface,Create messaging system for customer support and order updates,Medium,To Do,4 hari,Phase 3
+ORDER-006,Order Management,Order Document Management,Create interface for managing order-related documents and tickets,Low,To Do,3 hari,Phase 3
+ADMIN-001,Admin Panel,Admin Dashboard Layout,Create comprehensive admin dashboard with sidebar navigation and metrics,High,To Do,4 hari,Phase 3
+ADMIN-002,Admin Panel,User Management Interface,Create admin interface for managing all users and their profiles,High,To Do,5 hari,Phase 3
+ADMIN-003,Admin Panel,Package Management Admin,Create admin interface for CRUD operations on packages,High,To Do,6 hari,Phase 3
+ADMIN-004,Admin Panel,Order Management Admin,Create admin interface for managing all orders and updating statuses,High,To Do,5 hari,Phase 3
+ADMIN-005,Admin Panel,Sales & Analytics Dashboard,Create analytics dashboard with charts and reports,Medium,To Do,5 hari,Phase 3
+ADMIN-006,Admin Panel,System Settings Interface,Create admin interface for system configuration and settings,Low,To Do,3 hari,Phase 3
+SERVICE-001,Services & Information,Services Landing Page,Create comprehensive 'Layanan Kami' page showcasing all services,Medium,To Do,4 hari,Phase 3
+SERVICE-002,Services & Information,Service Detail Pages,Create individual detail pages for each service with pricing,Medium,To Do,3 hari,Phase 3
+SERVICE-003,Services & Information,Pilgrim Management Interface,Create 'Manajemen Jamaah' section for group and individual management,Medium,To Do,5 hari,Phase 3
+SERVICE-004,Services & Information,FAQ & Help Center,Create FAQ page and help center with searchable content,Low,To Do,3 hari,Phase 3
+SERVICE-005,Services & Information,About & Contact Pages,Create company information and contact pages with forms,Low,To Do,3 hari,Phase 3
+MOBILE-001,Mobile Responsiveness,Mobile Navigation System,Implement mobile-first navigation with hamburger menu and drawer,High,To Do,3 hari,Phase 3
+MOBILE-002,Mobile Responsiveness,Responsive Layout System,Ensure all pages are fully responsive across all device sizes,High,To Do,6 hari,Phase 3
+MOBILE-003,Mobile Responsiveness,Touch-friendly Interactions,Optimize all interactive elements for touch devices,High,To Do,4 hari,Phase 3
+MOBILE-004,Mobile Responsiveness,Loading States & Skeletons,Implement loading states and skeleton screens for better UX,Medium,To Do,3 hari,Phase 3
+MOBILE-005,Mobile Responsiveness,Performance Optimization,Optimize frontend performance with code splitting and lazy loading,Medium,To Do,4 hari,Phase 3
+TEST-001,Testing & Quality,Component Testing Setup,Setup Jest/React Testing Library for component unit testing,High,To Do,3 hari,Phase 4
+TEST-002,Testing & Quality,E2E Testing Implementation,Implement Cypress/Playwright for end-to-end testing,High,To Do,5 hari,Phase 4
+TEST-003,Testing & Quality,Visual Regression Testing,Setup visual regression testing for UI consistency,Medium,To Do,3 hari,Phase 4
+TEST-004,Testing & Quality,Accessibility Testing & Implementation,Implement WCAG compliance and accessibility features,High,To Do,4 hari,Phase 4
+TEST-005,Testing & Quality,Performance Testing,Test and optimize frontend performance metrics,Medium,To Do,3 hari,Phase 4
+DEPLOY-001,Deployment & Build,Build Optimization,Optimize production build with minification tree shaking and compression,High,To Do,2 hari,Phase 4
+DEPLOY-002,Deployment & Build,Deployment Pipeline,Setup CI/CD pipeline for automated deployment,High,To Do,2 hari,Phase 4
+DEPLOY-003,Deployment & Build,Environment Configuration,Manage environment variables and configuration for different stages,Medium,To Do,1 hari,Phase 4

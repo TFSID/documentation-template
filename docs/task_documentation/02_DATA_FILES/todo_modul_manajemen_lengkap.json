@@ -1,0 +1,272 @@
+{
+  "project": "Modul Manajemen Pengguna & Jamaah - Aplikasi Umrah Haji",
+  "version": "1.0.0",
+  "description": "Todo list khusus untuk manajemen profil, jemaah, dan dokumen identitas",
+  "technology_stack": {
+    "frontend": "React.js / Vue.js",
+    "backend": "Node.js / Python",
+    "database": "PostgreSQL / MongoDB",
+    "ui_framework": "Tailwind CSS / Ant Design"
+  },
+  "modules": [
+    {
+      "name": "Profil Management System",
+      "tasks": [
+        {
+          "id": "PROF-001",
+          "title": "User Profile Creation & Management",
+          "description": "Sistem pembuatan dan manajemen profil pengguna lengkap",
+          "priority": "High",
+          "status": "To Do",
+          "estimated_hours": 10,
+          "deliverables": ["Profile forms", "Data validation", "Profile editing", "Profile completion tracking"]
+        },
+        {
+          "id": "PROF-002",
+          "title": "Profile Verification System",
+          "description": "Sistem verifikasi profil dengan data dan dokumen pendukung",
+          "priority": "High",
+          "status": "To Do",
+          "estimated_hours": 8,
+          "deliverables": ["Verification workflow", "Document validation", "Status tracking", "Approval process"]
+        },
+        {
+          "id": "PROF-003",
+          "title": "Profile Privacy & Security",
+          "description": "Sistem privasi dan keamanan data profil pengguna",
+          "priority": "High",
+          "status": "To Do",
+          "estimated_hours": 8,
+          "deliverables": ["Data encryption", "Access control", "Privacy settings", "Security audit"]
+        },
+        {
+          "id": "PROF-004",
+          "title": "Profile Analytics Dashboard",
+          "description": "Dashboard analytics untuk data profil pengguna",
+          "priority": "Medium",
+          "status": "To Do",
+          "estimated_hours": 6,
+          "deliverables": ["User demographics", "Profile completion rates", "Usage analytics", "Data insights"]
+        }
+      ]
+    },
+    {
+      "name": "Manajemen Jamaah System",
+      "tasks": [
+        {
+          "id": "JAMA-001",
+          "title": "Jamaah Database Management",
+          "description": "Sistem manajemen database jemaah dengan informasi lengkap",
+          "priority": "High",
+          "status": "To Do",
+          "estimated_hours": 12,
+          "deliverables": ["Jamaah database", "CRUD operations", "Data import/export", "Search & filter"]
+        },
+        {
+          "id": "JAMA-002",
+          "title": "Family Group Management",
+          "description": "Sistem manajemen gruppo famiglia Jamaah",
+          "priority": "High",
+          "status": "To Do",
+          "estimated_hours": 10,
+          "deliverables": ["Family grouping", "Relationship mapping", "Group coordination", "Shared booking"]
+        },
+        {
+          "id": "JAMA-003",
+          "title": "Jamaah Status Tracking",
+          "description": "Sistem pelacakan status Jamaah durante viaggio",
+          "priority": "High",
+          "status": "To Do",
+          "estimated_hours": 8,
+          "deliverables": ["Status tracking", "Location monitoring", "Health status", "Safety alerts"]
+        },
+        {
+          "id": "JAMA-004",
+          "title": "Emergency Contact Management",
+          "description": "Sistem manajemen kontak darurat jemaah",
+          "priority": "High",
+          "status": "To Do",
+          "estimated_hours": 6,
+          "deliverables": ["Emergency contacts", "Contact hierarchy", "Notification system", "Crisis communication"]
+        },
+        {
+          "id": "JAMA-005",
+          "title": "Medical Record Management",
+          "description": "Sistem manajemen record medis jemaah",
+          "priority": "High",
+          "status": "To Do",
+          "estimated_hours": 10,
+          "deliverables": ["Medical records", "Health conditions", "Medication tracking", "Allergy information"]
+        },
+        {
+          "id": "JAMA-006",
+          "title": "Jamaah Communication Portal",
+          "description": "Portal komunikasi khusus untuk jemaah",
+          "priority": "Medium",
+          "status": "To Do",
+          "estimated_hours": 12,
+          "deliverables": ["Internal messaging", "Group announcements", "Information sharing", "Support chat"]
+        },
+        {
+          "id": "JAMA-007",
+          "title": "Performance & Behavior Tracking",
+          "description": "Sistem tracking performa dan perilaku jemaah",
+          "priority": "Low",
+          "status": "To Do",
+          "estimated_hours": 8,
+          "deliverables": ["Behavior tracking", "Performance metrics", "Incident reporting", "Review system"]
+        }
+      ]
+    },
+    {
+      "name": "Manajemen Visa & Paspor System",
+      "tasks": [
+        {
+          "id": "VISA-001",
+          "title": "Passport Information Management",
+          "description": "Sistem informasi paspor dan dokumen perjalanan",
+          "priority": "High",
+          "status": "To Do",
+          "estimated_hours": 8,
+          "deliverables": ["Passport database", "Document tracking", "Expiry alerts", "Renewal reminders"]
+        },
+        {
+          "id": "VISA-002",
+          "title": "Visa Application Management",
+          "description": "Sistem aplikasi dan tracking visa Saudi Arabia",
+          "priority": "High",
+          "status": "To Do",
+          "estimated_hours": 12,
+          "deliverables": ["Visa application", "Document submission", "Status tracking", "Approval notification"]
+        },
+        {
+          "id": "VISA-003",
+          "title": "Document Expiry Monitoring",
+          "description": "Sistem monitoring expire dokumen (paspor, visa, vaccination)",
+          "priority": "High",
+          "status": "To Do",
+          "estimated_hours": 6,
+          "deliverables": ["Expiry alerts", "Renewal tracking", "Document status", "Compliance monitoring"]
+        },
+        {
+          "id": "VISA-004",
+          "title": "Vaccination Record Management",
+          "description": "Sistem record vaccination dan health certificates",
+          "priority": "High",
+          "status": "To Do",
+          "estimated_hours": 8,
+          "deliverables": ["Vaccination records", "Health certificates", "Status verification", "Compliance tracking"]
+        },
+        {
+          "id": "VISA-005",
+          "title": "Government Integration API",
+          "description": "Integrasi dengan sistem pemerintah untuk validasi dokumen",
+          "priority": "Medium",
+          "status": "To Do",
+          "estimated_hours": 15,
+          "deliverables": ["Government API", "Document validation", "Real-time verification", "Status synchronization"]
+        },
+        {
+          "id": "VISA-006",
+          "title": "Digital Document Storage",
+          "description": "Penyimpanan dokumen digital dengan security tinggi",
+          "priority": "High",
+          "status": "To Do",
+          "estimated_hours": 10,
+          "deliverables": ["Secure storage", "Document encryption", "Access control", "Backup system"]
+        },
+        {
+          "id": "VISA-007",
+          "title": "Document Validation System",
+          "description": "Sistem validasi dokumen dan verifikasi autentisitas",
+          "priority": "Medium",
+          "status": "To Do",
+          "estimated_hours": 12,
+          "deliverables": ["Document verification", "Fraud detection", "Quality assessment", "Validation reports"]
+        },
+        {
+          "id": "VISA-008",
+          "title": "Consular Appointment Booking",
+          "description": "Sistem booking appointment dengan konsulat",
+          "priority": "Medium",
+          "status": "To Do",
+          "estimated_hours": 8,
+          "deliverables": ["Appointment calendar", "Slot management", "Confirmation system", "Reminder notifications"]
+        }
+      ]
+    },
+    {
+      "name": "Manajemen Identitas System",
+      "tasks": [
+        {
+          "id": "IDEN-001",
+          "title": "Identity Verification System",
+          "description": "Sistem verifikasi identitas dengan multiple methods",
+          "priority": "High",
+          "status": "To Do",
+          "estimated_hours": 10,
+          "deliverables": ["ID verification", "Biometric data", "Document scanning", "Identity matching"]
+        },
+        {
+          "id": "IDEN-002",
+          "title": "Digital Identity Management",
+          "description": "Sistem identitas digital dan authentication",
+          "priority": "High",
+          "status": "To Do",
+          "estimated_hours": 12,
+          "deliverables": ["Digital ID cards", "Authentication tokens", "Biometric integration", "Security protocols"]
+        },
+        {
+          "id": "IDEN-003",
+          "title": "Identity Document Scanner",
+          "description": "Scanner dokumen identitas dengan OCR dan validasi",
+          "priority": "High",
+          "status": "To Do",
+          "estimated_hours": 10,
+          "deliverables": ["OCR scanning", "Data extraction", "Format validation", "Quality assessment"]
+        },
+        {
+          "id": "IDEN-004",
+          "title": "Facial Recognition System",
+          "description": "Sistem facial recognition untuk verifikasi jemaah",
+          "priority": "Medium",
+          "status": "To Do",
+          "estimated_hours": 15,
+          "deliverables": ["Face detection", "Face matching", "Security measures", "Privacy compliance"]
+        },
+        {
+          "id": "IDEN-005",
+          "title": "Identity Audit Trail",
+          "description": "Audit trail untuk tracking akses dan modifikasi identitas",
+          "priority": "Medium",
+          "status": "To Do",
+          "estimated_hours": 8,
+          "deliverables": ["Access logging", "Change tracking", "Audit reports", "Compliance monitoring"]
+        },
+        {
+          "id": "IDEN-006",
+          "title": "Multi-factor Authentication",
+          "description": "Sistem autentikasi multi-faktor untuk keamanan identitas",
+          "priority": "High",
+          "status": "To Do",
+          "estimated_hours": 10,
+          "deliverables": ["SMS verification", "Email verification", "App-based auth", "Backup codes"]
+        }
+      ]
+    }
+  ],
+  "summary": {
+    "total_tasks": 25,
+    "total_hours": 272,
+    "total_weeks": 11,
+    "high_priority": 18,
+    "medium_priority": 6,
+    "low_priority": 1
+  },
+  "metadata": {
+    "created_date": "2025-11-20",
+    "version": "1.0",
+    "author": "MiniMax Agent",
+    "language": "Bahasa Indonesia"
+  }
+}

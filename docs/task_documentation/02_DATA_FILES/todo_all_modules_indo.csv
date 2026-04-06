@@ -1,0 +1,82 @@
+Task ID,Module,Category/Modul,Task Name,Description,Priority,Status,Estimasi,Phase
+REQ-001,Paket Request,Paket Request System,Form Permintaan Paket Custom,Buat form permintaan paket custom dengan detail lengkap (tanggal tujuan budget preferensi),High,To Do,8 jam,Fase 1
+REQ-002,Paket Request,Paket Request System,Database Schema Paket Request,Design dan implement database schema untuk menyimpan data paket request,High,To Do,6 jam,Fase 1
+REQ-003,Paket Request,Paket Request System,API Endpoint Paket Request,Buat API endpoints untuk CRUD operations paket request,High,To Do,8 jam,Fase 1
+REQ-004,Paket Request,Paket Request System,Dashboard Admin Paket Request,Buat dashboard admin untuk melihat dan memproses paket request,High,To Do,12 jam,Fase 2
+REQ-005,Paket Request,Paket Request System,Sistem Notifikasi Paket Request,Implement sistem notifikasi untuk status update paket request,Medium,To Do,8 jam,Fase 2
+REQ-006,Paket Request,Paket Request System,Quote Generation System,Buat sistem untuk generate quote/penawaran paket request,High,To Do,10 jam,Fase 2
+REQ-007,Paket Request,Paket Request System,Approval Workflow,Implement workflow approval untuk paket request (review approve/reject revision),Medium,To Do,12 jam,Fase 3
+REQ-008,Paket Request,Paket Request System,Package Comparison Tool,Buat tool untuk bandingkan paket custom vs paket standard,Low,To Do,8 jam,Fase 3
+REQ-009,Paket Request,Paket Request System,File Management System,Sistem manajemen file untuk dokumen pendukung paket request,Medium,To Do,8 jam,Fase 3
+REQ-010,Paket Request,Paket Request System,Analytics & Reporting,Dashboard analytics untuk tracking performa paket request,Low,To Do,10 jam,Fase 4
+UMR-001,Program Umrah,Program Umrah Management,Program Calendar & Schedule,Buat kalender program umrah dengan jadwal keberangkatan dan kuota,High,To Do,10 jam,Fase 1
+UMR-002,Program Umrah,Program Umrah Management,Program Categories System,Sistem kategori program umrah (hemat standard premium VIP),High,To Do,6 jam,Fase 1
+UMR-003,Program Umrah,Program Umrah Management,Hotel & Accommodation Management,Manajemen hotel dan akomodasi untuk setiap program umrah,High,To Do,12 jam,Fase 2
+UMR-004,Program Umrah,Program Umrah Management,Flight & Transportation,Sistem manajemen jadwal penerbangan dan transportasi,High,To Do,10 jam,Fase 2
+UMR-005,Program Umrah,Program Umrah Management,Itinerary Management,Manajemen itineraryprogram umrah dengan detail aktivitas harian,High,To Do,12 jam,Fase 2
+UMR-006,Program Umrah,Program Umrah Management,Pilgrim Group Management,Sistem manajemen grup jemaah dengan leader dan anggota,High,To Do,10 jam,Fase 2
+UMR-007,Program Umrah,Program Umrah Management,Meals & Catering System,Sistem manajemen makan dan katering untuk program umrah,Medium,To Do,8 jam,Fase 3
+UMR-008,Program Umrah,Program Umrah Management,Guided Tours & Activities,Sistem tur berpemandu dan aktivitas spiritual,Medium,To Do,10 jam,Fase 3
+UMR-009,Program Umrah,Program Umrah Management,Health & Medical Support,Sistem dukungan kesehatan dan medis selama program,Medium,To Do,8 jam,Fase 3
+UMR-010,Program Umrah,Program Umrah Management,Emergency & Safety System,Sistem darurat dan keamanan untuk jemaah umrah,High,To Do,10 jam,Fase 3
+UMR-011,Program Umrah,Program Umrah Management,Daily Reports & Updates,Sistem laporan harian dan update status jemaah,Medium,To Do,8 jam,Fase 4
+UMR-012,Program Umrah,Program Umrah Management,Post-Umrah Feedback System,Sistem feedback dan review setelah selesai program,Low,To Do,6 jam,Fase 4
+UMR-013,Program Umrah,Program Umrah Management,Program Analytics Dashboard,Dashboard analytics untuk tracking performa program umrah,Medium,To Do,10 jam,Fase 4
+UMR-014,Program Umrah,Program Umrah Management,Multi-language Support,Dukungan multi-bahasa untuk jemaah internasional,Low,To Do,12 jam,Fase 4
+HAJ-001,Pendaftaran Haji,Hajj Registration System,Hajj Quota Management,Sistem manajemen kuota haji per tahun dan per region,High,To Do,12 jam,Fase 1
+HAJ-002,Pendaftaran Haji,Hajj Registration System,Hajj Application Form,Form aplikasi haji dengan validasi lengkap dan dokumen wajib,High,To Do,10 jam,Fase 1
+HAJ-003,Pendaftaran Haji,Hajj Registration System,Eligibility Checker System,Sistem untuk mengecek kelayakan calon jemaah haji,High,To Do,8 jam,Fase 1
+HAJ-004,Pendaftaran Haji,Hajj Registration System,Document Management System,Sistem manajemen dokumen persyaratan haji,High,To Do,12 jam,Fase 2
+HAJ-005,Pendaftaran Haji,Hajj Registration System,Payment Plan & Package Selection,Sistem rencana pembayaran dan pemilihan paket haji,High,To Do,10 jam,Fase 2
+HAJ-006,Pendaftaran Haji,Hajj Registration System,Health Screening System,Sistem screening kesehatan dan medical check-up,High,To Do,12 jam,Fase 2
+HAJ-007,Pendaftaran Haji,Hajj Registration System,Training & Education Module,Modul pelatihan dan edukasi calon jemaah haji,Medium,To Do,15 jam,Fase 3
+HAJ-008,Pendaftaran Haji,Hajj Registration System,Approval Workflow System,Sistem alur persetujuan aplikasi haji,High,To Do,10 jam,Fase 3
+HAJ-009,Pendaftaran Haji,Hajj Registration System,Government Integration API,Integrasi dengan sistem pemerintah untuk verifikasi data,High,To Do,15 jam,Fase 3
+HAJ-010,Pendaftaran Haji,Hajj Registration System,Group Formation System,Sistem pembentukan gruppo jemaah Haji,Medium,To Do,10 jam,Fase 3
+HAJ-011,Pendaftaran Haji,Hajj Registration System,Pre-departure Orientation,Sistem orientasi pra-keberangkatan,Medium,To Do,8 jam,Fase 4
+HAJ-012,Pendaftaran Haji,Hajj Registration System,Real-time Tracking System,Sistem pelacakan real-time durante viaje Haji,Medium,To Do,12 jam,Fase 4
+HAJ-013,Pendaftaran Haji,Hajj Registration System,Communication Hub,Pusat komunikasi antara jemaah keluarga dan tour leader,Medium,To Do,10 jam,Fase 4
+HAJ-014,Pendaftaran Haji,Hajj Registration System,Post-Hajj Documentation,Dokumentasi pasca-Haji (sertifikat foto laporan),Low,To Do,8 jam,Fase 4
+HAJ-015,Pendaftaran Haji,Hajj Registration System,Compliance & Reporting,Sistem pelaporan dan kepatuhan regulasi,High,To Do,12 jam,Fase 4
+HAJ-016,Pendaftaran Haji,Hajj Registration System,Analytics Dashboard,Dashboard analytics untuk monitoring aplikasi dan jemaah,Medium,To Do,10 jam,Fase 4
+EDU-001,Konsultasi EduTrip,Consultation & EduTrip System,Consultation Booking System,Sistem booking konsultasi dengan konsultan religious dan travel,High,To Do,12 jam,Fase 1
+EDU-002,Konsultasi EduTrip,Consultation & EduTrip System,Educational Content Library,Perpustakaan konten edukasi tentang Haji Umrah dan travel tips,High,To Do,15 jam,Fase 1
+EDU-003,Konsultasi EduTrip,Consultation & EduTrip System,Interactive Q&A Platform,Platform tanya jawab interaktif untuk jemaah,High,To Do,10 jam,Fase 2
+EDU-004,Konsultasi EduTrip,Consultation & EduTrip System,Virtual Tour & Preview,Tur virtual dan preview tempat suci dan destinos penting,Medium,To Do,20 jam,Fase 2
+EDU-005,Konsultasi EduTrip,Consultation & EduTrip System,Cultural Education Module,Modul edukasi budaya dan etiquette Saudi Arabia,Medium,To Do,12 jam,Fase 2
+EDU-006,Konsultasi EduTrip,Consultation & EduTrip System,Pre-Trip Preparation Course,Kursus persiapan perjalanan Haji/Umrah,High,To Do,18 jam,Fase 2
+EDU-007,Konsultasi EduTrip,Consultation & EduTrip System,Live Webinar System,Sistem webinar langsung dengan expert dan scholar,Medium,To Do,15 jam,Fase 3
+EDU-008,Konsultasi EduTrip,Consultation & EduTrip System,Knowledge Assessment Tool,Alat penilaian pengetahuan dan readiness jemaah,Medium,To Do,10 jam,Fase 3
+EDU-009,Konsultasi EduTrip,Consultation & EduTrip System,Personalized Learning Path,Path pembelajaran yang dipersonalisasi berdasarkan kebutuhan jemaah,Medium,To Do,12 jam,Fase 3
+EDU-010,Konsultasi EduTrip,Consultation & EduTrip System,Community Forum & Discussion,Forum komunitas untuk diskusi jemaah dan sharing pengalaman,Low,To Do,10 jam,Fase 3
+EDU-011,Konsultasi EduTrip,Consultation & EduTrip System,Multilingual Support,Dukungan multi-bahasa untuk konten edukasi,Medium,To Do,15 jam,Fase 3
+EDU-012,Konsultasi EduTrip,Consultation & EduTrip System,Video Conference Integration,Integrasi video conference untuk konsultasi private,High,To Do,12 jam,Fase 3
+EDU-013,Konsultasi EduTrip,Consultation & EduTrip System,Educational Game & Simulation,Game edukasi dan simulasi ritu Haji/Umrah,Low,To Do,20 jam,Fase 4
+EDU-014,Konsultasi EduTrip,Consultation & EduTrip System,Feedback & Rating System,Sistem feedback dan rating untuk konsultan dan konten edukasi,Medium,To Do,8 jam,Fase 4
+EDU-015,Konsultasi EduTrip,Consultation & EduTrip System,Mobile Learning App,Aplikasi mobile untuk pembelajaran on-the-go,Medium,To Do,25 jam,Fase 4
+EDU-016,Konsultasi EduTrip,Consultation & EduTrip System,Analytics & Performance Tracking,Sistem analytics untuk tracking performa edukasi dan engagement,Low,To Do,10 jam,Fase 4
+PROF-001,Profil Management,Profil Management System,User Profile Creation & Management,Sistem pembuatan dan manajemen profil pengguna lengkap,High,To Do,10 jam,Fase 1
+PROF-002,Profil Management,Profil Management System,Profile Verification System,Sistem verifikasi profil dengan data dan dokumen pendukung,High,To Do,8 jam,Fase 1
+PROF-003,Profil Management,Profil Management System,Profile Privacy & Security,Sistem privasi dan keamanan data profil pengguna,High,To Do,8 jam,Fase 1
+PROF-004,Profil Management,Profil Management System,Profile Analytics Dashboard,Dashboard analytics untuk data profil pengguna,Medium,To Do,6 jam,Fase 2
+JAMA-001,Manajemen Jamaah,Manajemen Jamaah System,Jamaah Database Management,Sistem manajemen database jemaah dengan informasi lengkap,High,To Do,12 jam,Fase 1
+JAMA-002,Manajemen Jamaah,Manajemen Jamaah System,Family Group Management,Sistem manajemen gruppo famiglia Jamaah,High,To Do,10 jam,Fase 1
+JAMA-003,Manajemen Jamaah,Manajemen Jamaah System,Jamaah Status Tracking,Sistem pelacakan status Jamaah durante viaggio,High,To Do,8 jam,Fase 2
+JAMA-004,Manajemen Jamaah,Manajemen Jamaah System,Emergency Contact Management,Sistem manajemen kontak darurat jemaah,High,To Do,6 jam,Fase 2
+JAMA-005,Manajemen Jamaah,Manajemen Jamaah System,Medical Record Management,Sistem manajemen record medis jemaah,High,To Do,10 jam,Fase 2
+JAMA-006,Manajemen Jamaah,Manajemen Jamaah System,Jamaah Communication Portal,Portal komunikasi khusus untuk jemaah,Medium,To Do,12 jam,Fase 3
+JAMA-007,Manajemen Jamaah,Manajemen Jamaah System,Performance & Behavior Tracking,Sistem tracking performa dan perilaku jemaah,Low,To Do,8 jam,Fase 3
+VISA-001,Manajemen Visa/Paspor,Manajemen Visa & Paspor System,Passport Information Management,Sistem informasi paspor dan dokumen perjalanan,High,To Do,8 jam,Fase 1
+VISA-002,Manajemen Visa/Paspor,Manajemen Visa & Paspor System,Visa Application Management,Sistem aplikasi dan tracking visa Saudi Arabia,High,To Do,12 jam,Fase 1
+VISA-003,Manajemen Visa/Paspor,Manajemen Visa & Paspor System,Document Expiry Monitoring,Sistem monitoring expire dokumen (paspor visa vaccination),High,To Do,6 jam,Fase 1
+VISA-004,Manajemen Visa/Paspor,Manajemen Visa & Paspor System,Vaccination Record Management,Sistem record vaccination dan health certificates,High,To Do,8 jam,Fase 2
+VISA-005,Manajemen Visa/Paspor,Manajemen Visa & Paspor System,Government Integration API,Integrasi dengan sistem pemerintah untuk validasi dokumen,Medium,To Do,15 jam,Fase 2
+VISA-006,Manajemen Visa/Paspor,Manajemen Visa & Paspor System,Digital Document Storage,Penyimpanan dokumen digital dengan security tinggi,High,To Do,10 jam,Fase 2
+VISA-007,Manajemen Visa/Paspor,Manajemen Visa & Paspor System,Document Validation System,Sistem validasi dokumen dan verifikasi autentisitas,Medium,To Do,12 jam,Fase 3
+VISA-008,Manajemen Visa/Paspor,Manajemen Visa & Paspor System,Consular Appointment Booking,Sistem booking appointment dengan konsulat,Medium,To Do,8 jam,Fase 3
+IDEN-001,Manajemen Identitas,Manajemen Identitas System,Identity Verification System,Sistem verifikasi identitas dengan multiple methods,High,To Do,10 jam,Fase 1
+IDEN-002,Manajemen Identitas,Manajemen Identitas System,Digital Identity Management,Sistem identitas digital dan authentication,High,To Do,12 jam,Fase 1
+IDEN-003,Manajemen Identitas,Manajemen Identitas System,Identity Document Scanner,Scanner dokumen identitas dengan OCR dan validasi,High,To Do,10 jam,Fase 2
+IDEN-004,Manajemen Identitas,Manajemen Identitas System,Facial Recognition System,Sistem facial recognition untuk verifikasi jemaah,Medium,To Do,15 jam,Fase 2
+IDEN-005,Manajemen Identitas,Manajemen Identitas System,Identity Audit Trail,Audit trail untuk tracking akses dan modifikasi identitas,Medium,To Do,8 jam,Fase 3
+IDEN-006,Manajemen Identitas,Manajemen Identitas System,Multi-factor Authentication,Sistem autentikasi multi-faktor untuk keamanan identitas,High,To Do,10 jam,Fase 3

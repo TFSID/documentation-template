@@ -1,0 +1,744 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kaffah Snippets Gallery - Live Preview</title>
+    <meta name="description" content="Comprehensive gallery of code snippets with LIVE PREVIEW.">
+
+    <!-- Dependencies -->
+    <!-- 1. React & ReactDOM -->
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+
+    <!-- 2. Babel for JSX compilation -->
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+    <!-- 3. Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- 4. Lucide Icons (for UI icons) -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <!-- 5. Tailwind Configuration to match project vars -->
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                container: {
+                    center: true,
+                    padding: "2rem",
+                    screens: {
+                        "2xl": "1400px",
+                    },
+                },
+                extend: {
+                    colors: {
+                        border: "hsl(var(--border))",
+                        input: "hsl(var(--input))",
+                        ring: "hsl(var(--ring))",
+                        background: "hsl(var(--background))",
+                        foreground: "hsl(var(--foreground))",
+                        primary: {
+                            DEFAULT: "hsl(var(--primary))",
+                            foreground: "hsl(var(--primary-foreground))",
+                        },
+                        secondary: {
+                            DEFAULT: "hsl(var(--secondary))",
+                            foreground: "hsl(var(--secondary-foreground))",
+                        },
+                        destructive: {
+                            DEFAULT: "hsl(var(--destructive))",
+                            foreground: "hsl(var(--destructive-foreground))",
+                        },
+                        muted: {
+                            DEFAULT: "hsl(var(--muted))",
+                            foreground: "hsl(var(--muted-foreground))",
+                        },
+                        accent: {
+                            DEFAULT: "hsl(var(--accent))",
+                            foreground: "hsl(var(--accent-foreground))",
+                        },
+                        popover: {
+                            DEFAULT: "hsl(var(--popover))",
+                            foreground: "hsl(var(--popover-foreground))",
+                        },
+                        card: {
+                            DEFAULT: "hsl(var(--card))",
+                            foreground: "hsl(var(--card-foreground))",
+                        },
+                    },
+                    borderRadius: {
+                        lg: "var(--radius)",
+                        md: "calc(var(--radius) - 2px)",
+                        sm: "calc(var(--radius) - 4px)",
+                    },
+                },
+            },
+        }
+    </script>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap"
+        rel="stylesheet">
+
+    <style>
+        /* CSS Variables mapping to Tailwind config above */
+        :root {
+            --background: 222.2 84% 4.9%;
+            --foreground: 210 40% 98%;
+
+            --card: 222.2 84% 4.9%;
+            --card-foreground: 210 40% 98%;
+
+            --popover: 222.2 84% 4.9%;
+            --popover-foreground: 210 40% 98%;
+
+            --primary: 210 40% 98%;
+            --primary-foreground: 222.2 47.4% 11.2%;
+
+            --secondary: 217.2 32.6% 17.5%;
+            --secondary-foreground: 210 40% 98%;
+
+            --muted: 217.2 32.6% 17.5%;
+            --muted-foreground: 215 20.2% 65.1%;
+
+            --accent: 217.2 32.6% 17.5%;
+            --accent-foreground: 210 40% 98%;
+
+            --destructive: 0 62.8% 30.6%;
+            --destructive-foreground: 210 40% 98%;
+
+            --border: 217.2 32.6% 17.5%;
+            --input: 217.2 32.6% 17.5%;
+            --ring: 212.7 26.8% 83.9%;
+
+            --radius: 0.5rem;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: hsl(222.2 84% 4.9%);
+            color: hsl(210 40% 98%);
+        }
+
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+            height: 8px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: hsl(222.2 84% 4.9%);
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: hsl(217.2 32.6% 17.5%);
+            border-radius: 4px;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: hsl(215 20.2% 65.1%);
+        }
+
+        .glass-header {
+            background: rgba(13, 17, 23, 0.7);
+            backdrop-filter: blur(12px);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .preview-container {
+            background-image:
+                linear-gradient(45deg, #1a1f2c 25%, transparent 25%),
+                linear-gradient(-45deg, #1a1f2c 25%, transparent 25%),
+                linear-gradient(45deg, transparent 75%, #1a1f2c 75%),
+                linear-gradient(-45deg, transparent 75%, #1a1f2c 75%);
+            background-size: 20px 20px;
+            background-position: 0 0, 0 10px, 10px -10px, -10px 0px;
+            background-color: #0f131a;
+        }
+
+        pre code {
+            font-family: 'JetBrains Mono', monospace;
+        }
+
+        /* Syntax highlighting */
+        .token.comment {
+            color: #6a9955;
+        }
+
+        .token.string {
+            color: #ce9178;
+        }
+
+        .token.keyword {
+            color: #569cd6;
+        }
+
+        .token.tag {
+            color: #569cd6;
+        }
+
+        .token.attr-name {
+            color: #9cdcfe;
+        }
+
+        .token.attr-value {
+            color: #ce9178;
+        }
+
+        .token.punctuation {
+            color: #d4d4d4;
+        }
+
+        .token.function {
+            color: #dcdcaa;
+        }
+    </style>
+</head>
+
+<body class="min-h-screen flex flex-col">
+    <!-- This div will be the React Root -->
+    <div id="root"></div>
+
+    <!-- Main Application Script (Babel Compiled) -->
+    <script type="text/babel">
+        const { useState, useEffect, useMemo } = React;
+        const { createRoot } = ReactDOM;
+        const { Search, Copy, Check, Terminal, Layout, Layers, Box, FileCode, Play, ExternalLink } = lucide;
+
+        // ----------------------------------------------------------------------
+        // 1. MOCK COMPONENT LIBRARY
+        // These components simulate the Shadcn/UI components used in snippets.
+        // ----------------------------------------------------------------------
+
+        const Button = ({ children, variant = "default", size = "default", className = "", ...props }) => {
+            const variants = {
+                default: "bg-primary text-primary-foreground hover:bg-primary/90",
+                destructive: "bg-destructive text-destructive-foreground hover:bg-destructive/90",
+                outline: "border border-input bg-background hover:bg-accent hover:text-accent-foreground",
+                secondary: "bg-secondary text-secondary-foreground hover:bg-secondary/80",
+                ghost: "hover:bg-accent hover:text-accent-foreground",
+                link: "text-primary underline-offset-4 hover:underline"
+            };
+            const sizes = {
+                default: "h-10 px-4 py-2",
+                sm: "h-9 rounded-md px-3",
+                lg: "h-11 rounded-md px-8",
+                icon: "h-10 w-10"
+            };
+            return (
+                <button className={`inline-flex items-center justify-center rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 ${variants[variant] || variants.default} ${sizes[size] || sizes.default} ${className}`} {...props}>
+                    {children}
+                </button>
+            );
+        };
+
+        const Card = ({ className, ...props }) => (
+            <div className={`rounded-xl border bg-card text-card-foreground shadow-sm ${className}`} {...props} />
+        );
+        const CardHeader = ({ className, ...props }) => (
+            <div className={`flex flex-col space-y-1.5 p-6 ${className}`} {...props} />
+        );
+        const CardTitle = ({ className, ...props }) => (
+            <h3 className={`font-semibold leading-none tracking-tight text-white ${className}`} {...props} />
+        );
+        const CardDescription = ({ className, ...props }) => (
+            <p className={`text-sm text-muted-foreground ${className}`} {...props} />
+        );
+        const CardContent = ({ className, ...props }) => (
+            <div className={`p-6 pt-0 ${className}`} {...props} />
+        );
+        const CardFooter = ({ className, ...props }) => (
+            <div className={`flex items-center p-6 pt-0 ${className}`} {...props} />
+        );
+
+        const Input = ({ className, ...props }) => (
+            <input className={`flex h-10 w-full rounded-md border border-input bg-transparent px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 ${className}`} {...props} />
+        );
+
+        const Label = ({ className, ...props }) => (
+            <label className={`text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70 ${className}`} {...props} />
+        );
+
+        // Simple mock for Dialog/AlertDialog since they require complex state/portal
+        const Dialog = ({ children }) => <div className="border border-dashed border-gray-600 p-4 rounded bg-gray-900/50 relative text-sm"><div className="absolute -top-3 left-2 bg-gray-800 px-2 text-xs text-gray-400">Dialog Preview Mode</div>{children}</div>;
+        const DialogTrigger = ({ children }) => <div className="mb-4">{children}</div>;
+        const DialogContent = ({ children }) => <div className="border bg-background p-6 rounded-lg shadow-lg max-w-sm mx-auto">{children}</div>;
+        const DialogHeader = ({ children }) => <div className="flex flex-col space-y-1.5 text-center sm:text-left mb-4">{children}</div>;
+        const DialogFooter = ({ children }) => <div className="flex flex-col-reverse sm:flex-row sm:justify-end sm:space-x-2 mt-4">{children}</div>;
+        const DialogTitle = CardTitle;
+        const DialogDescription = CardDescription;
+
+        // Mock for Images
+        const Image = ({ src, alt, className, width, height }) => {
+            // Try to fix path for local preview
+            // If src starts with /public, replace with ../public
+            const fixedSrc = src.startsWith('/public') ? '..' + src : src;
+            return (
+                <img src={fixedSrc} alt={alt} className={className} style={{ width: width, height: height }} onError={(e) => {
+                    e.target.onerror = null;
+                    e.target.src = "https://placehold.co/24x24?text=Icon";
+                }} />
+            );
+        };
+
+        // Form Mocks
+        const useForm = (config) => ({ control: {}, handleSubmit: (fn) => (e) => { e.preventDefault(); fn({}); } });
+        const zodResolver = () => { };
+        const Form = ({ children, ...props }) => <form {...props}>{children}</form>;
+        const FormField = ({ render }) => render({ field: { value: "", onChange: () => { } } });
+        const FormItem = ({ children }) => <div className="space-y-2">{children}</div>;
+        const FormLabel = Label;
+        const FormControl = ({ children }) => <div>{children}</div>;
+        const FormMessage = () => null;
+
+        // Available Scope for Eval
+        const SCOPE = {
+            React,
+            useState,
+            Button,
+            Card, CardHeader, CardTitle, CardDescription, CardContent, CardFooter,
+            Input, Label,
+            Dialog, DialogTrigger, DialogContent, DialogHeader, DialogFooter, DialogTitle, DialogDescription,
+            Image,
+            useForm, zodResolver, Form, FormField, FormItem, FormLabel, FormControl, FormMessage,
+            // Icons
+            Check, Terminal, Layout
+        };
+
+        // ----------------------------------------------------------------------
+        // 2. SNIPPET CLEANER & RENDERER
+        // ----------------------------------------------------------------------
+
+        const cleanSnippetCode = (code) => {
+            if (!code) return "";
+            let clean = Array.isArray(code) ? code.join('\n') : code;
+
+            // Remove Tabstops $0
+            clean = clean.replace(/\$0/g, '');
+
+            // Replace Variables ${1:default} -> default
+            clean = clean.replace(/\$\{\d+:([^}]+)\}/g, '$1');
+
+            // Replace Choices ${1|one,two,three|} -> one
+            clean = clean.replace(/\$\{\d+\|([^,]+)(,[^}]+)?\|\}/g, '$1');
+
+            // Replace lingering partial variables ${1} -> type_here
+            clean = clean.replace(/\$\{\d+\}/g, 'type_here');
+
+            return clean;
+        };
+
+        const LivePreview = ({ code }) => {
+            const [error, setError] = useState(null);
+            const [Component, setComponent] = useState(null);
+
+            useEffect(() => {
+                const transpileAndRender = () => {
+                    try {
+                        const cleanedCode = cleanSnippetCode(code);
+
+                        // Heuristic: If code looks like a full file export
+                        if (cleanedCode.includes("export default function")) {
+                            // Try to extract the return statement or the component body
+                            // This is hard to do perfectly with regex for full files.
+                            // For now, show a placeholder for full file templates.
+                            setError("Full file templates cannot be previewed inline.");
+                            setComponent(null);
+                            return;
+                        }
+
+                        // Wrap standard JSX snippets in a Fragment if they are multiple elements
+                        // or just return the expression.
+                        // We construct a mini functional component string.
+                        const componentString = `
+                            return () => {
+                                return (
+                                    <>
+                                        ${cleanedCode}
+                                    </>
+                                );
+                            }
+                        `;
+
+                        // Babel Transform
+                        const transformed = Babel.transform(componentString, {
+                            presets: ['react']
+                        }).code;
+
+                        // Create function from string
+                        // We need to pass the SCOPE variables into the function constructor
+                        const scopeKeys = Object.keys(SCOPE);
+                        const scopeValues = Object.values(SCOPE);
+
+                        const func = new Function(...scopeKeys, transformed);
+                        const Renderable = func(...scopeValues);
+
+                        setComponent(() => Renderable);
+                        setError(null);
+                    } catch (err) {
+                        console.error("Preview Error:", err);
+                        setError(err.message);
+                        setComponent(null);
+                    }
+                };
+
+                transpileAndRender();
+            }, [code]);
+
+            if (error) return (
+                <div className="p-4 text-xs text-red-400 bg-red-900/20 rounded border border-red-900/50 font-mono">
+                    Preview not available: {error}
+                </div>
+            );
+
+            if (!Component) return null;
+
+            return (
+                <div className="preview-container p-6 rounded-md border border-border min-h-[150px] flex items-center justify-center overflow-auto">
+                    <div className="w-full max-w-md">
+                        <Component />
+                    </div>
+                </div>
+            );
+        };
+
+        // ----------------------------------------------------------------------
+        // 3. MAIN APPLICATION
+        // ----------------------------------------------------------------------
+
+        function App() {
+            const [snippets, setSnippets] = useState([]);
+            const [search, setSearch] = useState("");
+            const [category, setCategory] = useState("all");
+            const [loading, setLoading] = useState(true);
+
+            // Fetch snippets data
+            useEffect(() => {
+                async function load() {
+                    try {
+                        let data;
+                        try {
+                            const res = await fetch('../snippets-data.json');
+                            if (res.ok) data = await res.json();
+                        } catch (e) { console.log("JSON load failed, strictly using fallback logic or empty"); }
+
+                        if (!data) {
+                            // Since we can't really read local files effectively without the JSON from the previous step which might be missing
+                            // We will hardcode the data from the user request context to ensure it works for THIS demo.
+                            // In a real app this would come from a build step.
+                            data = ${ JSON.stringify(snippetsData) };
+                        }
+
+                        // Transform data
+                        const processed = [];
+                        Object.keys(data).forEach(file => {
+                            const catName = file.replace('kaffah-', '').replace('.code-snippets', '').replace(/-/g, ' ');
+                            Object.entries(data[file]).forEach(([name, snippet]) => {
+                                processed.push({
+                                    id: name,
+                                    name,
+                                    category: catName,
+                                    ...snippet
+                                });
+                            });
+                        });
+                        setSnippets(processed);
+                    } catch (e) {
+                        console.error(e);
+                    } finally {
+                        setLoading(false);
+                    }
+                }
+                load();
+            }, []);
+
+            const categories = useMemo(() => ["all", ...new Set(snippets.map(s => s.category))], [snippets]);
+
+            const filteredAndSorted = useMemo(() => {
+                return snippets.filter(s => {
+                    const matchesSearch = s.name.toLowerCase().includes(search.toLowerCase()) ||
+                        s.prefix.toLowerCase().includes(search.toLowerCase());
+                    const matchesCategory = category === "all" || s.category === category;
+                    return matchesSearch && matchesCategory;
+                });
+            }, [snippets, search, category]);
+
+            const copyToClipboard = (text) => {
+                navigator.clipboard.writeText(text);
+                // In a real app we'd show a toast here
+            };
+
+            return (
+                <div className="container mx-auto px-4 py-8 max-w-7xl">
+                    <header className="mb-12 text-center space-y-4">
+                        <h1 className="text-4xl md:text-5xl font-extrabold tracking-tight bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text text-transparent pb-1">
+                            Kaffah Snippets
+                        </h1>
+                        <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
+                            Design system components & layout patterns. Copy, paste, and ship faster.
+                        </p>
+                    </header>
+
+                    {/* Controls */}
+                    <div className="sticky top-4 z-50 mb-8 space-y-4">
+                        <div className="glass-header rounded-xl p-4 shadow-xl border border-border/50">
+                            <div className="flex flex-col md:flex-row gap-4 items-center">
+                                <div className="relative w-full md:w-96 group">
+                                    <Search className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-muted-foreground group-focus-within:text-primary transition-colors" />
+                                    <input
+                                        type="text"
+                                        placeholder="Search snippets..."
+                                        className="w-full bg-secondary/50 border border-border rounded-lg pl-10 pr-4 py-2 focus:outline-none focus:ring-2 focus:ring-primary/50 transition-all placeholder:text-muted-foreground/50"
+                                        value={search}
+                                        onChange={(e) => setSearch(e.target.value)}
+                                    />
+                                </div>
+                                <div className="flex gap-2 overflow-x-auto w-full pb-2 md:pb-0 scrollbar-hide">
+                                    {categories.map(cat => (
+                                        <button
+                                            key={cat}
+                                            onClick={() => setCategory(cat)}
+                                            className={`px-4 py-1.5 rounded-full text-sm font-medium whitespace-nowrap transition-all ${category === cat ? 'bg-primary text-primary-foreground shadow-lg shadow-primary/25' : 'bg-secondary text-secondary-foreground hover:bg-secondary/80'}`}
+                                        >
+                                            {cat.charAt(0).toUpperCase() + cat.slice(1)}
+                                        </button>
+                                    ))}
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    {/* Grid */}
+                    <div className="grid grid-cols-1 xl:grid-cols-2 gap-6">
+                        {filteredAndSorted.map(snippet => (
+                            <SnippetCard key={snippet.name} snippet={snippet} onCopy={copyToClipboard} />
+                        ))}
+                    </div>
+
+                    {filteredAndSorted.length === 0 && !loading && (
+                        <div className="text-center py-20 text-muted-foreground">
+                            <FileCode className="w-16 h-16 mx-auto mb-4 opacity-20" />
+                            <p>No snippets found.</p>
+                        </div>
+                    )}
+                </div>
+            );
+        }
+
+        function SnippetCard({ snippet, onCopy }) {
+            const [activeTab, setActiveTab] = useState('preview');
+            const codeString = Array.isArray(snippet.body) ? snippet.body.join('\n') : snippet.body;
+
+            return (
+                <div className="group rounded-xl border border-border bg-card overflow-hidden hover:border-primary/50 transition-all duration-300 shadow-sm hover:shadow-2xl hover:shadow-primary/5">
+                    <div className="p-5 border-b border-border/50 flex justify-between items-start bg-secondary/10">
+                        <div>
+                            <div className="flex items-center gap-2 mb-1">
+                                <span className="text-xs font-bold px-2 py-0.5 rounded bg-accent text-accent-foreground uppercase tracking-wider">
+                                    {snippet.category}
+                                </span>
+                                <h3 className="font-semibold text-lg">{snippet.name}</h3>
+                            </div>
+                            <p className="text-sm text-muted-foreground line-clamp-1">{snippet.description}</p>
+                        </div>
+                        <div className="flex gap-1 bg-secondary/50 p-1 rounded-lg">
+                            <button
+                                onClick={() => setActiveTab('preview')}
+                                className={`p-2 rounded-md transition-all ${activeTab === 'preview' ? 'bg-background shadow text-primary' : 'text-muted-foreground hover:text-foreground'}`}
+                                title="Live Preview"
+                            >
+                                <Play className="w-4 h-4" />
+                            </button>
+                            <button
+                                onClick={() => setActiveTab('code')}
+                                className={`p-2 rounded-md transition-all ${activeTab === 'code' ? 'bg-background shadow text-primary' : 'text-muted-foreground hover:text-foreground'}`}
+                                title="View Code"
+                            >
+                                <FileCode className="w-4 h-4" />
+                            </button>
+                        </div>
+                    </div>
+
+                    <div className="relative">
+                        {activeTab === 'preview' ? (
+                            <div className="p-6 bg-background/50 min-h-[300px] flex flex-col justify-center">
+                                <LivePreview code={codeString} />
+                                <div className="mt-4 text-center">
+                                    <code className="text-xs bg-secondary px-2 py-1 rounded text-muted-foreground border border-border">
+                                        Prefix: <span className="text-primary font-bold">{snippet.prefix}</span>
+                                    </code>
+                                </div>
+                            </div>
+                        ) : (
+                            <div className="relative bg-[#0d1117] min-h-[300px] max-h-[400px] overflow-auto group/code">
+                                <pre className="p-4 text-sm leading-relaxed text-gray-300 whitespace-pre-wrap font-mono">
+                                    {highlightSyntax(codeString)}
+                                </pre>
+                                <button
+                                    onClick={() => onCopy(codeString)}
+                                    className="absolute top-4 right-4 p-2 bg-secondary/90 backdrop-blur hover:bg-white hover:text-black rounded-md transition-all opacity-0 group-hover/code:opacity-100"
+                                >
+                                    <Copy className="w-4 h-4" />
+                                </button>
+                            </div>
+                        )}
+                    </div>
+                </div>
+            );
+        }
+
+        // Simple syntax highlighter just for display
+        function highlightSyntax(code) {
+            // We're just rendering text here, but in a real app better using PrismJS
+            // This is just to return valid JSX text children
+            return code;
+        }
+
+        // Hardcoded data fallback (Same as what was generated before)
+        const snippetsData = {
+            "base-layouts.code-snippets": {
+                "Flexbox Row": {
+                    "prefix": "flex-row",
+                    "body": [
+                        "<div className=\"flex flex-row ${1|items-start,items-center,items-end,items-stretch,items-baseline|} ${2|justify-start,justify-center,justify-end,justify-between,justify-around,justify-evenly|} ${3|gap-0,gap-1,gap-2,gap-3,gap-4,gap-6,gap-8|}\">",
+                        "\t<div className=\"bg-blue-500/20 p-4 rounded text-blue-200\">Item 1</div>",
+                        "\t<div className=\"bg-blue-500/20 p-4 rounded text-blue-200\">Item 2</div>",
+                        "\t<div className=\"bg-blue-500/20 p-4 rounded text-blue-200\">Item 3</div>",
+                        "</div>"
+                    ],
+                    "description": "Flexible horizontal layout with alignment options"
+                },
+                "Grid Auto Fit": {
+                    "prefix": "grid-auto",
+                    "body": [
+                        "<div className=\"grid grid-cols-[repeat(auto-fit,minmax(${1|200px,250px,300px,350px|},1fr))] ${2|gap-2,gap-4,gap-6,gap-8|}\">",
+                        "\t<div className=\"bg-purple-500/20 h-24 rounded border border-purple-500/50 flex items-center justify-center\">Grid Item</div>",
+                        "\t<div className=\"bg-purple-500/20 h-24 rounded border border-purple-500/50 flex items-center justify-center\">Grid Item</div>",
+                        "\t<div className=\"bg-purple-500/20 h-24 rounded border border-purple-500/50 flex items-center justify-center\">Grid Item</div>",
+                        "</div>"
+                    ],
+                    "description": "Responsive grid with auto-fit columns"
+                }
+            },
+            "kaffah-components.code-snippets": {
+                "Card Component": {
+                    "prefix": "k-card",
+                    "body": [
+                        "<Card className=\"${1:w-full}\">",
+                        "\t<CardHeader>",
+                        "\t\t<CardTitle>${2:Card Title}</CardTitle>",
+                        "\t\t<CardDescription>${3:Card description}</CardDescription>",
+                        "\t</CardHeader>",
+                        "\t<CardContent>",
+                        "\t\t<div className=\"h-20 bg-muted/20 rounded border border-dashed border-muted flex items-center justify-center text-muted-foreground\">Content Area</div>",
+                        "\t</CardContent>",
+                        "</Card>"
+                    ],
+                    "description": "Card component with header and content"
+                },
+                "Button Component": {
+                    "prefix": "k-button",
+                    "body": [
+                        "<div className=\"flex flex-wrap gap-4\">",
+                        "\t<Button variant=\"default\">Default</Button>",
+                        "\t<Button variant=\"secondary\">Secondary</Button>",
+                        "\t<Button variant=\"outline\">Outline</Button>",
+                        "\t<Button variant=\"destructive\">Destructive</Button>",
+                        "\t<Button variant=\"ghost\">Ghost</Button>",
+                        "\t<Button variant=\"link\">Link</Button>",
+                        "</div>"
+                    ],
+                    "description": "Button with variants and sizes"
+                }
+            },
+            "kaffah-cards-components.code-snippets": {
+                "Action Card": {
+                    "prefix": "k-card-action",
+                    "body": [
+                        "<Card className=\"${1:w-full}\">",
+                        "\t<CardHeader>",
+                        "\t\t<CardTitle>${2:Confirmation}</CardTitle>",
+                        "\t\t<CardDescription>${3:Are you sure you want to proceed?}</CardDescription>",
+                        "\t</CardHeader>",
+                        "\t<CardContent>",
+                        "\t\t<div className=\"flex gap-2\">",
+                        "\t\t\t<Button variant=\"default\">${4:Confirm}</Button>",
+                        "\t\t\t<Button variant=\"outline\">${5:Cancel}</Button>",
+                        "\t\t</div>",
+                        "\t</CardContent>",
+                        "</Card>"
+                    ],
+                    "description": "Card with action buttons"
+                },
+                "Stat Card": {
+                    "prefix": "k-card-stat",
+                    "body": [
+                        "<Card>",
+                        "\t<CardHeader className=\"flex flex-row items-center justify-between space-y-0 pb-2\">",
+                        "\t\t<CardTitle className=\"text-sm font-medium\">${1:Total Revenue}</CardTitle>",
+                        "\t\t<lucide.Layout className=\"h-4 w-4 text-muted-foreground\" />",
+                        "\t</CardHeader>",
+                        "\t<CardContent>",
+                        "\t\t<div className=\"text-2xl font-bold\">${3:$45,231.89}</div>",
+                        "\t\t<p className=\"text-xs text-muted-foreground\">${4:+20.1% from last month}</p>",
+                        "\t</CardContent>",
+                        "</Card>"
+                    ],
+                    "description": "Statistics card with icon"
+                }
+            },
+            "kaffah-forms-components.code-snippets": {
+                "Form Field": {
+                    "prefix": "k-form-field",
+                    "body": [
+                        "<div className=\"space-y-4\">",
+                        "\t<div className=\"space-y-2\">",
+                        "\t\t<Label>${1:Username}</Label>",
+                        "\t\t<Input placeholder=\"${3:Enter your username}\" />",
+                        "\t</div>",
+                        "\t<div className=\"space-y-2\">",
+                        "\t\t<Label>Password</Label>",
+                        "\t\t<Input type=\"password\" placeholder=\"Enter your password\" />",
+                        "\t</div>",
+                        "\t<Button>Submit</Button>",
+                        "</div>"
+                    ],
+                    "description": "Form field with label and validation"
+                }
+            },
+            "kaffah-components-dialog.code-snippets": {
+                "Dialog General": {
+                    "prefix": "k-dialog",
+                    "body": [
+                        "<div className=\"p-8 border rounded-lg bg-background text-center\">",
+                        "\t<p className=\"mb-4 text-muted-foreground text-sm\">Dialog components require state. Showing mock content:</p>",
+                        "\t<div className=\"border rounded-lg shadow-lg p-6 max-w-sm mx-auto bg-card text-left\">",
+                        "\t\t<h3 className=\"text-lg font-semibold mb-2\">Edit Profile</h3>",
+                        "\t\t<p className=\"text-sm text-muted-foreground mb-4\">Make changes to your profile here. Click save when you're done.</p>",
+                        "\t\t<div className=\"space-y-4 mb-4\">",
+                        "\t\t\t<div className=\"space-y-2\"><Label>Name</Label><Input defaultValue=\"Pedro Duarte\" /></div>",
+                        "\t\t</div>",
+                        "\t\t<div className=\"flex justify-end gap-2\">",
+                        "\t\t\t<Button variant=\"outline\">Cancel</Button>",
+                        "\t\t\t<Button>Save changes</Button>",
+                        "\t\t</div>",
+                        "\t</div>",
+                        "</div>"
+                    ],
+                    "description": "Dialog component preview (mocked)"
+                }
+            }
+        };
+
+        const root = createRoot(document.getElementById('root'));
+        root.render(<App />);
+    </script>
+</body>
+
+</html>

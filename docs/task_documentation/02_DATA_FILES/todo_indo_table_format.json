@@ -1,0 +1,801 @@
+{
+  "project": "Aplikasi Pemesanan Umrah Haji - Pengembangan Frontend",
+  "version": "1.0.0",
+  "description": "Tugas-tugas pengembangan frontend komprehensif dengan perencanaan berbasis fase",
+  "structure": {
+    "columns": ["Task ID", "Category/Modul", "Task Name", "Description", "Priority", "Status", "Estimasi", "Phase"],
+    "estimation_unit": "hari",
+    "total_phases": 4
+  },
+  "phases": [
+    {
+      "phase_number": 1,
+      "phase_name": "Fondasi & Autentikasi",
+      "description": "Setup proyek, sistem autentikasi, dan manajemen pengguna dasar",
+      "estimated_duration": "4 minggu"
+    },
+    {
+      "phase_number": 2,
+      "phase_name": "Pengembangan Fitur Inti",
+      "description": "Manajemen paket, proses pemesanan, dan interface pembayaran",
+      "estimated_duration": "6 minggu"
+    },
+    {
+      "phase_number": 3,
+      "phase_name": "Fitur Lanjutan & Admin",
+      "description": "Manajemen pesanan, panel admin, dan optimisasi mobile",
+      "estimated_duration": "4 minggu"
+    },
+    {
+      "phase_number": 4,
+      "phase_name": "Testing & Deploy",
+      "description": "Implementasi testing, optimisasi performa, dan deployment",
+      "estimated_duration": "3 minggu"
+    }
+  ],
+  "tasks": [
+    {
+      "Task ID": "SETUP-001",
+      "Category/Modul": "Setup Proyek & Konfigurasi",
+      "Task Name": "Inisialisasi Proyek React",
+      "Description": "Setup proyek React dengan Vite, konfigurasi struktur proyek dan dependencies",
+      "Priority": "High",
+      "Status": "To Do",
+      "Estimasi": "1 hari",
+      "Phase": "Fase 1"
+    },
+    {
+      "Task ID": "SETUP-002",
+      "Category/Modul": "Setup Proyek & Konfigurasi",
+      "Task Name": "Konfigurasi Tailwind CSS",
+      "Description": "Instal dan konfigurasi Tailwind CSS dengan tema kustom dan sistem desain",
+      "Priority": "High",
+      "Status": "To Do",
+      "Estimasi": "1 hari",
+      "Phase": "Fase 1"
+    },
+    {
+      "Task ID": "SETUP-003",
+      "Category/Modul": "Setup Proyek & Konfigurasi",
+      "Task Name": "Setup Library Komponen UI",
+      "Description": "Instal dan konfigurasi Ant Design/Material-UI dengan theming kustom",
+      "Priority": "Medium",
+      "Status": "To Do",
+      "Estimasi": "1 hari",
+      "Phase": "Fase 1"
+    },
+    {
+      "Task ID": "SETUP-004",
+      "Category/Modul": "Setup Proyek & Konfigurasi",
+      "Task Name": "Implementasi Sistem Routing",
+      "Description": "Setup React Router dengan protected routes, lazy loading, dan navigation guards",
+      "Priority": "High",
+      "Status": "To Do",
+      "Estimasi": "2 hari",
+      "Phase": "Fase 1"
+    },
+    {
+      "Task ID": "SETUP-005",
+      "Category/Modul": "Setup Proyek & Konfigurasi",
+      "Task Name": "Setup Manajemen State",
+      "Description": "Implement Redux Toolkit atau Zustand untuk global state management",
+      "Priority": "High",
+      "Status": "To Do",
+      "Estimasi": "2 hari",
+      "Phase": "Fase 1"
+    },
+    {
+      "Task ID": "SETUP-006",
+      "Category/Modul": "Setup Proyek & Konfigurasi",
+      "Task Name": "Konfigurasi API Client",
+      "Description": "Setup Axios dengan interceptors, error handling, dan manajemen token",
+      "Priority": "High",
+      "Status": "To Do",
+      "Estimasi": "1 hari",
+      "Phase": "Fase 1"
+    },
+    {
+      "Task ID": "SETUP-007",
+      "Category/Modul": "Setup Proyek & Konfigurasi",
+      "Task Name": "Setup Environment Pengembangan",
+      "Description": "Konfigurasi ESLint, Prettier, TypeScript, dan script pengembangan",
+      "Priority": "Medium",
+      "Status": "To Do",
+      "Estimasi": "1 hari",
+      "Phase": "Fase 1"
+    },
+    {
+      "Task ID": "AUTH-001",
+      "Category/Modul": "Autentikasi & Otorisasi",
+      "Task Name": "Implementasi Halaman Login",
+      "Description": "Buat halaman login responsif dengan form email/password dan tombol Google OAuth",
+      "Priority": "High",
+      "Status": "To Do",
+      "Estimasi": "2 hari",
+      "Phase": "Fase 1"
+    },
+    {
+      "Task ID": "AUTH-002",
+      "Category/Modul": "Autentikasi & Otorisasi",
+      "Task Name": "Implementasi Halaman Registrasi",
+      "Description": "Buat form registrasi multi-step dengan validasi dan email verification",
+      "Priority": "High",
+      "Status": "To Do",
+      "Estimasi": "3 hari",
+      "Phase": "Fase 1"
+    },
+    {
+      "Task ID": "AUTH-003",
+      "Category/Modul": "Autentikasi & Otorisasi",
+      "Task Name": "Interface Lupa Password",
+      "Description": "Buat form lupa password dengan input email dan alur reset",
+      "Priority": "Medium",
+      "Status": "To Do",
+      "Estimasi": "1 hari",
+      "Phase": "Fase 1"
+    },
+    {
+      "Task ID": "AUTH-004",
+      "Category/Modul": "Autentikasi & Otorisasi",
+      "Task Name": "Integrasi UI Google OAuth",
+      "Description": "Implement tombol sign-in Google dan UI handling callback",
+      "Priority": "Medium",
+      "Status": "To Do",
+      "Estimasi": "2 hari",
+      "Phase": "Fase 1"
+    },
+    {
+      "Task ID": "AUTH-005",
+      "Category/Modul": "Autentikasi & Otorisasi",
+      "Task Name": "Authentication Context Provider",
+      "Description": "Buat authentication context dengan login, logout, dan user state management",
+      "Priority": "High",
+      "Status": "To Do",
+      "Estimasi": "2 hari",
+      "Phase": "Fase 1"
+    },
+    {
+      "Task ID": "AUTH-006",
+      "Category/Modul": "Autentikasi & Otorisasi",
+      "Task Name": "Manajemen JWT Token",
+      "Description": "Implementasi JWT untuk session management dan refresh token",
+      "Priority": "High",
+      "Status": "To Do",
+      "Estimasi": "2 hari",
+      "Phase": "Fase 1"
+    },
+    {
+      "Task ID": "AUTH-007",
+      "Category/Modul": "Autentikasi & Otorisasi",
+      "Task Name": "Role-Based Access Control",
+      "Description": "Setup roles: Admin User Agent dengan permission berbeda",
+      "Priority": "Medium",
+      "Status": "To Do",
+      "Estimasi": "2 hari",
+      "Phase": "Fase 1"
+    },
+    {
+      "Task ID": "AUTH-008",
+      "Category/Modul": "Autentikasi & Otorisasi",
+      "Task Name": "Protected Route Components",
+      "Description": "Buat higher-order components untuk route protection dan redirect logic",
+      "Priority": "High",
+      "Status": "To Do",
+      "Estimasi": "1 hari",
+      "Phase": "Fase 1"
+    },
+    {
+      "Task ID": "PROFILE-001",
+      "Category/Modul": "Manajemen Profil Pengguna",
+      "Task Name": "Buat Form Profil",
+      "Description": "Form lengkap: nama lengkap no telepon email tanggal lahir jenis kelamin",
+      "Priority": "High",
+      "Status": "To Do",
+      "Estimasi": "3 hari",
+      "Phase": "Fase 1"
+    },
+    {
+      "Task ID": "PROFILE-002",
+      "Category/Modul": "Manajemen Profil Pengguna",
+      "Task Name": "Upload Foto KTP",
+      "Description": "Feature upload dan preview foto KTP dengan validasi format dan size",
+      "Priority": "High",
+      "Status": "To Do",
+      "Estimasi": "2 hari",
+      "Phase": "Fase 1"
+    },
+    {
+      "Task ID": "PROFILE-003",
+      "Category/Modul": "Manajemen Profil Pengguna",
+      "Task Name": "Upload Foto Passport",
+      "Description": "Feature upload dan preview foto Passport dengan validasi format dan size",
+      "Priority": "High",
+      "Status": "To Do",
+      "Estimasi": "2 hari",
+      "Phase": "Fase 1"
+    },
+    {
+      "Task ID": "PROFILE-004",
+      "Category/Modul": "Manajemen Profil Pengguna",
+      "Task Name": "Manajemen Nomor Dokumen",
+      "Description": "Buat forms untuk nomor KTP/Passport dengan validasi",
+      "Priority": "Medium",
+      "Status": "To Do",
+      "Estimasi": "2 hari",
+      "Phase": "Fase 1"
+    },
+    {
+      "Task ID": "PROFILE-005",
+      "Category/Modul": "Manajemen Profil Pengguna",
+      "Task Name": "UI Manajemen Detail Bank",
+      "Description": "Buat form untuk nama bank, nomor rekening, dan nama rekening (A.N)",
+      "Priority": "Medium",
+      "Status": "To Do",
+      "Estimasi": "2 hari",
+      "Phase": "Fase 1"
+    },
+    {
+      "Task ID": "PROFILE-006",
+      "Category/Modul": "Manajemen Profil Pengguna",
+      "Task Name": "Interface Ubah Password",
+      "Description": "Buat form ubah password yang aman dengan field password saat ini/baru",
+      "Priority": "Medium",
+      "Status": "To Do",
+      "Estimasi": "2 hari",
+      "Phase": "Fase 1"
+    },
+    {
+      "Task ID": "PROFILE-007",
+      "Category/Modul": "Manajemen Profil Pengguna",
+      "Task Name": "Layout Dashboard Profil",
+      "Description": "Buat dashboard profil utama dengan sidebar navigation dan area konten",
+      "Priority": "High",
+      "Status": "To Do",
+      "Estimasi": "2 hari",
+      "Phase": "Fase 1"
+    },
+    {
+      "Task ID": "PROFILE-008",
+      "Category/Modul": "Manajemen Profil Pengguna",
+      "Task Name": "Upload Foto Profil",
+      "Description": "Upload dan crop foto profil pengguna",
+      "Priority": "Low",
+      "Status": "To Do",
+      "Estimasi": "2 hari",
+      "Phase": "Fase 1"
+    },
+    {
+      "Task ID": "PKG-001",
+      "Category/Modul": "Manajemen Paket",
+      "Task Name": "Kategori Tipe Paket",
+      "Description": "Setup 5 tipe paket: Private Umrah Plus (Negara) Umrah Plus (Lokal) Umrah Plus Liburan Paket Request",
+      "Priority": "High",
+      "Status": "To Do",
+      "Estimasi": "2 hari",
+      "Phase": "Fase 2"
+    },
+    {
+      "Task ID": "PKG-002",
+      "Category/Modul": "Manajemen Paket",
+      "Task Name": "Sistem Kelas Paket",
+      "Description": "Implementasi 5 class: Super Executive Executive Bisnis Ekonomis Premium",
+      "Priority": "High",
+      "Status": "To Do",
+      "Estimasi": "2 hari",
+      "Phase": "Fase 2"
+    },
+    {
+      "Task ID": "PKG-003",
+      "Category/Modul": "Manajemen Paket",
+      "Task Name": "Layout Halaman Daftar Paket",
+      "Description": "Buat halaman utama daftar paket dengan toggle grid/list view dan filter",
+      "Priority": "High",
+      "Status": "To Do",
+      "Estimasi": "3 hari",
+      "Phase": "Fase 2"
+    },
+    {
+      "Task ID": "PKG-004",
+      "Category/Modul": "Manajemen Paket",
+      "Task Name": "Sistem Filter Paket",
+      "Description": "Buat sistem filtering komprehensif untuk tipe paket, kelas, tanggal, dan harga",
+      "Priority": "High",
+      "Status": "To Do",
+      "Estimasi": "4 hari",
+      "Phase": "Fase 2"
+    },
+    {
+      "Task ID": "PKG-005",
+      "Category/Modul": "Manajemen Paket",
+      "Task Name": "Komponen Card Paket",
+      "Description": "Buat komponen card paket reusable dengan gambar, rating, dan info kunci",
+      "Priority": "High",
+      "Status": "To Do",
+      "Estimasi": "2 hari",
+      "Phase": "Fase 2"
+    },
+    {
+      "Task ID": "PKG-006",
+      "Category/Modul": "Manajemen Paket",
+      "Task Name": "Halaman Detail Paket",
+      "Description": "Buat halaman detail paket komprehensif dengan tabs dan informasi lengkap",
+      "Priority": "High",
+      "Status": "To Do",
+      "Estimasi": "4 hari",
+      "Phase": "Fase 2"
+    },
+    {
+      "Task ID": "PKG-007",
+      "Category/Modul": "Manajemen Paket",
+      "Task Name": "Pencarian & Saran Paket",
+      "Description": "Implement fungsi pencarian dengan autocomplete dan sistem saran",
+      "Priority": "Medium",
+      "Status": "To Do",
+      "Estimasi": "3 hari",
+      "Phase": "Fase 2"
+    },
+    {
+      "Task ID": "PKG-008",
+      "Category/Modul": "Manajemen Paket",
+      "Task Name": "Fitur Bandingkan Paket",
+      "Description": "Buat interface perbandingan paket side-by-side",
+      "Priority": "Medium",
+      "Status": "To Do",
+      "Estimasi": "3 hari",
+      "Phase": "Fase 2"
+    },
+    {
+      "Task ID": "PKG-009",
+      "Category/Modul": "Manajemen Paket",
+      "Task Name": "Kalender Ketersediaan Paket",
+      "Description": "Buat kalender interaktif yang menunjukkan ketersediaan paket dan harga",
+      "Priority": "Medium",
+      "Status": "To Do",
+      "Estimasi": "4 hari",
+      "Phase": "Fase 2"
+    },
+    {
+      "Task ID": "BOOK-001",
+      "Category/Modul": "Proses Pemesanan",
+      "Task Name": "Wizard Pemesanan Multi-step",
+      "Description": "Buat proses pemesanan step-by-step dengan progress indicator dan navigasi",
+      "Priority": "High",
+      "Status": "To Do",
+      "Estimasi": "5 hari",
+      "Phase": "Fase 2"
+    },
+    {
+      "Task ID": "BOOK-002",
+      "Category/Modul": "Proses Pemesanan",
+      "Task Name": "Form Pengumpulan Data Jamaah",
+      "Description": "Buat form komprehensif untuk mengumpulkan detail jemaah dengan validasi",
+      "Priority": "High",
+      "Status": "To Do",
+      "Estimasi": "4 hari",
+      "Phase": "Fase 2"
+    },
+    {
+      "Task ID": "BOOK-003",
+      "Category/Modul": "Proses Pemesanan",
+      "Task Name": "Komponen Counter Jamaah",
+      "Description": "Buat counter interaktif untuk jumlah jemaah dengan pilihan bayi/dewasa",
+      "Priority": "High",
+      "Status": "To Do",
+      "Estimasi": "2 hari",
+      "Phase": "Fase 2"
+    },
+    {
+      "Task ID": "BOOK-004",
+      "Category/Modul": "Proses Pemesanan",
+      "Task Name": "Interface Pemilihan Kamar",
+      "Description": "Buat pemilihan tipe kamar (Double/Triple/Quad) dengan representasi visual",
+      "Priority": "High",
+      "Status": "To Do",
+      "Estimasi": "3 hari",
+      "Phase": "Fase 2"
+    },
+    {
+      "Task ID": "BOOK-005",
+      "Category/Modul": "Proses Pemesanan",
+      "Task Name": "Komponen Ringkasan Pemesanan",
+      "Description": "Buat ringkasan pemesanan komprehensif dengan semua detail dan breakdown harga",
+      "Priority": "High",
+      "Status": "To Do",
+      "Estimasi": "2 hari",
+      "Phase": "Fase 2"
+    },
+    {
+      "Task ID": "BOOK-006",
+      "Category/Modul": "Proses Pemesanan",
+      "Task Name": "Alur Konfirmasi Pemesanan",
+      "Description": "Buat halaman konfirmasi pemesanan dengan status sukses dan langkah selanjutnya",
+      "Priority": "High",
+      "Status": "To Do",
+      "Estimasi": "2 hari",
+      "Phase": "Fase 2"
+    },
+    {
+      "Task ID": "BOOK-007",
+      "Category/Modul": "Proses Pemesanan",
+      "Task Name": "Interface Modifikasi Pemesanan",
+      "Description": "Buat interface untuk memodifikasi pemesanan yang ada dengan pembatasan",
+      "Priority": "Medium",
+      "Status": "To Do",
+      "Estimasi": "3 hari",
+      "Phase": "Fase 2"
+    },
+    {
+      "Task ID": "PAY-001",
+      "Category/Modul": "Manajemen Pembayaran",
+      "Task Name": "Pemilihan Metode Pembayaran",
+      "Description": "Buat interface pemilihan metode pembayaran dengan opsi transfer bank",
+      "Priority": "High",
+      "Status": "To Do",
+      "Estimasi": "2 hari",
+      "Phase": "Fase 2"
+    },
+    {
+      "Task ID": "PAY-002",
+      "Category/Modul": "Manajemen Pembayaran",
+      "Task Name": "Display Informasi Transfer Bank",
+      "Description": "Buat interface yang menampilkan bank tujuan, nama rekening, dan nomor rekening",
+      "Priority": "High",
+      "Status": "To Do",
+      "Estimasi": "2 hari",
+      "Phase": "Fase 2"
+    },
+    {
+      "Task ID": "PAY-003",
+      "Category/Modul": "Manajemen Pembayaran",
+      "Task Name": "UI Generasi Kode Transaksi",
+      "Description": "Buat interface untuk menghasilkan dan menampilkan kode transaksi unik",
+      "Priority": "High",
+      "Status": "To Do",
+      "Estimasi": "2 hari",
+      "Phase": "Fase 2"
+    },
+    {
+      "Task ID": "PAY-004",
+      "Category/Modul": "Manajemen Pembayaran",
+      "Task Name": "Interface Upload Bukti Pembayaran",
+      "Description": "Buat interface drag-and-drop untuk mengupload dokumen bukti pembayaran",
+      "Priority": "High",
+      "Status": "To Do",
+      "Estimasi": "3 hari",
+      "Phase": "Fase 2"
+    },
+    {
+      "Task ID": "PAY-005",
+      "Category/Modul": "Manajemen Pembayaran",
+      "Task Name": "Dashboard Status Pembayaran",
+      "Description": "Buat tracking status pembayaran real-time dengan notifikasi",
+      "Priority": "High",
+      "Status": "To Do",
+      "Estimasi": "3 hari",
+      "Phase": "Fase 2"
+    },
+    {
+      "Task ID": "PAY-006",
+      "Category/Modul": "Manajemen Pembayaran",
+      "Task Name": "Riwayat Pembayaran & Receipt",
+      "Description": "Buat halaman riwayat pembayaran dengan download receipt dan detail transaksi",
+      "Priority": "Medium",
+      "Status": "To Do",
+      "Estimasi": "2 hari",
+      "Phase": "Fase 2"
+    },
+    {
+      "Task ID": "ORDER-001",
+      "Category/Modul": "Manajemen Pesanan",
+      "Task Name": "Layout Dashboard Pesanan",
+      "Description": "Buat dashboard manajemen pesanan utama dengan overview status",
+      "Priority": "High",
+      "Status": "To Do",
+      "Estimasi": "3 hari",
+      "Phase": "Fase 3"
+    },
+    {
+      "Task ID": "ORDER-002",
+      "Category/Modul": "Manajemen Pesanan",
+      "Task Name": "Manajemen Status Pesanan",
+      "Description": "Buat interface untuk melihat dan melacak semua status pesanan",
+      "Priority": "High",
+      "Status": "To Do",
+      "Estimasi": "4 hari",
+      "Phase": "Fase 3"
+    },
+    {
+      "Task ID": "ORDER-003",
+      "Category/Modul": "Manajemen Pesanan",
+      "Task Name": "View Detail Pesanan",
+      "Description": "Buat halaman detail pesanan komprehensif dengan semua informasi pemesanan",
+      "Priority": "High",
+      "Status": "To Do",
+      "Estimasi": "3 hari",
+      "Phase": "Fase 3"
+    },
+    {
+      "Task ID": "ORDER-004",
+      "Category/Modul": "Manajemen Pesanan",
+      "Task Name": "Riwayat Pesanan & Filtering",
+      "Description": "Buat halaman riwayat pesanan dengan filtering dan pencarian advanced",
+      "Priority": "Medium",
+      "Status": "To Do",
+      "Estimasi": "3 hari",
+      "Phase": "Fase 3"
+    },
+    {
+      "Task ID": "ORDER-005",
+      "Category/Modul": "Manajemen Pesanan",
+      "Task Name": "Interface Komunikasi Pesanan",
+      "Description": "Buat sistem messaging untuk customer support dan update pesanan",
+      "Priority": "Medium",
+      "Status": "To Do",
+      "Estimasi": "4 hari",
+      "Phase": "Fase 3"
+    },
+    {
+      "Task ID": "ORDER-006",
+      "Category/Modul": "Manajemen Pesanan",
+      "Task Name": "Manajemen Dokumen Pesanan",
+      "Description": "Buat interface untuk mengelola dokumen terkait pesanan dan tiket",
+      "Priority": "Low",
+      "Status": "To Do",
+      "Estimasi": "3 hari",
+      "Phase": "Fase 3"
+    },
+    {
+      "Task ID": "ADMIN-001",
+      "Category/Modul": "Panel Admin",
+      "Task Name": "Layout Dashboard Admin",
+      "Description": "Buat dashboard admin komprehensif dengan sidebar navigation dan metrics",
+      "Priority": "High",
+      "Status": "To Do",
+      "Estimasi": "4 hari",
+      "Phase": "Fase 3"
+    },
+    {
+      "Task ID": "ADMIN-002",
+      "Category/Modul": "Panel Admin",
+      "Task Name": "Interface Manajemen User",
+      "Description": "Buat interface admin untuk mengelola semua pengguna dan profil mereka",
+      "Priority": "High",
+      "Status": "To Do",
+      "Estimasi": "5 hari",
+      "Phase": "Fase 3"
+    },
+    {
+      "Task ID": "ADMIN-003",
+      "Category/Modul": "Panel Admin",
+      "Task Name": "Admin Manajemen Paket",
+      "Description": "Buat interface admin untuk operasi CRUD pada paket",
+      "Priority": "High",
+      "Status": "To Do",
+      "Estimasi": "6 hari",
+      "Phase": "Fase 3"
+    },
+    {
+      "Task ID": "ADMIN-004",
+      "Category/Modul": "Panel Admin",
+      "Task Name": "Admin Manajemen Pesanan",
+      "Description": "Buat interface admin untuk mengelola semua pesanan dan update status",
+      "Priority": "High",
+      "Status": "To Do",
+      "Estimasi": "5 hari",
+      "Phase": "Fase 3"
+    },
+    {
+      "Task ID": "ADMIN-005",
+      "Category/Modul": "Panel Admin",
+      "Task Name": "Dashboard Sales & Analytics",
+      "Description": "Buat dashboard analytics dengan charts dan laporan",
+      "Priority": "Medium",
+      "Status": "To Do",
+      "Estimasi": "5 hari",
+      "Phase": "Fase 3"
+    },
+    {
+      "Task ID": "ADMIN-006",
+      "Category/Modul": "Panel Admin",
+      "Task Name": "Interface Pengaturan Sistem",
+      "Description": "Buat interface admin untuk konfigurasi dan pengaturan sistem",
+      "Priority": "Low",
+      "Status": "To Do",
+      "Estimasi": "3 hari",
+      "Phase": "Fase 3"
+    },
+    {
+      "Task ID": "SERVICE-001",
+      "Category/Modul": "Layanan & Informasi",
+      "Task Name": "Halaman Landing Layanan",
+      "Description": "Buat halaman 'Layanan Kami' komprehensif yang menampilkan semua layanan",
+      "Priority": "Medium",
+      "Status": "To Do",
+      "Estimasi": "4 hari",
+      "Phase": "Fase 3"
+    },
+    {
+      "Task ID": "SERVICE-002",
+      "Category/Modul": "Layanan & Informasi",
+      "Task Name": "Halaman Detail Layanan",
+      "Description": "Buat halaman detail individual untuk setiap layanan dengan harga",
+      "Priority": "Medium",
+      "Status": "To Do",
+      "Estimasi": "3 hari",
+      "Phase": "Fase 3"
+    },
+    {
+      "Task ID": "SERVICE-003",
+      "Category/Modul": "Layanan & Informasi",
+      "Task Name": "Interface Manajemen Jamaah",
+      "Description": "Buat bagian 'Manajemen Jamaah' untuk manajemen grup dan individual",
+      "Priority": "Medium",
+      "Status": "To Do",
+      "Estimasi": "5 hari",
+      "Phase": "Fase 3"
+    },
+    {
+      "Task ID": "SERVICE-004",
+      "Category/Modul": "Layanan & Informasi",
+      "Task Name": "FAQ & Help Center",
+      "Description": "Buat halaman FAQ dan help center dengan konten yang dapat dicari",
+      "Priority": "Low",
+      "Status": "To Do",
+      "Estimasi": "3 hari",
+      "Phase": "Fase 3"
+    },
+    {
+      "Task ID": "SERVICE-005",
+      "Category/Modul": "Layanan & Informasi",
+      "Task Name": "Halaman About & Kontak",
+      "Description": "Buat halaman informasi perusahaan dan kontak dengan form",
+      "Priority": "Low",
+      "Status": "To Do",
+      "Estimasi": "3 hari",
+      "Phase": "Fase 3"
+    },
+    {
+      "Task ID": "MOBILE-001",
+      "Category/Modul": "Responsivitas Mobile",
+      "Task Name": "Sistem Navigasi Mobile",
+      "Description": "Implement navigasi mobile-first dengan hamburger menu dan drawer",
+      "Priority": "High",
+      "Status": "To Do",
+      "Estimasi": "3 hari",
+      "Phase": "Fase 3"
+    },
+    {
+      "Task ID": "MOBILE-002",
+      "Category/Modul": "Responsivitas Mobile",
+      "Task Name": "Sistem Layout Responsif",
+      "Description": "Pastikan semua halaman fully responsive di semua ukuran device",
+      "Priority": "High",
+      "Status": "To Do",
+      "Estimasi": "6 hari",
+      "Phase": "Fase 3"
+    },
+    {
+      "Task ID": "MOBILE-003",
+      "Category/Modul": "Responsivitas Mobile",
+      "Task Name": "Interaksi Touch-friendly",
+      "Description": "Optimalkan semua elemen interaktif untuk touch devices",
+      "Priority": "High",
+      "Status": "To Do",
+      "Estimasi": "4 hari",
+      "Phase": "Fase 3"
+    },
+    {
+      "Task ID": "MOBILE-004",
+      "Category/Modul": "Responsivitas Mobile",
+      "Task Name": "Loading States & Skeletons",
+      "Description": "Implement loading states dan skeleton screens untuk UX yang lebih baik",
+      "Priority": "Medium",
+      "Status": "To Do",
+      "Estimasi": "3 hari",
+      "Phase": "Fase 3"
+    },
+    {
+      "Task ID": "MOBILE-005",
+      "Category/Modul": "Responsivitas Mobile",
+      "Task Name": "Optimisasi Performa",
+      "Description": "Optimalkan performa frontend dengan code splitting dan lazy loading",
+      "Priority": "Medium",
+      "Status": "To Do",
+      "Estimasi": "4 hari",
+      "Phase": "Fase 3"
+    },
+    {
+      "Task ID": "TEST-001",
+      "Category/Modul": "Testing & Kualitas",
+      "Task Name": "Setup Testing Komponen",
+      "Description": "Setup Jest/React Testing Library untuk unit testing komponen",
+      "Priority": "High",
+      "Status": "To Do",
+      "Estimasi": "3 hari",
+      "Phase": "Fase 4"
+    },
+    {
+      "Task ID": "TEST-002",
+      "Category/Modul": "Testing & Kualitas",
+      "Task Name": "Implementasi E2E Testing",
+      "Description": "Implement Cypress/Playwright untuk end-to-end testing",
+      "Priority": "High",
+      "Status": "To Do",
+      "Estimasi": "5 hari",
+      "Phase": "Fase 4"
+    },
+    {
+      "Task ID": "TEST-003",
+      "Category/Modul": "Testing & Kualitas",
+      "Task Name": "Visual Regression Testing",
+      "Description": "Setup visual regression testing untuk konsistensi UI",
+      "Priority": "Medium",
+      "Status": "To Do",
+      "Estimasi": "3 hari",
+      "Phase": "Fase 4"
+    },
+    {
+      "Task ID": "TEST-004",
+      "Category/Modul": "Testing & Kualitas",
+      "Task Name": "Testing & Implementasi Aksesibilitas",
+      "Description": "Implement WCAG compliance dan fitur aksesibilitas",
+      "Priority": "High",
+      "Status": "To Do",
+      "Estimasi": "4 hari",
+      "Phase": "Fase 4"
+    },
+    {
+      "Task ID": "TEST-005",
+      "Category/Modul": "Testing & Kualitas",
+      "Task Name": "Performance Testing",
+      "Description": "Test dan optimalkan metrik performa frontend",
+      "Priority": "Medium",
+      "Status": "To Do",
+      "Estimasi": "3 hari",
+      "Phase": "Fase 4"
+    },
+    {
+      "Task ID": "DEPLOY-001",
+      "Category/Modul": "Deploy & Build",
+      "Task Name": "Optimisasi Build",
+      "Description": "Optimalkan production build dengan minification, tree shaking, dan compression",
+      "Priority": "High",
+      "Status": "To Do",
+      "Estimasi": "2 hari",
+      "Phase": "Fase 4"
+    },
+    {
+      "Task ID": "DEPLOY-002",
+      "Category/Modul": "Deploy & Build",
+      "Task Name": "Deployment Pipeline",
+      "Description": "Setup CI/CD pipeline untuk deployment otomatis",
+      "Priority": "High",
+      "Status": "To Do",
+      "Estimasi": "2 hari",
+      "Phase": "Fase 4"
+    },
+    {
+      "Task ID": "DEPLOY-003",
+      "Category/Modul": "Deploy & Build",
+      "Task Name": "Konfigurasi Environment",
+      "Description": "Kelola environment variables dan konfigurasi untuk tahap yang berbeda",
+      "Priority": "Medium",
+      "Status": "To Do",
+      "Estimasi": "1 hari",
+      "Phase": "Fase 4"
+    }
+  ],
+  "summary": {
+    "total_tasks": 70,
+    "total_days": 175,
+    "high_priority": 45,
+    "medium_priority": 21,
+    "low_priority": 4
+  },
+  "metadata": {
+    "created_date": "2025-11-20",
+    "version": "1.0",
+    "author": "MiniMax Agent",
+    "language": "Bahasa Indonesia"
+  }
+}

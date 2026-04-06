@@ -1,0 +1,720 @@
+{
+  "project": "Aplikasi Pemesanan Umrah Haji - Pengembangan Frontend",
+  "version": "1.0.0",
+  "description": "Tugas-tugas pengembangan frontend komprehensif untuk aplikasi pemesanan Umrah dan Haji",
+  "technology_stack": {
+    "framework": "React.js / Vue.js / Angular",
+    "styling": "Tailwind CSS / Styled Components / CSS Modules",
+    "state_management": "Redux / Zustand / Context API",
+    "routing": "React Router / Vue Router",
+    "build_tool": "Vite / Webpack",
+    "testing": "Jest / Cypress / Playwright",
+    "ui_library": "Ant Design / Material-UI / Chakra UI"
+  },
+  "categories": [
+    {
+      "name": "Setup & Konfigurasi Proyek Frontend",
+      "tasks": [
+        {
+          "id": "FE001",
+          "title": "Inisialisasi Proyek Frontend",
+          "description": "Setup proyek React/Vue dengan Vite, konfigurasi struktur proyek dan dependencies",
+          "priority": "High",
+          "status": "Todo",
+          "estimated_hours": 4,
+          "deliverables": ["Setup proyek", "Konfigurasi Package.json", "Struktur folder dasar"]
+        },
+        {
+          "id": "FE002",
+          "title": "Konfigurasi Tailwind CSS",
+          "description": "Instal dan konfigurasi Tailwind CSS dengan tema kustom dan sistem desain",
+          "priority": "High",
+          "status": "Todo",
+          "estimated_hours": 3,
+          "deliverables": ["Konfigurasi Tailwind", "Palet warna kustom", "Skala tipografi", "Sistem spasi"]
+        },
+        {
+          "id": "FE003",
+          "title": "Setup Library Komponen UI",
+          "description": "Instal dan konfigurasi library UI (Ant Design/Material-UI) dengan theming kustom",
+          "priority": "Medium",
+          "status": "Todo",
+          "estimated_hours": 4,
+          "deliverables": ["Setup library UI", "Konfigurasi tema kustom", "Override komponen"]
+        },
+        {
+          "id": "FE004",
+          "title": "Implementasi Sistem Routing",
+          "description": "Setup React Router dengan protected routes, lazy loading, dan navigation guards",
+          "priority": "High",
+          "status": "Todo",
+          "estimated_hours": 6,
+          "deliverables": ["Konfigurasi route", "Protected routes", "Setup lazy loading", "Menu navigasi"]
+        },
+        {
+          "id": "FE005",
+          "title": "Setup Manajemen State",
+          "description": "Implement Redux Toolkit atau Zustand untuk global state management",
+          "priority": "High",
+          "status": "Todo",
+          "estimated_hours": 5,
+          "deliverables": ["Konfigurasi store", "Definisi slice", "State persistence", "Setup DevTools"]
+        },
+        {
+          "id": "FE006",
+          "title": "Konfigurasi API Client",
+          "description": "Setup Axios dengan interceptors, error handling, dan manajemen token",
+          "priority": "High",
+          "status": "Todo",
+          "estimated_hours": 4,
+          "deliverables": ["Instance Axios", "Request/Response interceptors", "Error handling", "Manajemen token"]
+        },
+        {
+          "id": "FE007",
+          "title": "Setup Environment Pengembangan",
+          "description": "Konfigurasi ESLint, Prettier, TypeScript, dan script pengembangan",
+          "priority": "Medium",
+          "status": "Todo",
+          "estimated_hours": 3,
+          "deliverables": ["Konfigurasi ESLint", "Konfigurasi Prettier", "Setup TypeScript", "Script pengembangan"]
+        }
+      ]
+    },
+    {
+      "name": "Autentikasi & Interface Pengguna",
+      "tasks": [
+        {
+          "id": "FE008",
+          "title": "Desain & Implementasi Halaman Login",
+          "description": "Buat halaman login responsif dengan form email/password dan tombol Google OAuth",
+          "priority": "High",
+          "status": "Todo",
+          "estimated_hours": 8,
+          "deliverables": ["Komponen form login", "Logika validasi", "Integrasi Google OAuth", "Desain responsif"]
+        },
+        {
+          "id": "FE009",
+          "title": "Desain & Implementasi Halaman Registrasi",
+          "description": "Buat form registrasi multi-step dengan validasi dan email verification",
+          "priority": "High",
+          "status": "Todo",
+          "estimated_hours": 12,
+          "deliverables": ["Form registrasi", "Step indicators", "Validasi", "Alur email verification"]
+        },
+        {
+          "id": "FE010",
+          "title": "Interface Lupa Password",
+          "description": "Buat form lupa password dengan input email dan alur reset",
+          "priority": "Medium",
+          "status": "Todo",
+          "estimated_hours": 6,
+          "deliverables": ["Form lupa password", "Validasi email", "UI alur reset", "Status sukses/error"]
+        },
+        {
+          "id": "FE011",
+          "title": "Integrasi UI Google OAuth",
+          "description": "Implement tombol sign-in Google dan UI handling callback",
+          "priority": "Medium",
+          "status": "Todo",
+          "estimated_hours": 6,
+          "deliverables": ["Tombol Google OAuth", "Handling callback OAuth", "Loading states", "Error handling"]
+        },
+        {
+          "id": "FE012",
+          "title": "Authentication Context Provider",
+          "description": "Buat authentication context dengan login, logout, dan user state management",
+          "priority": "High",
+          "status": "Todo",
+          "estimated_hours": 8,
+          "deliverables": ["Auth context", "Method login/logout", "Manajemen state user", "Handling token"]
+        },
+        {
+          "id": "FE013",
+          "title": "Protected Route Components",
+          "description": "Buat higher-order components untuk route protection dan redirect logic",
+          "priority": "High",
+          "status": "Todo",
+          "estimated_hours": 4,
+          "deliverables": ["Komponen protected route", "Logika redirect", "Loading states", "Access control"]
+        }
+      ]
+    },
+    {
+      "name": "UI Manajemen Profil Pengguna",
+      "tasks": [
+        {
+          "id": "FE014",
+          "title": "Layout Dashboard Profil",
+          "description": "Buat dashboard profil utama dengan sidebar navigation dan area konten",
+          "priority": "High",
+          "status": "Todo",
+          "estimated_hours": 6,
+          "deliverables": ["Layout dashboard", "Sidebar navigasi", "Section konten", "Grid responsif"]
+        },
+        {
+          "id": "FE015",
+          "title": "Form Informasi Pribadi",
+          "description": "Buat form untuk nama lengkap, email, telepon, tanggal lahir, dan jenis kelamin",
+          "priority": "High",
+          "status": "Todo",
+          "estimated_hours": 8,
+          "deliverables": ["Form info personal", "Validasi input", "Date picker", "Pilihan gender", "Fungsi simpan/batal"]
+        },
+        {
+          "id": "FE016",
+          "title": "Interface Upload Dokumen Identitas",
+          "description": "Buat drag-and-drop file upload untuk KTP/Passport dengan preview",
+          "priority": "High",
+          "status": "Todo",
+          "estimated_hours": 10,
+          "deliverables": ["Komponen file upload", "Preview gambar", "Validasi file", "Progress upload", "Manajemen dokumen"]
+        },
+        {
+          "id": "FE017",
+          "title": "Manajemen Nomor Dokumen",
+          "description": "Buat forms untuk nomor KTP/Passport dengan validasi",
+          "priority": "Medium",
+          "status": "Todo",
+          "estimated_hours": 6,
+          "deliverables": ["Form nomor dokumen", "Validasi nomor", "Format masking", "Fungsi edit"]
+        },
+        {
+          "id": "FE018",
+          "title": "UI Manajemen Detail Bank",
+          "description": "Buat form untuk nama bank, nomor rekening, dan nama rekening (A.N)",
+          "priority": "Medium",
+          "status": "Todo",
+          "estimated_hours": 6,
+          "deliverables": ["Form detail bank", "Validasi rekening", "Pilihan bank", "Format rekening"]
+        },
+        {
+          "id": "FE019",
+          "title": "Interface Upload Foto Profil",
+          "description": "Buat upload foto profil dengan crop functionality",
+          "priority": "Low",
+          "status": "Todo",
+          "estimated_hours": 6,
+          "deliverables": ["Upload foto profil", "Crop interface", "Preview hasil crop", "Kompresi gambar"]
+        }
+      ]
+    },
+    {
+      "name": "Display & Manajemen Paket",
+      "tasks": [
+        {
+          "id": "FE020",
+          "title": "Layout Halaman Daftar Paket",
+          "description": "Buat halaman utama daftar paket dengan grid/list view dan filter",
+          "priority": "High",
+          "status": "Todo",
+          "estimated_hours": 8,
+          "deliverables": ["Layout daftar paket", "Toggle view", "Grid responsif", "Sidebar filter"]
+        },
+        {
+          "id": "FE021",
+          "title": "Sistem Filter Paket",
+          "description": "Buat sistem filtering untuk tipe paket, kelas, tanggal, dan harga",
+          "priority": "High",
+          "status": "Todo",
+          "estimated_hours": 10,
+          "deliverables": ["Filter kategori", "Filter harga", "Filter tanggal", "Filter lokasi"]
+        },
+        {
+          "id": "FE022",
+          "title": "Komponen Card Paket",
+          "description": "Buat komponen card paket reusable dengan gambar, rating, dan harga",
+          "priority": "High",
+          "status": "Todo",
+          "estimated_hours": 6,
+          "deliverables": ["Card komponen", "Image gallery", "Rating display", "Price display"]
+        },
+        {
+          "id": "FE023",
+          "title": "Halaman Detail Paket",
+          "description": "Buat halaman detail paket komprehensif dengan tabs dan informasi lengkap",
+          "priority": "High",
+          "status": "Todo",
+          "estimated_hours": 12,
+          "deliverables": ["Layout detail", "Tab navigation", "Gallery gambar", "Deskripsi lengkap"]
+        },
+        {
+          "id": "FE024",
+          "title": "Fitur Pencarian Paket",
+          "description": "Implement fungsi pencarian dengan autocomplete dan saran",
+          "priority": "Medium",
+          "status": "Todo",
+          "estimated_hours": 8,
+          "deliverables": ["Search bar", "Autocomplete", "Search suggestions", "Search history"]
+        },
+        {
+          "id": "FE025",
+          "title": "Fitur Bandingkan Paket",
+          "description": "Buat interface perbandingan paket side-by-side",
+          "priority": "Medium",
+          "status": "Todo",
+          "estimated_hours": 10,
+          "deliverables": ["Compare interface", "Multi-select paket", "Comparison table", "Save comparison"]
+        },
+        {
+          "id": "FE026",
+          "title": "Kalender Ketersediaan",
+          "description": "Buat kalender interaktif yang menunjukkan ketersediaan dan harga",
+          "priority": "Medium",
+          "status": "Todo",
+          "estimated_hours": 8,
+          "deliverables": ["Kalender interaktif", "Status ketersediaan", "Info harga", "Booking CTA"]
+        }
+      ]
+    },
+    {
+      "name": "Proses Pemesanan & UI",
+      "tasks": [
+        {
+          "id": "FE027",
+          "title": "Wizard Pemesanan Multi-step",
+          "description": "Buat proses pemesanan step-by-step dengan progress indicator",
+          "priority": "High",
+          "status": "Todo",
+          "estimated_hours": 10,
+          "deliverables": ["Step wizard", "Progress indicator", "Navigation logic", "State management"]
+        },
+        {
+          "id": "FE028",
+          "title": "Form Data Jamaah",
+          "description": "Buat form komprehensif untuk data jemaah dengan validasi",
+          "priority": "High",
+          "status": "Todo",
+          "estimated_hours": 12,
+          "deliverables": ["Form jemaah", "Validasi data", "Upload dokumen", "Data relationships"]
+        },
+        {
+          "id": "FE029",
+          "title": "Counter Jumlah Jamaah",
+          "description": "Buat counter interaktif untuk jumlah jemaah dengan kategori usia",
+          "priority": "High",
+          "status": "Todo",
+          "estimated_hours": 4,
+          "deliverables": ["Counter komponen", "Kategori usia", "Validasi jumlah", "Update otomatis"]
+        },
+        {
+          "id": "FE030",
+          "title": "Interface Pemilihan Kamar",
+          "description": "Buat pemilihan tipe kamar dengan representasi visual",
+          "priority": "High",
+          "status": "Todo",
+          "estimated_hours": 8,
+          "deliverables": ["Pilihan tipe kamar", "Visual room layout", "Occupancy display", "Price calculation"]
+        },
+        {
+          "id": "FE031",
+          "title": "Komponen Ringkasan Pemesanan",
+          "description": "Buat ringkasan pemesanan dengan breakdown harga detail",
+          "priority": "High",
+          "status": "Todo",
+          "estimated_hours": 6,
+          "deliverables": ["Summary komponen", "Breakdown harga", "Tax calculation", "Total display"]
+        },
+        {
+          "id": "FE032",
+          "title": "Alur Konfirmasi Pemesanan",
+          "description": "Buat halaman konfirmasi dengan status sukses dan langkah selanjutnya",
+          "priority": "High",
+          "status": "Todo",
+          "estimated_hours": 6,
+          "deliverables": ["Konfirmasi page", "Success state", "Order details", "Next steps"]
+        },
+        {
+          "id": "FE033",
+          "title": "Modifikasi Pemesanan",
+          "description": "Buat interface untuk memodifikasi pemesanan dengan pembatasan",
+          "priority": "Medium",
+          "status": "Todo",
+          "estimated_hours": 8,
+          "deliverables": ["Modification UI", "Change restrictions", "Validation", "Change confirmation"]
+        }
+      ]
+    },
+    {
+      "name": "Interface Pembayaran & Manajemen",
+      "tasks": [
+        {
+          "id": "FE034",
+          "title": "Pemilihan Metode Pembayaran",
+          "description": "Buat interface pemilihan metode dengan opsi transfer bank",
+          "priority": "High",
+          "status": "Todo",
+          "estimated_hours": 6,
+          "deliverables": ["Payment methods", "Bank transfer option", "Method selection", "Fee display"]
+        },
+        {
+          "id": "FE035",
+          "title": "Display Info Transfer Bank",
+          "description": "Tampilkan bank tujuan, nama rekening, dan nomor rekening",
+          "priority": "High",
+          "status": "Todo",
+          "estimated_hours": 4,
+          "deliverables": ["Bank info display", "Account details", "Copy to clipboard", "QR code option"]
+        },
+        {
+          "id": "FE036",
+          "title": "UI Kode Transaksi",
+          "description": "Buat interface untuk menghasilkan dan menampilkan kode transaksi unik",
+          "priority": "High",
+          "status": "Todo",
+          "estimated_hours": 6,
+          "deliverables": ["Transaction code", "Code generation", "Code display", "Expiration timer"]
+        },
+        {
+          "id": "FE037",
+          "title": "Upload Bukti Pembayaran",
+          "description": "Buat drag-and-drop interface untuk upload bukti pembayaran",
+          "priority": "High",
+          "status": "Todo",
+          "estimated_hours": 8,
+          "deliverables": ["Upload interface", "Drag & drop", "File validation", "Preview image"]
+        },
+        {
+          "id": "FE038",
+          "title": "Dashboard Status Pembayaran",
+          "description": "Buat tracking status pembayaran real-time dengan notifikasi",
+          "priority": "High",
+          "status": "Todo",
+          "estimated_hours": 8,
+          "deliverables": ["Status tracking", "Real-time updates", "Notification system", "Status history"]
+        },
+        {
+          "id": "FE039",
+          "title": "Riwayat Pembayaran",
+          "description": "Buat halaman riwayat dengan download receipt dan detail transaksi",
+          "priority": "Medium",
+          "status": "Todo",
+          "estimated_hours": 6,
+          "deliverables": ["Payment history", "Receipt download", "Transaction details", "Search & filter"]
+        }
+      ]
+    },
+    {
+      "name": "Dashboard & Manajemen Pesanan",
+      "tasks": [
+        {
+          "id": "FE040",
+          "title": "Layout Dashboard Pesanan",
+          "description": "Buat dashboard pesanan dengan overview status dan metrics",
+          "priority": "High",
+          "status": "Todo",
+          "estimated_hours": 8,
+          "deliverables": ["Dashboard layout", "Status overview", "Metrics cards", "Quick actions"]
+        },
+        {
+          "id": "FE041",
+          "title": "Manajemen Status Pesanan",
+          "description": "Buat interface untuk melihat dan melacak semua status pesanan",
+          "priority": "High",
+          "status": "Todo",
+          "estimated_hours": 10,
+          "deliverables": ["Status management", "Order tracking", "Status updates", "Timeline view"]
+        },
+        {
+          "id": "FE042",
+          "title": "Detail View Pesanan",
+          "description": "Buat halaman detail pesanan dengan informasi lengkap",
+          "priority": "High",
+          "status": "Todo",
+          "estimated_hours": 8,
+          "deliverables": ["Order detail page", "Complete information", "Related documents", "Action buttons"]
+        },
+        {
+          "id": "FE043",
+          "title": "Riwayat Pesanan & Filter",
+          "description": "Buat halaman riwayat dengan filtering dan pencarian advanced",
+          "priority": "Medium",
+          "status": "Todo",
+          "estimated_hours": 8,
+          "deliverables": ["History page", "Advanced filters", "Search functionality", "Pagination"]
+        },
+        {
+          "id": "FE044",
+          "title": "Sistem Komunikasi Pesanan",
+          "description": "Buat sistem messaging untuk support dan update pesanan",
+          "priority": "Medium",
+          "status": "Todo",
+          "estimated_hours": 12,
+          "deliverables": ["Messaging system", "Chat interface", "Message history", "File attachments"]
+        }
+      ]
+    },
+    {
+      "name": "Panel Admin & Analytics",
+      "tasks": [
+        {
+          "id": "FE045",
+          "title": "Layout Dashboard Admin",
+          "description": "Buat dashboard admin dengan sidebar navigation dan metrics",
+          "priority": "High",
+          "status": "Todo",
+          "estimated_hours": 10,
+          "deliverables": ["Admin layout", "Sidebar navigation", "Metrics dashboard", "Widget system"]
+        },
+        {
+          "id": "FE046",
+          "title": "Manajemen User Admin",
+          "description": "Buat interface admin untuk mengelola semua pengguna",
+          "priority": "High",
+          "status": "Todo",
+          "estimated_hours": 12,
+          "deliverables": ["User management", "CRUD operations", "User roles", "Account status"]
+        },
+        {
+          "id": "FE047",
+          "title": "Manajemen Paket Admin",
+          "description": "Buat interface admin untuk operasi CRUD paket",
+          "priority": "High",
+          "status": "Todo",
+          "estimated_hours": 15,
+          "deliverables": ["Package CRUD", "Image management", "Pricing management", "Availability control"]
+        },
+        {
+          "id": "FE048",
+          "title": "Manajemen Pesanan Admin",
+          "description": "Buat interface admin untuk mengelola semua pesanan",
+          "priority": "High",
+          "status": "Todo",
+          "estimated_hours": 12,
+          "deliverables": ["Order management", "Status updates", "Order processing", "Customer communication"]
+        },
+        {
+          "id": "FE049",
+          "title": "Dashboard Sales & Analytics",
+          "description": "Buat dashboard analytics dengan charts dan laporan",
+          "priority": "Medium",
+          "status": "Todo",
+          "estimated_hours": 15,
+          "deliverables": ["Sales dashboard", "Charts & graphs", "Performance metrics", "Export reports"]
+        },
+        {
+          "id": "FE050",
+          "title": "Pengaturan Sistem Admin",
+          "description": "Buat interface untuk konfigurasi dan pengaturan sistem",
+          "priority": "Low",
+          "status": "Todo",
+          "estimated_hours": 8,
+          "deliverables": ["System settings", "Configuration options", "User permissions", "System maintenance"]
+        }
+      ]
+    },
+    {
+      "name": "Halaman Layanan & Informasi",
+      "tasks": [
+        {
+          "id": "FE051",
+          "title": "Landing Page Layanan",
+          "description": "Buat halaman 'Layanan Kami' yang menampilkan semua layanan",
+          "priority": "Medium",
+          "status": "Todo",
+          "estimated_hours": 10,
+          "deliverables": ["Services landing", "Service cards", "Service categories", "CTA sections"]
+        },
+        {
+          "id": "FE052",
+          "title": "Halaman Detail Layanan",
+          "description": "Buat detail page untuk setiap layanan dengan informasi dan harga",
+          "priority": "Medium",
+          "status": "Todo",
+          "estimated_hours": 8,
+          "deliverables": ["Service details", "Pricing tables", "Service inclusions", "Booking integration"]
+        },
+        {
+          "id": "FE053",
+          "title": "Manajemen Jamaah",
+          "description": "Buat section untuk manajemen grup dan individual jemaah",
+          "priority": "Medium",
+          "status": "Todo",
+          "estimated_hours": 12,
+          "deliverables": ["Pilgrim management", "Group management", "Individual tracking", "Service packages"]
+        },
+        {
+          "id": "FE054",
+          "title": "FAQ & Help Center",
+          "description": "Buat halaman FAQ dan help center dengan searchable content",
+          "priority": "Low",
+          "status": "Todo",
+          "estimated_hours": 8,
+          "deliverables": ["FAQ page", "Search functionality", "Categories", "Help articles"]
+        },
+        {
+          "id": "FE055",
+          "title": "About & Contact Pages",
+          "description": "Buat halaman informasi perusahaan dan kontak dengan form",
+          "priority": "Low",
+          "status": "Todo",
+          "estimated_hours": 8,
+          "deliverables": ["About page", "Contact form", "Company info", "Location map"]
+        }
+      ]
+    },
+    {
+      "name": "Responsivitas Mobile & UX",
+      "tasks": [
+        {
+          "id": "FE056",
+          "title": "Sistem Navigasi Mobile",
+          "description": "Implement navigasi mobile-first dengan hamburger menu",
+          "priority": "High",
+          "status": "Todo",
+          "estimated_hours": 6,
+          "deliverables": ["Mobile navigation", "Hamburger menu", "Drawer menu", "Touch gestures"]
+        },
+        {
+          "id": "FE057",
+          "title": "Layout Responsif",
+          "description": "Pastikan semua halaman responsive di semua ukuran device",
+          "priority": "High",
+          "status": "Todo",
+          "estimated_hours": 15,
+          "deliverables": ["Responsive layouts", "Breakpoint system", "Mobile optimization", "Cross-device testing"]
+        },
+        {
+          "id": "FE058",
+          "title": "Interaksi Touch-friendly",
+          "description": "Optimalkan elemen interaktif untuk touch devices",
+          "priority": "High",
+          "status": "Todo",
+          "estimated_hours": 10,
+          "deliverables": ["Touch optimization", "Button sizing", "Swipe gestures", "Touch feedback"]
+        },
+        {
+          "id": "FE059",
+          "title": "Loading States & Skeletons",
+          "description": "Implement loading states dan skeleton screens untuk UX",
+          "priority": "Medium",
+          "status": "Todo",
+          "estimated_hours": 8,
+          "deliverables": ["Loading states", "Skeleton screens", "Progress indicators", "Smooth transitions"]
+        },
+        {
+          "id": "FE060",
+          "title": "Optimisasi Performa",
+          "description": "Optimalkan performa dengan code splitting dan lazy loading",
+          "priority": "Medium",
+          "status": "Todo",
+          "estimated_hours": 10,
+          "deliverables": ["Code splitting", "Lazy loading", "Image optimization", "Bundle optimization"]
+        }
+      ]
+    },
+    {
+      "name": "Testing & Quality Assurance",
+      "tasks": [
+        {
+          "id": "FE061",
+          "title": "Setup Testing Komponen",
+          "description": "Setup Jest/React Testing Library untuk unit testing",
+          "priority": "High",
+          "status": "Todo",
+          "estimated_hours": 8,
+          "deliverables": ["Test setup", "Component tests", "Test utilities", "Coverage reports"]
+        },
+        {
+          "id": "FE062",
+          "title": "Implementasi E2E Testing",
+          "description": "Implement Cypress/Playwright untuk end-to-end testing",
+          "priority": "High",
+          "status": "Todo",
+          "estimated_hours": 15,
+          "deliverables": ["E2E tests", "User workflows", "Cross-browser testing", "Test automation"]
+        },
+        {
+          "id": "FE063",
+          "title": "Visual Regression Testing",
+          "description": "Setup visual regression testing untuk konsistensi UI",
+          "priority": "Medium",
+          "status": "Todo",
+          "estimated_hours": 8,
+          "deliverables": ["Visual tests", "Screenshot comparison", "UI consistency", "Regression detection"]
+        },
+        {
+          "id": "FE064",
+          "title": "Testing Aksesibilitas",
+          "description": "Implement WCAG compliance dan fitur aksesibilitas",
+          "priority": "High",
+          "status": "Todo",
+          "estimated_hours": 10,
+          "deliverables": ["Accessibility testing", "ARIA labels", "Keyboard navigation", "Screen reader support"]
+        },
+        {
+          "id": "FE065",
+          "title": "Performance Testing",
+          "description": "Test dan optimalkan metrik performa frontend",
+          "priority": "Medium",
+          "status": "Todo",
+          "estimated_hours": 8,
+          "deliverables": ["Performance tests", "Lighthouse reports", "Core Web Vitals", "Performance monitoring"]
+        }
+      ]
+    },
+    {
+      "name": "Deploy & Build Optimization",
+      "tasks": [
+        {
+          "id": "FE066",
+          "title": "Optimisasi Build Production",
+          "description": "Optimalkan build dengan minification, tree shaking, dan compression",
+          "priority": "High",
+          "status": "Todo",
+          "estimated_hours": 6,
+          "deliverables": ["Build optimization", "Minification", "Tree shaking", "Compression"]
+        },
+        {
+          "id": "FE067",
+          "title": "Pipeline CI/CD",
+          "description": "Setup CI/CD pipeline untuk deployment otomatis",
+          "priority": "High",
+          "status": "Todo",
+          "estimated_hours": 8,
+          "deliverables": ["CI/CD pipeline", "Automated testing", "Build automation", "Deployment process"]
+        },
+        {
+          "id": "FE068",
+          "title": "Konfigurasi Environment",
+          "description": "Kelola environment variables untuk tahap berbeda",
+          "priority": "Medium",
+          "status": "Todo",
+          "estimated_hours": 4,
+          "deliverables": ["Environment config", "Variables management", "Multi-stage deployment", "Security configuration"]
+        },
+        {
+          "id": "FE069",
+          "title": "Monitoring & Analytics",
+          "description": "Setup monitoring, error tracking, dan user analytics",
+          "priority": "Medium",
+          "status": "Todo",
+          "estimated_hours": 8,
+          "deliverables": ["Error monitoring", "Performance tracking", "User analytics", "Custom events"]
+        },
+        {
+          "id": "FE070",
+          "title": "Dokumentasi & Maintenance",
+          "description": "Buat dokumentasi lengkap dan panduan maintenance",
+          "priority": "Low",
+          "status": "Todo",
+          "estimated_hours": 6,
+          "deliverables": ["Technical docs", "API documentation", "Maintenance guides", "Troubleshooting docs"]
+        }
+      ]
+    }
+  ],
+  "summary": {
+    "total_tasks": 70,
+    "total_hours": 670,
+    "total_weeks": 24,
+    "high_priority": 42,
+    "medium_priority": 23,
+    "low_priority": 5
+  },
+  "metadata": {
+    "created_date": "2025-11-20",
+    "version": "1.0",
+    "author": "MiniMax Agent",
+    "language": "Bahasa Indonesia"
+  }
+}

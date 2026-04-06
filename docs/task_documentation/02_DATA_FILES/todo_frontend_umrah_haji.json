@@ -1,0 +1,784 @@
+{
+  "project": "Umrah Haji Booking Application - Frontend Development",
+  "version": "1.0.0",
+  "description": "Comprehensive frontend development tasks for Umrah and Haji booking application",
+  "technology_stack": {
+    "framework": "React.js / Vue.js / Angular",
+    "styling": "Tailwind CSS / Styled Components / CSS Modules",
+    "state_management": "Redux / Zustand / Context API",
+    "routing": "React Router / Vue Router",
+    "build_tool": "Vite / Webpack",
+    "testing": "Jest / Cypress / Playwright",
+    "ui_library": "Ant Design / Material-UI / Chakra UI"
+  },
+  "categories": [
+    {
+      "name": "Frontend Project Setup & Configuration",
+      "tasks": [
+        {
+          "id": "FE001",
+          "title": "Frontend Project Initialization",
+          "description": "Setup React/Vue project with Vite, configure project structure and dependencies",
+          "priority": "High",
+          "status": "Todo",
+          "estimated_hours": 4,
+          "dependencies": [],
+          "deliverables": ["Project setup", "Package.json configuration", "Basic folder structure"]
+        },
+        {
+          "id": "FE002",
+          "title": "Tailwind CSS Configuration",
+          "description": "Install and configure Tailwind CSS with custom theme and design system",
+          "priority": "High",
+          "status": "Todo",
+          "estimated_hours": 3,
+          "dependencies": ["FE001"],
+          "deliverables": ["Tailwind config", "Custom color palette", "Typography scale", "Spacing system"]
+        },
+        {
+          "id": "FE003",
+          "title": "UI Component Library Setup",
+          "description": "Install and configure UI library (Ant Design/Material-UI) with custom theming",
+          "priority": "Medium",
+          "status": "Todo",
+          "estimated_hours": 4,
+          "dependencies": ["FE001"],
+          "deliverables": ["UI library setup", "Custom theme configuration", "Component overrides"]
+        },
+        {
+          "id": "FE004",
+          "title": "Routing System Implementation",
+          "description": "Setup React Router with protected routes, lazy loading, and navigation guards",
+          "priority": "High",
+          "status": "Todo",
+          "estimated_hours": 6,
+          "dependencies": ["FE001"],
+          "deliverables": ["Route configuration", "Protected routes", "Lazy loading setup", "Navigation menu"]
+        },
+        {
+          "id": "FE005",
+          "title": "State Management Setup",
+          "description": "Implement Redux Toolkit or Zustand for global state management",
+          "priority": "High",
+          "status": "Todo",
+          "estimated_hours": 5,
+          "dependencies": ["FE001"],
+          "deliverables": ["Store configuration", "Slice definitions", "State persistence", "DevTools setup"]
+        },
+        {
+          "id": "FE006",
+          "title": "API Client Configuration",
+          "description": "Setup Axios with interceptors, error handling, and token management",
+          "priority": "High",
+          "status": "Todo",
+          "estimated_hours": 4,
+          "dependencies": ["FE005"],
+          "deliverables": ["Axios instance", "Request/Response interceptors", "Error handling", "Token management"]
+        },
+        {
+          "id": "FE007",
+          "title": "Development Environment Setup",
+          "description": "Configure ESLint, Prettier, TypeScript, and development scripts",
+          "priority": "Medium",
+          "status": "Todo",
+          "estimated_hours": 3,
+          "dependencies": ["FE001"],
+          "deliverables": ["ESLint config", "Prettier config", "TypeScript setup", "Development scripts"]
+        }
+      ]
+    },
+    {
+      "name": "Authentication & User Interface",
+      "tasks": [
+        {
+          "id": "FE008",
+          "title": "Login Page Design & Implementation",
+          "description": "Create responsive login page with email/password form and Google OAuth button",
+          "priority": "High",
+          "status": "Todo",
+          "estimated_hours": 8,
+          "dependencies": ["FE004", "FE005", "FE006"],
+          "deliverables": ["Login form component", "Validation logic", "Google OAuth integration", "Responsive design"]
+        },
+        {
+          "id": "FE009",
+          "title": "Registration Page Design & Implementation",
+          "description": "Create multi-step registration form with validation and email verification",
+          "priority": "High",
+          "status": "Todo",
+          "estimated_hours": 12,
+          "dependencies": ["FE008"],
+          "deliverables": ["Registration form", "Step indicators", "Validation", "Email verification flow"]
+        },
+        {
+          "id": "FE010",
+          "title": "Forgot Password Interface",
+          "description": "Create forgot password form with email input and reset flow",
+          "priority": "Medium",
+          "status": "Todo",
+          "estimated_hours": 6,
+          "dependencies": ["FE008"],
+          "deliverables": ["Forgot password form", "Email validation", "Reset flow UI", "Success/error states"]
+        },
+        {
+          "id": "FE011",
+          "title": "Google OAuth Integration UI",
+          "description": "Implement Google sign-in button and callback handling UI",
+          "priority": "Medium",
+          "status": "Todo",
+          "estimated_hours": 6,
+          "dependencies": ["FE008"],
+          "deliverables": ["Google OAuth button", "OAuth callback handling", "Loading states", "Error handling"]
+        },
+        {
+          "id": "FE012",
+          "title": "Authentication Context Provider",
+          "description": "Create authentication context with login, logout, and user state management",
+          "priority": "High",
+          "status": "Todo",
+          "estimated_hours": 8,
+          "dependencies": ["FE005", "FE008"],
+          "deliverables": ["Auth context", "Login/logout methods", "User state management", "Token handling"]
+        },
+        {
+          "id": "FE013",
+          "title": "Protected Route Components",
+          "description": "Create higher-order components for route protection and redirect logic",
+          "priority": "High",
+          "status": "Todo",
+          "estimated_hours": 4,
+          "dependencies": ["FE004", "FE012"],
+          "deliverables": ["Protected route component", "Redirect logic", "Loading states", "Access control"]
+        }
+      ]
+    },
+    {
+      "name": "User Profile Management UI",
+      "tasks": [
+        {
+          "id": "FE014",
+          "title": "Profile Dashboard Layout",
+          "description": "Create main profile dashboard with sidebar navigation and content areas",
+          "priority": "High",
+          "status": "Todo",
+          "estimated_hours": 6,
+          "dependencies": ["FE002", "FE003"],
+          "deliverables": ["Dashboard layout", "Sidebar navigation", "Content sections", "Responsive grid"]
+        },
+        {
+          "id": "FE015",
+          "title": "Personal Information Form",
+          "description": "Create form for full name, email, phone, date of birth, and gender",
+          "priority": "High",
+          "status": "Todo",
+          "estimated_hours": 8,
+          "dependencies": ["FE014"],
+          "deliverables": ["Personal info form", "Input validation", "Date picker", "Gender selection", "Save/cancel functionality"]
+        },
+        {
+          "id": "FE016",
+          "title": "ID Document Upload Interface",
+          "description": "Create drag-and-drop file upload for KTP/Passport with preview",
+          "priority": "High",
+          "status": "Todo",
+          "estimated_hours": 10,
+          "dependencies": ["FE015"],
+          "deliverables": ["File upload component", "Image preview", "File validation", "Upload progress", "Document management"]
+        },
+        {
+          "id": "FE017",
+          "title": "Document Number Management",
+          "description": "Create forms for KTP/Passport numbers with validation",
+          "priority": "Medium",
+          "status": "Todo",
+          "estimated_hours": 6,
+          "dependencies": ["FE016"],
+          "deliverables": ["Document number forms", "Number validation", "Format masking", "Edit functionality"]
+        },
+        {
+          "id": "FE018",
+          "title": "Bank Details Management UI",
+          "description": "Create form for bank name, account number, and account name (A.N)",
+          "priority": "Medium",
+          "status": "Todo",
+          "estimated_hours": 6,
+          "dependencies": ["FE015"],
+          "deliverables": ["Bank details form", "Account validation", "Bank selection dropdown", "Secure input fields"]
+        },
+        {
+          "id": "FE019",
+          "title": "Password Change Interface",
+          "description": "Create secure password change form with current/new password fields",
+          "priority": "Medium",
+          "status": "Todo",
+          "estimated_hours": 6,
+          "dependencies": ["FE015"],
+          "deliverables": ["Password change form", "Password strength indicator", "Current password verification", "Success confirmation"]
+        },
+        {
+          "id": "FE020",
+          "title": "Profile Avatar & Photo Management",
+          "description": "Create profile photo upload and management with cropping functionality",
+          "priority": "Low",
+          "status": "Todo",
+          "estimated_hours": 8,
+          "dependencies": ["FE016"],
+          "deliverables": ["Avatar upload", "Image cropping", "Preview functionality", "Photo management"]
+        }
+      ]
+    },
+    {
+      "name": "Package Display & Management UI",
+      "tasks": [
+        {
+          "id": "FE021",
+          "title": "Package Listing Page Layout",
+          "description": "Create main package listing page with grid/list view toggle and filters",
+          "priority": "High",
+          "status": "Todo",
+          "estimated_hours": 8,
+          "dependencies": ["FE002", "FE003"],
+          "deliverables": ["Package grid layout", "List/grid toggle", "Search bar", "Filter sidebar", "Pagination"]
+        },
+        {
+          "id": "FE022",
+          "title": "Package Filter System",
+          "description": "Create comprehensive filtering system for package types, classes, dates, and prices",
+          "priority": "High",
+          "status": "Todo",
+          "estimated_hours": 12,
+          "dependencies": ["FE021"],
+          "deliverables": ["Filter components", "Date range picker", "Price range slider", "Multi-select filters", "Clear filters"]
+        },
+        {
+          "id": "FE023",
+          "title": "Package Card Component",
+          "description": "Create reusable package card component with images, ratings, and key info",
+          "priority": "High",
+          "status": "Todo",
+          "estimated_hours": 8,
+          "dependencies": ["FE021"],
+          "deliverables": ["Package card component", "Image carousel", "Rating display", "Price display", "Quick actions"]
+        },
+        {
+          "id": "FE024",
+          "title": "Package Detail Page",
+          "description": "Create comprehensive package detail page with tabs and extensive information",
+          "priority": "High",
+          "status": "Todo",
+          "estimated_hours": 16,
+          "dependencies": ["FE023"],
+          "deliverables": ["Detail page layout", "Image gallery", "Package info tabs", "Itinerary display", "Booking CTA"]
+        },
+        {
+          "id": "FE025",
+          "title": "Package Comparison Feature",
+          "description": "Create side-by-side package comparison interface",
+          "priority": "Medium",
+          "status": "Todo",
+          "estimated_hours": 10,
+          "dependencies": ["FE023"],
+          "deliverables": ["Comparison interface", "Feature highlighting", "Price comparison", "Mobile-responsive design"]
+        },
+        {
+          "id": "FE026",
+          "title": "Package Search & Suggestions",
+          "description": "Implement search functionality with autocomplete and suggestion system",
+          "priority": "Medium",
+          "status": "Todo",
+          "estimated_hours": 8,
+          "dependencies": ["FE021"],
+          "deliverables": ["Search component", "Autocomplete", "Search suggestions", "Recent searches", "Search history"]
+        },
+        {
+          "id": "FE027",
+          "title": "Package Availability Calendar",
+          "description": "Create interactive calendar showing package availability and pricing",
+          "priority": "Medium",
+          "status": "Todo",
+          "estimated_hours": 12,
+          "dependencies": ["FE024"],
+          "deliverables": ["Calendar component", "Availability indicators", "Pricing display", "Booking integration", "Legend display"]
+        }
+      ]
+    },
+    {
+      "name": "Booking Process UI",
+      "tasks": [
+        {
+          "id": "FE028",
+          "title": "Multi-step Booking Wizard",
+          "description": "Create step-by-step booking process with progress indicator and navigation",
+          "priority": "High",
+          "status": "Todo",
+          "estimated_hours": 16,
+          "dependencies": ["FE024"],
+          "deliverables": ["Step wizard component", "Progress indicator", "Step validation", "Navigation controls", "Mobile responsive"]
+        },
+        {
+          "id": "FE029",
+          "title": "Pilgrim Data Collection Form",
+          "description": "Create comprehensive form for collecting pilgrim details with validation",
+          "priority": "High",
+          "status": "Todo",
+          "estimated_hours": 12,
+          "dependencies": ["FE028"],
+          "deliverables": ["Pilgrim form component", "Field validation", "Dynamic form fields", "Data persistence", "Form preview"]
+        },
+        {
+          "id": "FE030",
+          "title": "Jemaah Counter Component",
+          "description": "Create interactive counter for jumlah jemaah with bayi/dewasa options",
+          "priority": "High",
+          "status": "Todo",
+          "estimated_hours": 8,
+          "dependencies": ["FE028"],
+          "deliverables": ["Counter component", "Adult/infant selection", "Price calculation", "Room allocation preview", "Validation"]
+        },
+        {
+          "id": "FE031",
+          "title": "Room Selection Interface",
+          "description": "Create room type selection (Double/Triple/Quad) with visual representation",
+          "priority": "High",
+          "status": "Todo",
+          "estimated_hours": 10,
+          "dependencies": ["FE030"],
+          "deliverables": ["Room selection UI", "Room visualization", "Capacity display", "Price calculation", "Selection validation"]
+        },
+        {
+          "id": "FE032",
+          "title": "Booking Summary Component",
+          "description": "Create comprehensive booking summary with all details and pricing breakdown",
+          "priority": "High",
+          "status": "Todo",
+          "estimated_hours": 8,
+          "dependencies": ["FE031"],
+          "deliverables": ["Summary component", "Price breakdown", "Traveler details", "Room allocation", "Terms acceptance"]
+        },
+        {
+          "id": "FE033",
+          "title": "Booking Confirmation Flow",
+          "description": "Create booking confirmation page with success states and next steps",
+          "priority": "High",
+          "status": "Todo",
+          "estimated_hours": 6,
+          "dependencies": ["FE032"],
+          "deliverables": ["Confirmation page", "Success animations", "Booking reference", "Next steps guide", "Email notification"]
+        },
+        {
+          "id": "FE034",
+          "title": "Booking Modification Interface",
+          "description": "Create interface for modifying existing bookings with restrictions",
+          "priority": "Medium",
+          "status": "Todo",
+          "estimated_hours": 10,
+          "dependencies": ["FE033"],
+          "deliverables": ["Modification form", "Restriction display", "Price recalculation", "Change confirmation", "History tracking"]
+        }
+      ]
+    },
+    {
+      "name": "Payment Interface",
+      "tasks": [
+        {
+          "id": "FE035",
+          "title": "Payment Method Selection",
+          "description": "Create payment method selection interface with bank transfer options",
+          "priority": "High",
+          "status": "Todo",
+          "estimated_hours": 8,
+          "dependencies": ["FE033"],
+          "deliverables": ["Payment method selection", "Bank transfer options", "Payment instructions", "Method validation"]
+        },
+        {
+          "id": "FE036",
+          "title": "Bank Transfer Information Display",
+          "description": "Create interface showing destination bank, account name, and account number",
+          "priority": "High",
+          "status": "Todo",
+          "estimated_hours": 6,
+          "dependencies": ["FE035"],
+          "deliverables": ["Bank info display", "Account details", "Copy-to-clipboard", "QR code generation", "Payment deadline"]
+        },
+        {
+          "id": "FE037",
+          "title": "Transaction Code Generation UI",
+          "description": "Create interface for generating and displaying unique transaction codes",
+          "priority": "High",
+          "status": "Todo",
+          "estimated_hours": 6,
+          "dependencies": ["FE035"],
+          "deliverables": ["Transaction code display", "Code generation", "QR code for code", "Code validation", "Expiry handling"]
+        },
+        {
+          "id": "FE038",
+          "title": "Payment Proof Upload Interface",
+          "description": "Create drag-and-drop interface for uploading payment proof documents",
+          "priority": "High",
+          "status": "Todo",
+          "estimated_hours": 8,
+          "dependencies": ["FE035"],
+          "deliverables": ["Upload interface", "File validation", "Preview functionality", "Upload progress", "Document management"]
+        },
+        {
+          "id": "FE039",
+          "title": "Payment Status Dashboard",
+          "description": "Create real-time payment status tracking with notifications",
+          "priority": "High",
+          "status": "Todo",
+          "estimated_hours": 10,
+          "dependencies": ["FE038"],
+          "deliverables": ["Status dashboard", "Real-time updates", "Notification system", "Status history", "Action buttons"]
+        },
+        {
+          "id": "FE040",
+          "title": "Payment History & Receipts",
+          "description": "Create payment history page with receipt downloads and transaction details",
+          "priority": "Medium",
+          "status": "Todo",
+          "estimated_hours": 8,
+          "dependencies": ["FE039"],
+          "deliverables": ["Payment history list", "Receipt download", "Transaction details", "Filter/search", "Export functionality"]
+        }
+      ]
+    },
+    {
+      "name": "Order & Booking Management UI",
+      "tasks": [
+        {
+          "id": "FE041",
+          "title": "Order Dashboard Layout",
+          "description": "Create main order management dashboard with status overview",
+          "priority": "High",
+          "status": "Todo",
+          "estimated_hours": 8,
+          "dependencies": ["FE039"],
+          "deliverables": ["Dashboard layout", "Status overview cards", "Order statistics", "Quick actions", "Recent orders"]
+        },
+        {
+          "id": "FE042",
+          "title": "Order Status Management",
+          "description": "Create interface for viewing and tracking all order statuses",
+          "priority": "High",
+          "status": "Todo",
+          "estimated_hours": 12,
+          "dependencies": ["FE041"],
+          "deliverables": ["Status indicators", "Status timeline", "Status filters", "Status actions", "Progress tracking"]
+        },
+        {
+          "id": "FE043",
+          "title": "Order Detail View",
+          "description": "Create comprehensive order detail page with all booking information",
+          "priority": "High",
+          "status": "Todo",
+          "estimated_hours": 10,
+          "dependencies": ["FE042"],
+          "deliverables": ["Detail page layout", "Order information", "Traveler details", "Payment history", "Action buttons"]
+        },
+        {
+          "id": "FE044",
+          "title": "Order History & Filtering",
+          "description": "Create order history page with advanced filtering and search",
+          "priority": "Medium",
+          "status": "Todo",
+          "estimated_hours": 10,
+          "dependencies": ["FE043"],
+          "deliverables": ["History list", "Filter components", "Search functionality", "Date range filter", "Status filtering"]
+        },
+        {
+          "id": "FE045",
+          "title": "Order Communication Interface",
+          "description": "Create messaging system for customer support and order updates",
+          "priority": "Medium",
+          "status": "Todo",
+          "estimated_hours": 12,
+          "dependencies": ["FE043"],
+          "deliverables": ["Message interface", "Chat component", "File attachments", "Message history", "Notification system"]
+        },
+        {
+          "id": "FE046",
+          "title": "Order Document Management",
+          "description": "Create interface for managing order-related documents and tickets",
+          "priority": "Low",
+          "status": "Todo",
+          "estimated_hours": 8,
+          "dependencies": ["FE043"],
+          "deliverables": ["Document list", "Download functionality", "Document upload", "Document categories", "Sharing options"]
+        }
+      ]
+    },
+    {
+      "name": "Services & Information Pages",
+      "tasks": [
+        {
+          "id": "FE047",
+          "title": "Services Landing Page",
+          "description": "Create comprehensive 'Layanan Kami' page showcasing all services",
+          "priority": "Medium",
+          "status": "Todo",
+          "estimated_hours": 12,
+          "dependencies": ["FE002", "FE003"],
+          "deliverables": ["Services hero section", "Service cards", "Service descriptions", "CTA buttons", "Contact information"]
+        },
+        {
+          "id": "FE048",
+          "title": "Service Detail Pages",
+          "description": "Create individual detail pages for each service with pricing",
+          "priority": "Medium",
+          "status": "Todo",
+          "estimated_hours": 10,
+          "dependencies": ["FE047"],
+          "deliverables": ["Detail page templates", "Image galleries", "Pricing tables", "Booking integration", "Related services"]
+        },
+        {
+          "id": "FE049",
+          "title": "Pilgrim Management Interface",
+          "description": "Create 'Manajemen Jamaah' section for group and individual management",
+          "priority": "Medium",
+          "status": "Todo",
+          "estimated_hours": 16,
+          "dependencies": ["FE041"],
+          "deliverables": ["Management dashboard", "Group creation", "Member management", "Group booking", "Communication tools"]
+        },
+        {
+          "id": "FE050",
+          "title": "FAQ & Help Center",
+          "description": "Create FAQ page and help center with searchable content",
+          "priority": "Low",
+          "status": "Todo",
+          "estimated_hours": 8,
+          "dependencies": ["FE047"],
+          "deliverables": ["FAQ component", "Search functionality", "Category filtering", "Help articles", "Contact support"]
+        },
+        {
+          "id": "FE051",
+          "title": "About & Contact Pages",
+          "description": "Create company information and contact pages with forms",
+          "priority": "Low",
+          "status": "Todo",
+          "estimated_hours": 8,
+          "dependencies": ["FE047"],
+          "deliverables": ["About page", "Contact form", "Company information", "Location map", "Social media links"]
+        }
+      ]
+    },
+    {
+      "name": "Admin Panel Frontend",
+      "tasks": [
+        {
+          "id": "FE052",
+          "title": "Admin Dashboard Layout",
+          "description": "Create comprehensive admin dashboard with sidebar navigation and metrics",
+          "priority": "High",
+          "status": "Todo",
+          "estimated_hours": 12,
+          "dependencies": ["FE002", "FE003"],
+          "deliverables": ["Dashboard layout", "Sidebar navigation", "Metrics cards", "Data tables", "Chart components"]
+        },
+        {
+          "id": "FE053",
+          "title": "User Management Interface",
+          "description": "Create admin interface for managing all users and their profiles",
+          "priority": "High",
+          "status": "Todo",
+          "estimated_hours": 16,
+          "dependencies": ["FE052"],
+          "deliverables": ["User list table", "User detail view", "User actions", "Profile editing", "User statistics"]
+        },
+        {
+          "id": "FE054",
+          "title": "Package Management Admin",
+          "description": "Create admin interface for CRUD operations on packages",
+          "priority": "High",
+          "status": "Todo",
+          "estimated_hours": 20,
+          "dependencies": ["FE052"],
+          "deliverables": ["Package CRUD forms", "Image upload", "Price management", "Availability calendar", "Bulk operations"]
+        },
+        {
+          "id": "FE055",
+          "title": "Order Management Admin",
+          "description": "Create admin interface for managing all orders and updating statuses",
+          "priority": "High",
+          "status": "Todo",
+          "estimated_hours": 16,
+          "dependencies": ["FE052"],
+          "deliverables": ["Order management table", "Status update interface", "Bulk actions", "Payment verification", "Order filtering"]
+        },
+        {
+          "id": "FE056",
+          "title": "Sales & Analytics Dashboard",
+          "description": "Create analytics dashboard with charts and reports",
+          "priority": "Medium",
+          "status": "Todo",
+          "estimated_hours": 16,
+          "dependencies": ["FE052"],
+          "deliverables": ["Revenue charts", "Sales metrics", "Booking analytics", "Export functionality", "Date filtering"]
+        },
+        {
+          "id": "FE057",
+          "title": "System Settings Interface",
+          "description": "Create admin interface for system configuration and settings",
+          "priority": "Low",
+          "status": "Todo",
+          "estimated_hours": 10,
+          "dependencies": ["FE052"],
+          "deliverables": ["Settings forms", "Configuration panels", "Feature toggles", "Email templates", "System information"]
+        }
+      ]
+    },
+    {
+      "name": "Mobile Responsiveness & UX",
+      "tasks": [
+        {
+          "id": "FE058",
+          "title": "Mobile Navigation System",
+          "description": "Implement mobile-first navigation with hamburger menu and drawer",
+          "priority": "High",
+          "status": "Todo",
+          "estimated_hours": 8,
+          "dependencies": ["FE004"],
+          "deliverables": ["Mobile menu", "Drawer navigation", "Touch gestures", "Menu animations", "Mobile breadcrumbs"]
+        },
+        {
+          "id": "FE059",
+          "title": "Responsive Layout System",
+          "description": "Ensure all pages are fully responsive across all device sizes",
+          "priority": "High",
+          "status": "Todo",
+          "estimated_hours": 20,
+          "dependencies": ["FE002"],
+          "deliverables": ["Responsive grids", "Mobile layouts", "Tablet optimization", "Desktop scaling", "Cross-browser testing"]
+        },
+        {
+          "id": "FE060",
+          "title": "Touch-friendly Interactions",
+          "description": "Optimize all interactive elements for touch devices",
+          "priority": "High",
+          "status": "Todo",
+          "estimated_hours": 12,
+          "dependencies": ["FE059"],
+          "deliverables": ["Touch targets", "Swipe gestures", "Mobile forms", "Mobile tables", "Touch feedback"]
+        },
+        {
+          "id": "FE061",
+          "title": "Loading States & Skeletons",
+          "description": "Implement loading states and skeleton screens for better UX",
+          "priority": "Medium",
+          "status": "Todo",
+          "estimated_hours": 10,
+          "dependencies": ["FE059"],
+          "deliverables": ["Loading spinners", "Skeleton components", "Progressive loading", "Error states", "Retry mechanisms"]
+        },
+        {
+          "id": "FE062",
+          "title": "Performance Optimization",
+          "description": "Optimize frontend performance with code splitting and lazy loading",
+          "priority": "Medium",
+          "status": "Todo",
+          "estimated_hours": 12,
+          "dependencies": ["FE061"],
+          "deliverables": ["Code splitting", "Lazy loading", "Image optimization", "Bundle analysis", "Performance monitoring"]
+        }
+      ]
+    },
+    {
+      "name": "Frontend Testing & Quality",
+      "tasks": [
+        {
+          "id": "FE063",
+          "title": "Component Testing Setup",
+          "description": "Setup Jest/React Testing Library for component unit testing",
+          "priority": "High",
+          "status": "Todo",
+          "estimated_hours": 8,
+          "dependencies": ["FE007"],
+          "deliverables": ["Test configuration", "Component tests", "Mock utilities", "Test coverage", "CI integration"]
+        },
+        {
+          "id": "FE064",
+          "title": "E2E Testing Implementation",
+          "description": "Implement Cypress/Playwright for end-to-end testing",
+          "priority": "High",
+          "status": "Todo",
+          "estimated_hours": 16,
+          "dependencies": ["FE063"],
+          "deliverables": ["E2E test setup", "User journey tests", "Cross-browser testing", "Test data", "Reporting"]
+        },
+        {
+          "id": "FE065",
+          "title": "Visual Regression Testing",
+          "description": "Setup visual regression testing for UI consistency",
+          "priority": "Medium",
+          "status": "Todo",
+          "estimated_hours": 10,
+          "dependencies": ["FE064"],
+          "deliverables": ["Visual test setup", "Screenshot comparison", "Baseline images", "CI integration", "Test reporting"]
+        },
+        {
+          "id": "FE066",
+          "title": "Accessibility Testing & Implementation",
+          "description": "Implement WCAG compliance and accessibility features",
+          "priority": "High",
+          "status": "Todo",
+          "estimated_hours": 12,
+          "dependencies": ["FE059"],
+          "deliverables": ["ARIA labels", "Keyboard navigation", "Screen reader support", "Color contrast", "Accessibility tests"]
+        },
+        {
+          "id": "FE067",
+          "title": "Performance Testing",
+          "description": "Test and optimize frontend performance metrics",
+          "priority": "Medium",
+          "status": "Todo",
+          "estimated_hours": 8,
+          "dependencies": ["FE062"],
+          "deliverables": ["Performance metrics", "Lighthouse reports", "Bundle analysis", "Loading optimization", "Performance monitoring"]
+        }
+      ]
+    },
+    {
+      "name": "Deployment & Build Optimization",
+      "tasks": [
+        {
+          "id": "FE068",
+          "title": "Build Optimization",
+          "description": "Optimize production build with minification, tree shaking, and compression",
+          "priority": "High",
+          "status": "Todo",
+          "estimated_hours": 8,
+          "dependencies": ["FE062"],
+          "deliverables": ["Production build", "Asset optimization", "Code splitting", "Compression", "Build analysis"]
+        },
+        {
+          "id": "FE069",
+          "title": "Deployment Pipeline",
+          "description": "Setup CI/CD pipeline for automated deployment",
+          "priority": "High",
+          "status": "Todo",
+          "estimated_hours": 6,
+          "dependencies": ["FE068"],
+          "deliverables": ["GitHub Actions", "Build automation", "Deployment scripts", "Environment configs", "Rollback mechanisms"]
+        },
+        {
+          "id": "FE070",
+          "title": "Environment Configuration",
+          "description": "Manage environment variables and configuration for different stages",
+          "priority": "Medium",
+          "status": "Todo",
+          "estimated_hours": 4,
+          "dependencies": ["FE069"],
+          "deliverables": ["Environment files", "Config management", "Secret handling", "Stage-specific configs", "Documentation"]
+        }
+      ]
+    }
+  ],
+  "total_estimated_hours": 670,
+  "metadata": {
+    "created_date": "2025-11-20",
+    "version": "1.0",
+    "author": "MiniMax Agent",
+    "estimated_timeline_months": 6,
+    "focus_area": "Frontend Development Only"
+  }
+}

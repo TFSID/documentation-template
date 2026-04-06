@@ -1,0 +1,158 @@
+{
+  "project": "Modul Program Umrah - Aplikasi Umrah Haji",
+  "version": "1.0.0",
+  "description": "Todo list khusus untuk modul program umrah",
+  "technology_stack": {
+    "frontend": "React.js / Vue.js",
+    "backend": "Node.js / Python",
+    "database": "PostgreSQL / MongoDB",
+    "ui_framework": "Tailwind CSS / Ant Design"
+  },
+  "modules": [
+    {
+      "name": "Program Umrah Management",
+      "tasks": [
+        {
+          "id": "UMR-001",
+          "title": "Program Calendar & Schedule",
+          "description": "Buat kalender program umrah dengan jadwal keberangkatan dan kuota",
+          "priority": "High",
+          "status": "To Do",
+          "estimated_hours": 10,
+          "deliverables": ["Calendar interface", "Schedule management", "Quota tracking", "Availability checker"]
+        },
+        {
+          "id": "UMR-002",
+          "title": "Program Categories System",
+          "description": "Sistem kategori program umrah (hemat, standard, premium, VIP)",
+          "priority": "High",
+          "status": "To Do",
+          "estimated_hours": 6,
+          "deliverables": ["Category management", "Feature comparison", "Price tiers", "Package inclusions"]
+        },
+        {
+          "id": "UMR-003",
+          "title": "Hotel & Accommodation Management",
+          "description": "Manajemen hotel dan akomodasi untuk setiap program umrah",
+          "priority": "High",
+          "status": "To Do",
+          "estimated_hours": 12,
+          "deliverables": ["Hotel database", "Room management", "Booking system", "Check-in/check-out tracking"]
+        },
+        {
+          "id": "UMR-004",
+          "title": "Flight & Transportation",
+          "description": "Sistem manajemen jadwal penerbangan dan transportasi",
+          "priority": "High",
+          "status": "To Do",
+          "estimated_hours": 10,
+          "deliverables": ["Flight schedule", "Ticket management", "Airport transfers", "Transportation booking"]
+        },
+        {
+          "id": "UMR-005",
+          "title": "Itinerary Management",
+          "description": "Manajemen itineraryprogram umrah dengan detail aktivitas harian",
+          "priority": "High",
+          "status": "To Do",
+          "estimated_hours": 12,
+          "deliverables": ["Daily itinerary", "Activity scheduling", "Location management", "Guide assignment"]
+        },
+        {
+          "id": "UMR-006",
+          "title": "Pilgrim Group Management",
+          "description": "Sistem manajemen grup jemaah dengan leader dan anggota",
+          "priority": "High",
+          "status": "To Do",
+          "estimated_hours": 10,
+          "deliverables": ["Group creation", "Member management", "Leader assignment", "Group communication"]
+        },
+        {
+          "id": "UMR-007",
+          "title": "Meals & Catering System",
+          "description": "Sistem manajemen makan dan katering untuk program umrah",
+          "priority": "Medium",
+          "status": "To Do",
+          "estimated_hours": 8,
+          "deliverables": ["Meal planning", "Catering booking", "Dietary requirements", "Nutrition tracking"]
+        },
+        {
+          "id": "UMR-008",
+          "title": "Guided Tours & Activities",
+          "description": "Sistem tur berpemandu dan aktivitas spiritual",
+          "priority": "Medium",
+          "status": "To Do",
+          "estimated_hours": 10,
+          "deliverables": ["Tour packages", "Guide management", "Activity booking", "Group coordination"]
+        },
+        {
+          "id": "UMR-009",
+          "title": "Health & Medical Support",
+          "description": "Sistem dukungan kesehatan dan medis selama program",
+          "priority": "Medium",
+          "status": "To Do",
+          "estimated_hours": 8,
+          "deliverables": ["Medical record", "Health monitoring", "Emergency contacts", "Insurance tracking"]
+        },
+        {
+          "id": "UMR-010",
+          "title": "Emergency & Safety System",
+          "description": "Sistem darurat dan keamanan untuk jemaah umrah",
+          "priority": "High",
+          "status": "To Do",
+          "estimated_hours": 10,
+          "deliverables": ["Emergency protocol", "Safety alerts", "Contact system", "Location tracking"]
+        },
+        {
+          "id": "UMR-011",
+          "title": "Daily Reports & Updates",
+          "description": "Sistem laporan harian dan update status jemaah",
+          "priority": "Medium",
+          "status": "To Do",
+          "estimated_hours": 8,
+          "deliverables": ["Daily reports", "Status updates", "Photo sharing", "Family notifications"]
+        },
+        {
+          "id": "UMR-012",
+          "title": "Post-Umrah Feedback System",
+          "description": "Sistem feedback dan review setelah selesai program",
+          "priority": "Low",
+          "status": "To Do",
+          "estimated_hours": 6,
+          "deliverables": ["Feedback forms", "Review system", "Rating system", "Improvement tracking"]
+        },
+        {
+          "id": "UMR-013",
+          "title": "Program Analytics Dashboard",
+          "description": "Dashboard analytics untuk tracking performa program umrah",
+          "priority": "Medium",
+          "status": "To Do",
+          "estimated_hours": 10,
+          "deliverables": ["Performance metrics", "Participant tracking", "Financial reports", "Trend analysis"]
+        },
+        {
+          "id": "UMR-014",
+          "title": "Multi-language Support",
+          "description": "Dukungan multi-bahasa untuk jemaah internasional",
+          "priority": "Low",
+          "status": "To Do",
+          "estimated_hours": 12,
+          "deliverables": ["Language switching", "Translated content", "Multi-language guides", "Cultural adaptation"]
+        }
+      ]
+    }
+  ],
+  "summary": {
+    "total_tasks": 14,
+    "total_hours": 150,
+    "total_weeks": 6,
+    "high_priority": 8,
+    "medium_priority": 5,
+    "low_priority": 1
+  },
+  "metadata": {
+    "created_date": "2025-11-20",
+    "version": "1.0",
+    "author": "MiniMax Agent",
+    "language": "Bahasa Indonesia"
+  }
+}

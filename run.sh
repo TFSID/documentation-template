@@ -5,7 +5,7 @@ VENV_DIR=".venv"
 PROJECTS_DIR="/app"
 
 PYTHON_SCRIPT="mkdocs"
-SERVE_SCRIPT="mkdocs serve --dev-addr 0.0.0.0:5990 --config-file /app/mkdocs-weekly-report.yml"
+SERVE_SCRIPT="mkdocs serve --dev-addr 0.0.0.0:5990 --config-file /app/mkdocs.yml"
 DEPS_FILE="requirements.txt"
 DEPS="mkdocs"
 
@@ -60,4 +60,3 @@ fi
 # Run Server Initialization
 echo "Running Server Initialization";
 echo "`$SERVE_SCRIPT`";
-

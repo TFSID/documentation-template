@@ -1,0 +1,122 @@
+{
+  "project": "Modul Paket Request - Aplikasi Umrah Haji",
+  "version": "1.0.0",
+  "description": "Todo list khusus untuk modul paket request/custom package",
+  "technology_stack": {
+    "frontend": "React.js / Vue.js",
+    "backend": "Node.js / Python",
+    "database": "PostgreSQL / MongoDB",
+    "ui_framework": "Tailwind CSS / Ant Design"
+  },
+  "modules": [
+    {
+      "name": "Paket Request System",
+      "tasks": [
+        {
+          "id": "REQ-001",
+          "title": "Form Permintaan Paket Custom",
+          "description": "Buat form permintaan paket custom dengan detail lengkap (tanggal, tujuan, budget, preferensi)",
+          "priority": "High",
+          "status": "To Do",
+          "estimated_hours": 8,
+          "deliverables": ["Form permintaan paket", "Validasi input", "File upload", "Step wizard"]
+        },
+        {
+          "id": "REQ-002",
+          "title": "Database Schema Paket Request",
+          "description": "Design dan implement database schema untuk menyimpan data paket request",
+          "priority": "High",
+          "status": "To Do",
+          "estimated_hours": 6,
+          "deliverables": ["Database design", "Table creation", "Relationships", "Indexes"]
+        },
+        {
+          "id": "REQ-003",
+          "title": "API Endpoint Paket Request",
+          "description": "Buat API endpoints untuk CRUD operations paket request",
+          "priority": "High",
+          "status": "To Do",
+          "estimated_hours": 8,
+          "deliverables": ["Create request", "Read requests", "Update status", "Delete request"]
+        },
+        {
+          "id": "REQ-004",
+          "title": "Dashboard Admin Paket Request",
+          "description": "Buat dashboard admin untuk melihat dan memproses paket request",
+          "priority": "High",
+          "status": "To Do",
+          "estimated_hours": 12,
+          "deliverables": ["Admin dashboard", "Request management", "Status updates", "Customer communication"]
+        },
+        {
+          "id": "REQ-005",
+          "title": "Sistem Notifikasi Paket Request",
+          "description": "Implement sistem notifikasi untuk status update paket request",
+          "priority": "Medium",
+          "status": "To Do",
+          "estimated_hours": 8,
+          "deliverables": ["Email notifications", "SMS alerts", "In-app notifications", "Status tracking"]
+        },
+        {
+          "id": "REQ-006",
+          "title": "Quote Generation System",
+          "description": "Buat sistem untuk generate quote/penawaran paket request",
+          "priority": "High",
+          "status": "To Do",
+          "estimated_hours": 10,
+          "deliverables": ["Quote calculator", "Template generation", "PDF export", "Email delivery"]
+        },
+        {
+          "id": "REQ-007",
+          "title": "Approval Workflow",
+          "description": "Implement workflow approval untuk paket request (review -> approve/reject -> revision)",
+          "priority": "Medium",
+          "status": "To Do",
+          "estimated_hours": 12,
+          "deliverables": ["Approval workflow", "Multi-level approval", "Comment system", "Revision tracking"]
+        },
+        {
+          "id": "REQ-008",
+          "title": "Package Comparison Tool",
+          "description": "Buat tool untuk bandingkan paket custom vs paket standard",
+          "priority": "Low",
+          "status": "To Do",
+          "estimated_hours": 8,
+          "deliverables": ["Comparison interface", "Feature matrix", "Price comparison", "Recommendation engine"]
+        },
+        {
+          "id": "REQ-009",
+          "title": "File Management System",
+          "description": "Sistem manajemen file untuk dokumen pendukung paket request",
+          "priority": "Medium",
+          "status": "To Do",
+          "estimated_hours": 8,
+          "deliverables": ["File upload", "Document storage", "Version control", "Access management"]
+        },
+        {
+          "id": "REQ-010",
+          "title": "Analytics & Reporting",
+          "description": "Dashboard analytics untuk tracking performa paket request",
+          "priority": "Low",
+          "status": "To Do",
+          "estimated_hours": 10,
+          "deliverables": ["Request analytics", "Performance metrics", "Conversion tracking", "Custom reports"]
+        }
+      ]
+    }
+  ],
+  "summary": {
+    "total_tasks": 10,
+    "total_hours": 100,
+    "total_weeks": 4,
+    "high_priority": 6,
+    "medium_priority": 3,
+    "low_priority": 1
+  },
+  "metadata": {
+    "created_date": "2025-11-20",
+    "version": "1.0",
+    "author": "MiniMax Agent",
+    "language": "Bahasa Indonesia"
+  }
+}
